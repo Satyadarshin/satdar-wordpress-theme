@@ -2,6 +2,7 @@
 /*
 Template Name: Orbit 
 */
+?>
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
@@ -67,7 +68,7 @@ Template Name: Orbit
 					<h4>Get in touch!</h4>
 					<div class="row">
 						<div class="large-9 columns">
-							<p>We'd love to hear from you, you attractive person you.</p>
+							<p>We&rsquo;d love to hear from you, you attractive person you.</p>
 						</div>
 						<div class="large-3 columns">
 							<a href="#" class="radius button right">Contact Us</a>
