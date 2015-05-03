@@ -17,7 +17,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
-		<script src="/wp-content/SatDar/bower_components/modernizr/modernizr.js"></script>
+		<script src="<?php echo bloginfo('template_directory'); ?>/bower_components/modernizr/modernizr.js"></script>
 	</head>
 	
 	<body <?php body_class(); ?>>
@@ -56,7 +56,7 @@
 				</ul>
 					  </section>
 			</nav>
-				  
+
 		<!--
 					<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 					<h5><?php bloginfo('description'); ?></h5>
