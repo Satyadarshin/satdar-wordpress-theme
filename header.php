@@ -21,7 +21,8 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-
+<?
+/*
 		<nav class="top-bar" data-topbar role="navigation">
 			<ul class="title-area">
 				<li class="name">
@@ -57,10 +58,11 @@
 			</section>
 		</nav>
 
-		<!--
+
 					<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 					<h5><?php bloginfo('description'); ?></h5>
 					<hr/>
 				</div>
 			</div>
--->
+
+*/

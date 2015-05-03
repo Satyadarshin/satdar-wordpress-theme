@@ -3,23 +3,9 @@
 Template Name: Contact
 http://foundation.zurb.com/templates/contact.html
 */
+
+get_header();
 ?>
-<!doctype html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
-
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>Foundation Template | Contact</title>
-		<meta name="description" content="Documentation and reference library for ZURB Foundation. JavaScript, CSS, components, grid and more."/>
-		<meta name="author" content="ZURB, inc. ZURB network also includes zurb.com"/>
-		<meta name="copyright" content="ZURB, inc. Copyright (c) 2015"/>
-		<link rel="stylesheet" href="../assets/css/templates/foundation.css"/>
-		<script src="../assets/js/modernizr.js"></script>
-	</head>
-
-	<body>
 
 		<nav class="top-bar" data-topbar>
 			<ul class="title-area">
@@ -158,30 +144,11 @@ http://foundation.zurb.com/templates/contact.html
 			<a href="#" class="close-reveal-modal">&times;</a>
 		</div>
 
-		<script>
-		  document.write('<script src=js/vendor/' +
-		  ('__proto__' in {} ? 'zepto' : 'jquery') +
-		  '.js><\/script>')
-		  </script>
-		<script src="../../assets/js/jquery.js"></script>
-		<script src="js/foundation.min.js"></script>
-		<script>
-			$(document).foundation();
-		  </script>
-		<script src="../assets/js/templates/jquery.js"></script>
-		<script src="../assets/js/templates/foundation.js"></script>
-		<script>
-			  $(document).foundation();
-
-			  var doc = document.documentElement;
-			  doc.setAttribute('data-useragent', navigator.userAgent);
-			</script>
 		<script type="text/javascript">
 		/* <![CDATA[ */
 		(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
 		/* ]]> */
 		</script>
-
-	</body>
-
-</html>
+<?php
+get_footer();
+?>
