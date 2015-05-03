@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: Banner 
+http://foundation.zurb.com/templates/banner.html
 */
 ?>
 <!doctype html>

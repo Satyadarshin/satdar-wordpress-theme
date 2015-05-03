@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Sidebar
-
+http://foundation.zurb.com/templates/sidebar.html
 */
 ?>
 <!doctype html>

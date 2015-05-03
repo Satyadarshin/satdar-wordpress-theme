@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Realty
-
+http://foundation.zurb.com/templates/realty.html
 */
 ?>
 <!doctype html>

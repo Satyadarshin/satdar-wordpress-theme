@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Marketing 2
-
+http://foundation.zurb.com/templates/marketing-2.html
 */
 ?>
 <!doctype html>

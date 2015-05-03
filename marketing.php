@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: Marketing
+http://foundation.zurb.com/templates/marketing.html
 */
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->

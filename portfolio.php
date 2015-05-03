@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: Portfolio
+http://foundation.zurb.com/templates/portfolio.html
 */
 ?>
 <!doctype html>

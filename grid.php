@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Grid
-
+http://foundation.zurb.com/templates/grid.html
 */
 ?>
 <!doctype html>

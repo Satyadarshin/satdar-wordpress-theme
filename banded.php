@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Banded 
-
+http://foundation.zurb.com/templates/banded.html
 */
 ?>
 <!doctype html>

@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Blog
-
+http://foundation.zurb.com/templates/blog.html
 */
 ?>
 <!doctype html>

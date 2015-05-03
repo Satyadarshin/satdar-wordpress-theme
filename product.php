@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: Product
+http://foundation.zurb.com/templates/product.html
 */
 ?>
 <!doctype html>

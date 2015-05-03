@@ -1,6 +1,7 @@
 <?php
 /*
-Template Name: Orbit 
+Template Name: Orbit Home
+http://foundation.zurb.com/templates/orbit.html
 */
 ?>
 <!doctype html>

@@ -1,9 +1,9 @@
 <?php
 /*
 Template Name: So Boxy
+http://foundation.zurb.com/templates/boxy.html
 */
 ?>
-
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
