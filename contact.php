@@ -14,7 +14,7 @@
 <body>
 <nav class="top-bar" data-topbar>
 <ul class="title-area">
- 
+
 <li class="name">
 <h1>
 <a href="#">
@@ -25,7 +25,7 @@ Top Bar Title
 <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
 </ul>
 <section class="top-bar-section">
- 
+
 <ul class="right">
 <li class="divider"></li>
 <li class="has-dropdown">
@@ -70,10 +70,10 @@ Top Bar Title
 </ul>
 </section>
 </nav>
- 
- 
+
+
 <div class="row">
- 
+
 <div class="large-9 columns">
 <h3>Get in Touch!</h3>
 <p>We'd love to hear from you. You can either reach out to us as a whole and one of our awesome team members will get back to you, or if you have a specific question reach out to one of our staff. We love getting email all day <em>all day</em>.</p>
@@ -122,11 +122,11 @@ Top Bar Title
 </section>
 </div>
 </div>
- 
- 
+
+
 <div class="large-3 columns">
 <h5>Map</h5>
- 
+
 <p>
 <a href="" data-reveal-id="mapModal"><img src="http://placehold.it/400x280"></a><br/>
 <a href="" data-reveal-id="mapModal">View Map</a>
@@ -136,10 +136,10 @@ Top Bar Title
 Barsoom, MA 95155
 </p>
 </div>
- 
+
 </div>
- 
- 
+
+
 <footer class="row">
 <div class="large-12 columns">
 <hr/>
@@ -158,12 +158,12 @@ Barsoom, MA 95155
 </div>
 </div>
 </footer>
- 
- 
+
+
 <div class="reveal-modal" id="mapModal">
 <h4>Where We Are</h4>
 <p><img src="http://placehold.it/800x600"/></p>
- 
+
 <a href="#" class="close-reveal-modal">&times;</a>
 </div>
 <script>
