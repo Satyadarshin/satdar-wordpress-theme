@@ -1,5 +1,7 @@
 <?php
 
+require_once('satdar-nav-menu.php');
+
 function satDar_resources() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
