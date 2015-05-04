@@ -5,7 +5,9 @@ http://foundation.zurb.com/templates/blog.html
 */
 
 get_header();
-?>
+get_template_part('navigation');
+if ( have_posts() ) :
+while ( have_posts() ) : the_post(); ?>
 
 		<div class="row">
 			<div class="large-12 columns">
@@ -71,25 +73,14 @@ get_header();
 			</aside>
 		</div>
 
-		<footer class="row">
-			<div class="large-12 columns">
-				<hr/>
-				<div class="row">
-					<div class="large-6 columns">
-						<p>&copy; Copyright no one at all. Go to town.</p>
-					</div>
-					<div class="large-6 columns">
-						<ul class="inline-list right">
-							<li><a href="#">Link 1</a></li>
-							<li><a href="#">Link 2</a></li>
-							<li><a href="#">Link 3</a></li>
-							<li><a href="#">Link 4</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
+	<?php
+		endwhile;
 
-<?php
-get_footer();
-?>
+		else :
+
+		echo '<p>No content found</p>';
+
+		endif;
+
+		get_footer();
+	?>

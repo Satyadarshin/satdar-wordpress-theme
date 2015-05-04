@@ -5,24 +5,9 @@ http://foundation.zurb.com/templates/marketing-2.html
 */
 
 get_header();
-?>
-
-		<nav class="top-bar" data-topbar>
-			<ul class="title-area">
-				<li class="name"><h1><a href="#">My Site</a></h1></li>
-				<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-			</ul>
-			<section class="top-bar-section">
-				<ul class="right">
-					<li><a href="#">Nav Button</a></li>
-					<li><a href="#">Nav Button</a></li>
-					<li><a href="#">Nav Button</a></li>
-					<li><a href="#">Nav Button</a></li>
-					<li><a href="#">Nav Button</a></li>
-					<li><a href="#">Nav Button</a></li>
-				</ul>
-			</section>
-		</nav>
+get_template_part('navigation');
+if ( have_posts() ) :
+while ( have_posts() ) : the_post(); ?>
 
 		<header>
 			<div class="row">
@@ -142,6 +127,14 @@ get_header();
 			</div>
 		</div>
 
-<?php
-get_footer();
-?>
+	<?php
+		endwhile;
+
+		else :
+
+		echo '<p>No content found</p>';
+
+		endif;
+
+		get_footer();
+	?>

@@ -16,5 +16,5 @@ register_nav_menus(
 
 //Removes default id from nav menu
 //This allows the optional menu_id parameter to work in wp_nav_menu
-add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+//dd_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
 ?>

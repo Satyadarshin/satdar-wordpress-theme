@@ -5,59 +5,9 @@ http://foundation.zurb.com/templates/contact.html
 */
 
 get_header();
-?>
-
-		<nav class="top-bar" data-topbar>
-			<ul class="title-area">
-				<li class="name">
-				<h1><a href="#">Top Bar Title</a></h1></li>
-				<li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-			</ul>
-			<section class="top-bar-section">
-				<ul class="right">
-					<li class="divider"></li>
-					<li class="has-dropdown">
-						<a href="#">Main Item 1</a>
-						<ul class="dropdown">
-							<li><label>Section Name</label></li>
-							<li class="has-dropdown">
-								<a href="#" class="">Has Dropdown, Level 1</a>
-								<ul class="dropdown">
-									<li><a href="#">Dropdown Options</a></li>
-									<li><a href="#">Dropdown Options</a></li>
-									<li><a href="#">Level 2</a></li>
-									<li><a href="#">Subdropdown Option</a></li>
-									<li><a href="#">Subdropdown Option</a></li>
-									<li><a href="#">Subdropdown Option</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Dropdown Option</a></li>
-							<li><a href="#">Dropdown Option</a></li>
-							<li class="divider"></li>
-							<li><label>Section Name</label></li>
-							<li><a href="#">Dropdown Option</a></li>
-							<li><a href="#">Dropdown Option</a></li>
-							<li><a href="#">Dropdown Option</a></li>
-							<li class="divider"></li>
-							<li><a href="#">See all &rarr;</a></li>
-						</ul>
-					</li>
-					<li class="divider"></li>
-					<li><a href="#">Main Item 2</a></li>
-					<li class="divider"></li>
-					<li class="has-dropdown">
-						<a href="#">Main Item 3</a>
-						<ul class="dropdown">
-							<li><a href="#">Dropdown Option</a></li>
-							<li><a href="#">Dropdown Option</a></li>
-							<li><a href="#">Dropdown Option</a></li>
-							<li class="divider"></li>
-							<li><a href="#">See all &rarr;</a></li>
-						</ul>
-					</li>
-				</ul>
-			</section>
-		</nav>
+get_template_part('navigation');
+if ( have_posts() ) :
+while ( have_posts() ) : the_post(); ?>
 
 		<div class="row">
 			<div class="large-9 columns">
@@ -144,11 +94,21 @@ get_header();
 			<a href="#" class="close-reveal-modal">&times;</a>
 		</div>
 
+	<?php
+		endwhile;
+
+		else :
+
+		echo '<p>No content found</p>';
+
+		endif;
+	?>
+
 		<script type="text/javascript">
 		/* <![CDATA[ */
 		(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
 		/* ]]> */
 		</script>
-<?php
-get_footer();
-?>
+	<?php
+		get_footer();
+	?>

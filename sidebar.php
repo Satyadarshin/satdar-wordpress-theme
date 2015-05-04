@@ -4,22 +4,25 @@ Template Name: Sidebar
 http://foundation.zurb.com/templates/sidebar.html
 */
 
-get_header();
+	get_header();
+	get_template_part('navigation');
+	if ( have_posts() ) :
+	while ( have_posts() ) : the_post();
 ?>
 
-	<div class="row">
-		<div class="large-3 columns">
-			<h1><img src="http://placehold.it/400x100&text=Logo"/></h1>
+		<div class="row">
+			<div class="large-3 columns">
+				<h1><img src="http://placehold.it/400x100&text=Logo"/></h1>
+			</div>
+			<div class="large-9 columns">
+				<ul class="inline-list right">
+					<li><a href="#">Section 1</a></li>
+					<li><a href="#">Section 2</a></li>
+					<li><a href="#">Section 3</a></li>
+					<li><a href="#">Section 4</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="large-9 columns">
-			<ul class="inline-list right">
-				<li><a href="#">Section 1</a></li>
-				<li><a href="#">Section 2</a></li>
-				<li><a href="#">Section 3</a></li>
-				<li><a href="#">Section 4</a></li>
-			</ul>
-		</div>
-	</div>
 
 		<div class="row">
 			<div class="large-9 push-3 columns">
@@ -42,25 +45,14 @@ get_header();
 			</div>
 		</div>
 
-		<footer class="row">
-			<div class="large-12 columns">
-				<hr/>
-				<div class="row">
-					<div class="large-6 columns">
-						<p>&copy; Copyright no one at all. Go to town.</p>
-					</div>
-					<div class="large-6 columns">
-						<ul class="inline-list right">
-							<li><a href="#">Section 1</a></li>
-							<li><a href="#">Section 2</a></li>
-							<li><a href="#">Section 3</a></li>
-							<li><a href="#">Section 4</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
+	<?php
+		endwhile;
 
-<?php
-get_footer();
-?>
+		else :
+
+		echo '<p>No content found</p>';
+
+		endif;
+
+		get_footer();
+	?>

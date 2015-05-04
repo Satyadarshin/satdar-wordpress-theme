@@ -5,11 +5,13 @@ http://foundation.zurb.com/templates/boxy.html
 */
 
 get_header();
-?>
+get_template_part('navigation');
+if ( have_posts() ) :
+while ( have_posts() ) : the_post(); ?>
 
 		<div class="row">
 			<div class="large-12 columns">
-			<ul class="button-group">
+				<ul class="button-group">
 					<li><a href="#" class="button">Nav Item 1</a></li>
 					<li><a href="#" class="button">Nav Item 2</a></li>
 					<li><a href="#" class="button">Nav Item 3</a></li>
@@ -117,6 +119,14 @@ get_header();
 
 		</div>
 
-<?php
-get_footer();
-?>
+	<?php
+		endwhile;
+
+		else :
+
+		echo '<p>No content found</p>';
+
+		endif;
+
+		get_footer();
+	?>
