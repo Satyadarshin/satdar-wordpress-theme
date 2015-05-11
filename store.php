@@ -86,6 +86,14 @@ while ( have_posts() ) : the_post(); ?>
 										<div class="large-10 small-6 columns">
 											<strong>This Site Is Managed By</strong>
 											<hr>
+											<?php
+$classes = array ('foo', 'bar', 'label');
+				  $ietm_html = '<li><a href="">test</a></li>';
+											if ( in_array('label', $classes) ) {
+			$item_html = preg_replace( '/<a[^>]*>( .* )<\/a>/iU', '<label>$1</label>', $item_html );
+        }
+											echo $item_html;
+											?>
 											Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis
 										</div>
 									</div>
