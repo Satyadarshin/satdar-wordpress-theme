@@ -34,4 +34,31 @@ add_filter( 'wp_nav_menu_objects', 'menu_set_dropdown', 10, 2 );
 //Removes default id from nav menu
 //This allows the optional menu_id parameter to work in wp_nav_menu
 //dd_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+
+
+//Widget locations
+function satdarWidgets() {
+	register_sidebar(
+		array(
+			'name' => 'Upper Sidebar',
+			'id' => 'sidebar1',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Lower Sidebar',
+			'id' => 'sidebar2',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+}
+
+add_action('widgets_init', 'satdarWidgets');
 ?>

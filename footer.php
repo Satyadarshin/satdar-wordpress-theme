@@ -30,6 +30,7 @@
 		</script>
 		<script src="<?php echo bloginfo('template_directory'); ?>/bower_components/jquery/dist/jquery.js"></script>
 		<script src="<?php echo bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation.min.js"></script>
+		<script src="<?php echo bloginfo('template_directory'); ?>/bower_components/foundation/js/foundation/foundation.topbar.js"></script>
 		<script>
 			$(document).foundation();
 		</script>
