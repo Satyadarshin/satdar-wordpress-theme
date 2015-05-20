@@ -13,32 +13,36 @@
 
 get_header();
 get_template_part('navigation');
-if ( have_posts() ) :
-while ( have_posts() ) : the_post(); ?>
+?>
 	<div class="row">
 
 		<div class="large-9 columns" role="content">
 			<article>
+			<?php
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post();
+			?>
 				<h2><?php the_title(); ?></h2>
 				<h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-				<?php the_content(); ?>
+			<?php
+					the_content();
+					endwhile;
+
+				else :
+
+					echo '<p>No content found</p>';
+
+				endif;
+			?>
 			</article>
 		</div>
 
         <div class="large-3 columns">
-		<?php get_sidebar('right'); ?>
+			<?php get_sidebar('right'); ?>
         </div>
 
       </div>
-	<?php
-			endwhile;
 
-			else :
-
-			echo '<p>No content found</p>';
-
-			endif;
-
-
-		get_footer();
-	?>
+<?php
+	get_footer();
+?>

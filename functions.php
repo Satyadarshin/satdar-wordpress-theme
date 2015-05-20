@@ -61,4 +61,6 @@ function satdarWidgets() {
 }
 
 add_action('widgets_init', 'satdarWidgets');
+
+include('themeAdmin/SatDarAdmin.php');
 ?>
