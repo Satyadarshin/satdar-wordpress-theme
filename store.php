@@ -112,6 +112,7 @@ $classes = array ('foo', 'bar', 'label');
 
 				endif;
 
+				get_footer('display');
 				get_footer();
 			?>
 

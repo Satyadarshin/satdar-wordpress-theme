@@ -110,5 +110,6 @@ while ( have_posts() ) : the_post(); ?>
 		/* ]]> */
 		</script>
 	<?php
+		get_footer('display');
 		get_footer();
 	?>

@@ -54,5 +54,6 @@ http://foundation.zurb.com/templates/sidebar.html
 
 		endif;
 
+		get_footer('display');
 		get_footer();
 	?>

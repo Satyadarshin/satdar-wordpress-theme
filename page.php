@@ -38,11 +38,12 @@ get_template_part('navigation');
 		</div>
 
         <div class="large-3 columns">
-			<?php get_sidebar('right'); ?>
+			<?php get_sidebar('panels'); ?>
         </div>
 
       </div>
 
 <?php
+	get_footer('display');
 	get_footer();
 ?>

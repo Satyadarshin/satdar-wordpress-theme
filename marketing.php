@@ -135,5 +135,6 @@ while ( have_posts() ) : the_post(); ?>
 
 		endif;
 
+		get_footer('display');
 		get_footer();
 	?>

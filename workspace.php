@@ -130,5 +130,6 @@ http://foundation.zurb.com/templates/workspace.html
 
 		endif;
 
+		get_footer('display');
 		get_footer();
 	?>
