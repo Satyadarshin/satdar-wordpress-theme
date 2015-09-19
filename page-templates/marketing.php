@@ -87,15 +87,15 @@ while ( have_posts() ) : the_post(); ?>
 							<div class="panel">
 								<h5><a href="#">Post Title 1</a></h5>
 								<h6 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Suspendisse ultrices ornare tempor...</h6>
-								<h6><a href="#">Read More »</a></h6>
+								<h6><a href="#">Read More &raquo;</a></h6>
 							</div>
 							<div class="panel hide-for-small">
-								<h5><a href="#">Post Title 2 »</a></h5>
+								<h5><a href="#">Post Title 2 &raquo;</a></h5>
 							</div>
 							<div class="panel hide-for-small">
-								<h5><a href="#">Post Title 3 »</a></h5>
+								<h5><a href="#">Post Title 3 &raquo;</a></h5>
 							</div>
-								<a href="#" class="right">Go To Blog »</a>
+								<a href="#" class="right">Go To Blog &raquo;</a>
 							</div>
 
 						</div>

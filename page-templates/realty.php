@@ -14,7 +14,7 @@ while ( have_posts() ) : the_post(); ?>
 				<img src="http://placehold.it/1600x600&text=Header"><br><br>
 			</div>
 		</div>
- 
+
 		<div class="row">
 			<div class="large-3 panel columns">
 				<img src="http://placehold.it/500x500&text=Image">
@@ -92,7 +92,7 @@ while ( have_posts() ) : the_post(); ?>
 				</div>
 			</div>
 		</div>
- 
+
 	<?php
 		endwhile;
 

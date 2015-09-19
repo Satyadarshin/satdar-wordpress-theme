@@ -5,7 +5,7 @@
  *
  * @since 1.0.0
  */
-class SatDar_Walker_Nav_Menu extends Walker_Nav_Menu {
+class satdar_Walker_Nav_Menu extends Walker_Nav_Menu {
   /**
    * @see Walker_Nav_Menu::start_lvl()
    * @since 1.0.0

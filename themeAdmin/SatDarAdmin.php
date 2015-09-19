@@ -8,7 +8,7 @@ function SatDar_theme_admin_init() {
 	$menu_slug = "satdar-theme-settings";
 	$function = "SatDar_theme_admin";
 	$icon_url = get_template_directory_uri();
-	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url );
+	add_theme_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url );
 }
 
 function SatDar_theme_admin() {

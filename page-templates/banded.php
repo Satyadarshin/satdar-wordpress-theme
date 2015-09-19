@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Banded 
+Template Name: Banded
 http://foundation.zurb.com/templates/banded.html
 */
 

@@ -69,9 +69,12 @@ get_header();
 					while ( have_posts() ) : the_post();
 			?>
 				<h2><?php the_title(); ?></h2>
-				<h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
+
 			<?php
 					the_content();
+
+					echo '<p>' . the_time( get_option( 'date_format' ) ) . ' by <a href="' . get_author_posts_url( get_the_author_meta('ID') ) . '">' . the_author() . '</a></p>';
+
 					endwhile;
 
 				else :
