@@ -61,7 +61,7 @@ comments_template( );
 		</div>
 
         <div class="large-3 columns">
-			<?php get_sidebar('panels'); ?>
+			<?php get_sidebar('one-column'); ?>
         </div>
 
       </div>

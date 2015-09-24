@@ -45,7 +45,7 @@ wp_link_pages();
 	</div>
 
 	<div class="row" data-equalizer>
-		<?php get_sidebar('front-page'); ?>
+		<?php get_sidebar('three-column'); ?>
 	</div>
 
 <?php
