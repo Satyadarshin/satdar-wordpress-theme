@@ -37,16 +37,14 @@ get_template_part('navigation');
 					echo '<p>No content found</p>';
 
 				endif;
-//TODO placed to pass the the them checker test
+//TODO placed to pass the the theme checker test
 wp_link_pages();
 			?>
 			</article>
 		</div>
 	</div>
 
-	<div class="row" data-equalizer>
-		<?php get_sidebar('three-column'); ?>
-	</div>
+	<?php get_sidebar('three-column'); ?>
 
 <?php
 	get_footer('display');

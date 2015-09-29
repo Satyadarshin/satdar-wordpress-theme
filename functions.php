@@ -13,6 +13,7 @@ register_nav_menus(
 	array(
 		'primary' => __( 'Primary Site Navigation', 'satdar' ),
 		'secondary' => __( 'Secondary Site Navigation' , 'satdar' ),
+		'tertiary' => __( 'Tertiary Site Navigation' , 'satdar' ),
 	)
 );
 
@@ -38,9 +39,11 @@ add_filter( 'wp_nav_menu_objects', 'menu_set_dropdown', 10, 2 );
 
 //Widget locations
 function satdarWidgets() {
+
+	// One column, threee rows
 	register_sidebar(
 		array(
-			'name' => 'Upper Sidebar',
+			'name' => 'One column, upper panel',
 			'id' => 'sidebar1',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -50,7 +53,7 @@ function satdarWidgets() {
 	);
 	register_sidebar(
 		array(
-			'name' => 'Lower Sidebar',
+			'name' => 'One column, middle panel',
 			'id' => 'sidebar2',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -60,7 +63,7 @@ function satdarWidgets() {
 	);
 	register_sidebar(
 		array(
-			'name' => 'Home Footer Left',
+			'name' => 'One column, lower panel',
 			'id' => 'sidebar3',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -68,9 +71,11 @@ function satdarWidgets() {
 			'after_title' => '</h4>'
 		)
 	);
+
+	// Two rows, three columns
 	register_sidebar(
 		array(
-			'name' => 'Home Footer Middle Left',
+			'name' => 'Three columns, top bar',
 			'id' => 'sidebar4',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -80,7 +85,7 @@ function satdarWidgets() {
 	);
 	register_sidebar(
 		array(
-			'name' => 'Home Footer Middle Right',
+			'name' => 'Three columns, left',
 			'id' => 'sidebar5',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -90,8 +95,60 @@ function satdarWidgets() {
 	);
 	register_sidebar(
 		array(
-			'name' => 'Home Footer Right',
+			'name' => 'Three columns, middle ',
 			'id' => 'sidebar6',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Three columns, right',
+			'id' => 'sidebar7',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+
+	// Three rows, two columns
+	register_sidebar(
+		array(
+			'name' => 'Two columns, top bar',
+			'id' => 'sidebar8',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Two columns, middle-left',
+			'id' => 'sidebar9',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Three columns, middle-right ',
+			'id' => 'sidebar10',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'Two columns, bottom bar',
+			'id' => 'sidebar11',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
 			'before_title' => '<h4>',
@@ -130,7 +187,11 @@ function satdar_theme_setup() {
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => ''
 		)
-  );
+	);
+	add_theme_support( 'html5', array(
+		'search-form'
+		)
+	 );
 }
 add_action( 'after_setup_theme', 'satdar_theme_setup' );
 

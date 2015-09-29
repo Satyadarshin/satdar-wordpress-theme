@@ -1,13 +1,22 @@
 <?php
-/**
- * The template for displaying pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
- * @package WordPress
- */
+/*
+Template Name: Search Page
+*/
+
+global $query_string;
+
+$query_args = explode("&", $query_string);
+$search_query = array();
+
+foreach($query_args as $key => $string) {
+	$query_split = explode("=", $string);
+	$search_query[$query_split[0]] = urldecode($query_split[1]);
+} // foreach
+
+$search = new WP_Query($search_query);
+
+global $wp_query;
+$total_results = $wp_query->found_posts;
 
 get_header();
 get_template_part('navigation');
@@ -36,7 +45,7 @@ get_template_part('navigation');
 					echo '<p>No content found</p>';
 
 				endif;
-//TODO placed to pass the the them checker test
+//TODO placed to pass the the theme checker test
 wp_link_pages();
 			?>
 			</article>

@@ -1,0 +1,99 @@
+.upper_footer {
+	min-height: 10em;
+	background-color: black
+}
+
+.lower_footer {
+	min-height: 10em;
+	background-color: $oil;
+	text-align: center;
+	font-size: 1.2rem;
+	padding: 4rem;
+	border-top: 1px dotted #92999f;
+
+	p {
+		color: rgba(255,255,255,1);
+		font-size:.75rem;
+	}
+
+	.inline-list a {
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		background-color: #33383b;
+		border-radius: 2px;
+		font-size: 1.5rem;
+		color: #fff;
+		text-align: center;
+		line-height: 35px;
+		margin: 0 3px 0 0;
+	}
+
+	.copyright {
+		color: #8f9296;
+		font-size: 0.875rem;
+		margin: 1.75rem 0 0 0;
+	}
+
+	.about {
+		color: #92999f;
+		font-size: 0.875rem;
+		margin: 0 0 1rem 0;
+
+		a {
+			color: #fff;
+
+			&:hover {
+				color: #92999f;
+			}
+		}
+	}
+
+	.footer-links a {
+		list-style: none;
+		font-weight: normal;
+		color: rgba(255,255,255,1);
+		padding: 3rem 0 2rem;
+		margin: 0;
+		font-size: 0.875rem;
+
+		&::after {
+		  content: "•";
+		  padding: 0 0.2rem 0 0.4rem;
+		}
+
+		&:last-child::after {
+		  content: "";
+		  padding: 0 0.4rem 0 0.8rem;
+		}
+
+		&:hover {
+			color: #92999f;
+		}
+	}
+
+	@media only screen and (min-width: 40.063em) {
+
+		p {
+		  text-align: left;
+		}
+
+		.social {
+		  text-align: left;
+		  margin: 0;
+		}
+
+		.contact {
+		  text-align: left;
+		  > i {
+			margin-right: 1rem;
+		  }
+		}
+	}
+
+	@media only screen and (max-width: 40.063em) {
+		p {
+		  text-align: center;
+		}
+	}
+}

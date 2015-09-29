@@ -1,26 +1,13 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
+$(document).foundation({
+  sticky_class : 'sticky',
+  custom_back_text: true, // Set this to false and it will pull the top level link name as the back text
+  back_text: 'Back', // Define what you want your custom back text to be if custom_back_text: true
+  is_hover: true,
+  mobile_show_parent_link: false, // will copy parent links into dropdowns for mobile navigation
+  scrolltop : true // jump to top when sticky nav menu toggle is clicked
+});
 
-var doc = document.documentElement;
-doc.setAttribute('data-useragent', navigator.userAgent);
-
- $(document).ready(function(){
-      $('.multiple-items').slick({
-		  dots: true,
-	   autoplay: true,
-  autoplaySpeed: 3000,
-  slidesToShow:1,
-  slidesToScroll: 1
-
-		  });
- });
-
-$('.tertiary-nav .search-icon').click(function(event) {
-      if ($('.inline-list li.search-field').hasClass('open')){
-        $('.inline-list li.search-field').animate({width: "0px", margin: "0px"}, 500).removeClass('open')
-        $('.inline-list').style({margin: "0 -10px 0 0"})
-      } else {
-        $('.inline-list li.search-field').animate({width: "160px", margin: "0 0 0 10px"}, 500).addClass('open')
-      }
-  });
+// @codekit-prepend "../bower_components/jquery/dist/jquery.min.js";"../bower_components/foundation/js/foundation.min.js";"../bower_components/foundation/js/foundation/foundation.topbar.js";"../bower_components/foundation/foundation.equalizer.js"
+// TODO "../slick_slideshow/slick/slick.min.js";

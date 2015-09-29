@@ -43,6 +43,7 @@ get_template_part('navigation');
 					}
 						echo '<div class="large-6 columns">';
 						echo '<div class="panel" data-equalizer-watch>';
+echo '<img style="margin: -1.25em; "src="http://placehold.it/400x150" />';
 						echo  the_title( '<h5>', '</h5>');
 						echo  the_excerpt( '<p>', '</p>');
 						echo '</div>'; //Close the panel
@@ -72,7 +73,7 @@ wp_link_pages();
 		</div>
 
         <div class="large-3 columns">
-			<?php get_sidebar('panels'); ?>
+			<?php get_sidebar('one-column'); ?>
         </div>
 
       </div>
