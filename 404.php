@@ -1,87 +1,87 @@
 <?php
-/**
- * The template for displaying pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
- * @package WordPress
- */
+/*
+Template Name: 404 Page
+*/
+
+global $query_string;
+
+$query_args = explode("&", $query_string);
+$search_query = array();
+
+foreach($query_args as $key => $string) {
+	$query_split = explode("=", $string);
+	$search_query[$query_split[0]] = urldecode($query_split[1]);
+} // foreach
+
+$search = new WP_Query($search_query);
+
+global $wp_query;
+$total_results = $wp_query->found_posts;
 
 get_header();
+get_header('blog-hero');
 get_template_part('navigation');
 ?>
 	<div class="row">
 
-		<div class="large-9 columns" role="content">
+		<div class="large-12 columns" role="content">
 
 			<article id="post-<?php
 				//TODO from id onwards placed to pass the the them checker test
 				the_ID(); ?>" <?php post_class();
 					 ?>
 			>
-
-
-		<div class="row">
-
-			<div class="large-12 columns">
-				<h2>The Error Page</h2>
-				<p>Whatever link you clicked didn&rsquo;t take you where you expected, so lets give you some options.</p>
-			</div>
-		</div>
-		<ul class="tabs" data-tab role="tablist">
-  <li class="tab-title active" role="presentation"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1">Tag cloud</a></li>
-  <li class="tab-title" role="presentation"><a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">categories</a></li>
-  <li class="tab-title" role="presentation"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-3">pages</a></li>
-  <li class="tab-title" role="presentation"><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-4">posts</a></li>
-</ul>
-<div class="tabs-content">
-  <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
-	 <table>
-	  <thead>
-		<tr>
-		  <th width="200">Tag</th>
-		  <th>Description</th>
-		</tr>
-		 </thead>
-		 <tbody>
-
-		<?php
-		if ( have_posts() ) :
-			while ( have_posts() ) : the_post();
-				echo the_tags( '<tr><td>', '</td><td>' . tag_description() . '</td></tr><tr><td>');
-				echo '</td></tr>';
-			endwhile;
-		endif;
-		?>
-			 </tbody>
-		</table>
-  </section>
-  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
-    <h2>Second panel content goes here...</h2>
-  </section>
-  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
-    <h2>Third panel content goes here...</h2>
-  </section>
-  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-4">
-    <h2>Fourth panel content goes here...</h2>
-  </section>
-</div>
-
-<?php
-
-//TODO placed to pass the the them checker test
-wp_link_pages();
+                <h2>Whoops! Now this is a trifle embarrasing isn&rsquo;t it?</h2>
+				<p>You&rsquo;ve been dropped off here because it seems you tried to vist a page that doesn&rsquo;t exist. Try the main navigation above, have a gander at the keywords in the tag cloud, or peruse the categories below.</p>
+            <?php
+                //TODO placed to pass the the theme checker test
+                wp_link_pages();
 			?>
 			</article>
-		</div>
-
-        <div class="large-3 columns">
-			<?php get_sidebar('one-column'); ?>
+            <div class="row" data-equalizer>
+                <div class="large-6 medium-6 small-12 columns">
+                    <div class="panel" data-equalizer-watch>
+                        <h3>Tag Cloud</h3>
+                        <?php  
+                            $args = array(
+                                'smallest'                  => 8, 
+                                'largest'                   => 22,
+                                'unit'                      => 'pt', 
+                                'number'                    => 45,  
+                                'format'                    => 'flat',
+                                'separator'                 => "\n",
+                                'orderby'                   => 'name', 
+                                'order'                     => 'ASC',
+                                'exclude'                   => null, 
+                                'include'                   => null, 
+                                'topic_count_text_callback' => default_topic_count_text,
+                                'link'                      => 'view', 
+                                'taxonomy'                  => array('post_tag', 'jetpack-portfolio-tag'), 
+                                'echo'                      => true,
+                                'child_of'                  => null,
+                            ); 
+                            wp_tag_cloud( $args );
+                        ?>
+                    </div>
+                </div>
+                <div class="large-6 medium-6 small-12 columns">
+                    <div class="panel" data-equalizer-watch>
+                        <h3>Categories</h3>
+                        <p>
+                        <?php             
+                            //TODO generalise the categories to out put all of them, not just portfoili ones
+                            $args = array('orderby' => 'term_order');
+                            $terms = wp_get_object_terms( $post->ID, 'jetpack-portfolio-type', $args );
+                            foreach ( $terms as $term ){
+                                echo '&bull; <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>  ';
+                            } 
+                        ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
+    </div>
 
 <?php
 	get_footer('display');

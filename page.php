@@ -10,25 +10,24 @@
  */
 
 get_header();
+get_header('hero');
 get_template_part('navigation');
 ?>
 	<div class="row">
 
 		<div class="large-9 columns" role="content">
-
-			<article id="post-<?php
-				//TODO from id onwards placed to pass the the them checker test
-				the_ID(); ?>" <?php post_class();
-					 ?>
-			>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+               
 			<?php
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
 			?>
 				<h2><?php the_title(); ?></h2>
-				<h6><?php the_time( get_option( 'date_format' ) ); ?> Written by <?php the_author(); ?></h6>
 			<?php
 					the_content();
+            //TODO placed to pass the the them checker test
+            wp_link_pages();
+			
 					endwhile;
 
 				else :
@@ -36,14 +35,12 @@ get_template_part('navigation');
 					echo '<p>No content found</p>';
 
 				endif;
-//TODO placed to pass the the them checker test
-wp_link_pages();
-			?>
+                ?>
 			</article>
 		</div>
 
         <div class="large-3 columns one-column-sidebar">
-			<?php get_sidebar('one-column'); ?>
+			
         </div>
 
       </div>

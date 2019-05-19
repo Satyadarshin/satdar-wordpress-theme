@@ -7,42 +7,67 @@
  * other "pages" on your WordPress site will use a different template.
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 
 get_header();
+get_header('blog-hero');
 get_template_part('navigation');
 ?>
-	<div class="row">
+<div class="row">
+    <div class="blog_posts large-9 columns" role="content">
+        <article id="post-<?php the_ID(); ?>" <?php post_class();?>>
+        <?php
+            if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+        ?>
+            <div class="row post_excerpt">
+                <div class="large-3 medium-6 small-12 columns" >
+                    <?php 
+                        if ( has_post_thumbnail() ) {        
+                            the_post_thumbnail( 'project-post_detail' );
+                            //If there's a caption for the image, output that.
+                        } 
+                        else {
+                            echo '<img src="http://placehold.it/400x400&amp;text=thumbnail" />';
+                        }
+                    ?>
+                </div>
+                <div class="large-9 medium-6 small-12 columns">
+                    <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                    <?php the_excerpt(); ?>
+                </div>
+            </div>
 
-		<div class="large-9 columns" role="content">
-			<article>
-			<?php
-				if ( have_posts() ) :
-					while ( have_posts() ) : the_post();
-			?>
-				<h2><?php the_title(); ?></h2>
-				<h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-			<?php
-					the_content();
-					endwhile;
-
-				else :
-
-					echo '<p>No content found</p>';
-
-				endif;
-			?>
-			</article>
-		</div>
-
-        <div class="large-3 columns">
-			<?php get_sidebar('panels'); ?>
-        </div>
-
-      </div>
-
+        <?php
+           endwhile;
+            else :
+               echo '<p>Sorry buddy, no posts so far.</p>';
+            endif;
+        ?>
+        </article>
+    </div>
+    <div class="blog_sidebar large-3 columns">
+        <div class="panel">
+        <p>Post categories</p>
+            <?php
+            $categories = get_the_category();
+				$separator = ", ";
+				$output = " ";
+				if ($categories) {
+					foreach ($categories as $category) {
+						$output .= '<a href="' . get_category_link( $category->term_id ) . '">' .$category->cat_name . '</a>'. $separator;
+					}
+                    //TODO build a page to display a list of categoried posts
+					echo '<p>' . trim( $output, $separator) . '</p>';
+				} ?>
+                <p>Post tags</p>
+                <?php
+                //TODO build a page to display a list of tagged posts
+				echo '<p>' . the_tags( 'Tags: ', ', ', '' ) . '</p>';
+        ?>
+        </div>      
+    </div>
+</div>
 <?php
 	get_footer('display');
 	get_footer();

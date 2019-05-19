@@ -27,12 +27,11 @@ get_template_part('navigation');
 					while ( have_posts() ) : the_post();
 			?>
 				<h2><?php the_title(); ?></h2>
-				<h6><?php the_time( get_option( 'date_format' ) ); ?> Written by <?php the_author(); ?></h6>
 			<?php
-					the_content();
+                    the_content();
 					endwhile;
 
-				else :
+				else:
 
 					echo '<p>No content found</p>';
 
@@ -43,10 +42,8 @@ wp_link_pages();
 			</article>
 		</div>
 	</div>
-
-	<?php get_sidebar('three-column'); ?>
-
 <?php
+	get_sidebar('front-page');
 	get_footer('display');
 	get_footer();
 ?>

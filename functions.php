@@ -13,7 +13,6 @@ register_nav_menus(
 	array(
 		'primary' => __( 'Primary Site Navigation', 'satdar' ),
 		'secondary' => __( 'Secondary Site Navigation' , 'satdar' ),
-		'tertiary' => __( 'Tertiary Site Navigation' , 'satdar' ),
 	)
 );
 
@@ -75,15 +74,26 @@ function satdarWidgets() {
 	// Two rows, three columns
 	register_sidebar(
 		array(
-			'name' => 'Three columns, top bar',
-			'id' => 'sidebar4',
+			'name' => 'Three columns, top bar left',
+			'id' => 'sidebar4a',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
 			'before_title' => '<h4>',
 			'after_title' => '</h4>'
 		)
 	);
-	register_sidebar(
+    register_sidebar(
+		array(
+			'name' => 'Three columns, top bar right',
+			'id' => 'sidebar4b',
+			'before_widget' => '<div>',
+			'after_widget' => '</div>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+	/* Deprecated
+    register_sidebar(
 		array(
 			'name' => 'Three columns, left',
 			'id' => 'sidebar5',
@@ -92,10 +102,10 @@ function satdarWidgets() {
 			'before_title' => '<h4>',
 			'after_title' => '</h4>'
 		)
-	);
+	);*/
 	register_sidebar(
 		array(
-			'name' => 'Three columns, middle ',
+			'name' => 'Front Page, lower ',
 			'id' => 'sidebar6',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -103,7 +113,8 @@ function satdarWidgets() {
 			'after_title' => '</h4>'
 		)
 	);
-	register_sidebar(
+	/* Deprecated
+    register_sidebar(
 		array(
 			'name' => 'Three columns, right',
 			'id' => 'sidebar7',
@@ -112,7 +123,7 @@ function satdarWidgets() {
 			'before_title' => '<h4>',
 			'after_title' => '</h4>'
 		)
-	);
+	);*/
 
 	// Three rows, two columns
 	register_sidebar(
@@ -127,7 +138,7 @@ function satdarWidgets() {
 	);
 	register_sidebar(
 		array(
-			'name' => 'Two columns, middle-left',
+			'name' => 'Two columns, middle',
 			'id' => 'sidebar9',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -137,7 +148,7 @@ function satdarWidgets() {
 	);
 	register_sidebar(
 		array(
-			'name' => 'Three columns, middle-right ',
+			'name' => 'Two columns, bottom-left ',
 			'id' => 'sidebar10',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
@@ -147,12 +158,60 @@ function satdarWidgets() {
 	);
 	register_sidebar(
 		array(
-			'name' => 'Two columns, bottom bar',
+			'name' => 'Two columns, bottom-right',
 			'id' => 'sidebar11',
 			'before_widget' => '<div>',
 			'after_widget' => '</div>',
 			'before_title' => '<h4>',
 			'after_title' => '</h4>'
+		)
+	);
+    register_sidebar(
+		array(
+			'name' => 'Upper footer, left A',
+			'id' => 'sidebar12',
+			'before_widget' => '<p>',
+			'after_widget' => '</p>',
+		)
+	);
+    register_sidebar(
+		array(
+			'name' => 'Upper footer, left B',
+			'id' => 'sidebar13',
+			'before_widget' => '<p>',
+			'after_widget' => '</p>',
+		)
+	);
+    register_sidebar(
+		array(
+			'name' => 'Upper footer, left C ',
+			'id' => 'sidebar14',
+			'before_widget' => '<p>',
+			'after_widget' => '</p>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => 'upper footer, centre',
+			'id' => 'sidebar15',
+			'before_widget' => '<p>',
+			'after_widget' => '</p>',
+		)
+	);
+    register_sidebar(
+		array(
+			'name' => 'upper footer, right',
+			'id' => 'sidebar16',
+			'before_widget' => '<p>',
+			'after_widget' => '</p>',
+		)
+	);
+    register_sidebar(
+		array(
+			'name' => 'Lower footer, left',
+			'id' => 'sidebar17',
+			'before_widget' => '<p>',
+			'after_widget' => '</p>',
 		)
 	);
 }
@@ -163,8 +222,15 @@ add_action('widgets_init', 'satdarWidgets');
 function satdar_theme_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( "title-tag" );
+	add_theme_support( 'title-tag' );
+	
+	//Support for featured images
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'project-thumb', 500, 500, array('left', 'top'));
+    add_image_size( 'project-post_large', 800, 9999, array('left', 'top'));
+    add_image_size( 'project-post_detail');
+
+	// register_post_type( 'portfolio', $args );
 	add_theme_support( "custom-header", array(
 			'default-image'          => '',
 			'random-default'         => false,
@@ -188,14 +254,13 @@ function satdar_theme_setup() {
 			'admin-preview-callback' => ''
 		)
 	);
-	add_theme_support( 'html5', array(
-		'search-form'
-		)
-	 );
 }
 add_action( 'after_setup_theme', 'satdar_theme_setup' );
 
-include('themeAdmin/SatDarAdmin.php');
+// Activate Links Manager
+add_filter('pre_option_link_manager_enabled', '__return_true');
+
+//include('themeAdmin/SatDarAdmin.php');
 
 // TODO look at setting Content Width https://codex.wordpress.org/Content_Width
 if ( ! isset( $content_width ) ) {
@@ -209,4 +274,12 @@ function satdar_add_editor_styles() {
     add_editor_style( $font_url );
 }
 add_action( 'admin_init', 'satdar_add_editor_styles' );
+
+
+function satdar_scripts() {
+    //wp_enqueue_style( 'style-name', get_stylesheet_uri() );
+    wp_enqueue_script( 'heroSmootheScroll', get_template_directory_uri() . '/js/heroSmootheScroll.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'projectThumbnail', get_template_directory_uri() . '/js/projectThumbnail.js', array('jquery'), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'satdar_scripts' );
 ?>

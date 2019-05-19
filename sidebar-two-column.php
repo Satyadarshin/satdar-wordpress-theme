@@ -12,7 +12,7 @@
 <div class="row" data-equalizer>
 
 <?php if(is_active_sidebar('sidebar9')): ?>
-	<div class="large-6 columns" >
+	<div class="large-12 columns" >
 		<div class="panel" data-equalizer-watch>
 			<?php dynamic_sidebar('sidebar9'); ?>
 		</div>
@@ -27,15 +27,15 @@
 	</div>
 <?php endif; ?>
 
-</div>
-<div class="row" data-equalizer>
-
 <?php if(is_active_sidebar('sidebar11')): ?>
-	<div class="large-12 columns">
+	<div class="large-6 columns">
 		<div class="panel" data-equalizer-watch>
 			<?php dynamic_sidebar('sidebar11'); ?>
 		</div>
 	</div>
 <?php endif; ?>
+</div>
+<div class="row" data-equalizer>
+
 
 </div>

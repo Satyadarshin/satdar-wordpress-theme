@@ -97,7 +97,7 @@ $include-html-global-classes: $include-html-classes;
 // $font-weight-normal: normal;
 // $font-weight-bold: bold;
 
-// $white       : #FFFFFF;
+$white       : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -105,9 +105,9 @@ $include-html-global-classes: $include-html-classes;
 // $silver      : #EFEFEF;
 // $smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
+$iron        : #CCCCCC;
 // $base        : #AAAAAA;
-// $aluminum    : #999999;
+$aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
@@ -118,9 +118,9 @@ $include-html-global-classes: $include-html-classes;
 // $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+ $primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
+$alert-color: rgba(241,90,34,1);
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
@@ -968,7 +968,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color($white, $lightness: -5%);
+ $panel-bg: $mid-tone; //scale-color($white, $lightness: -5%);
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -1361,7 +1361,7 @@ $include-html-global-classes: $include-html-classes;
 // $has-tip-cursor-type: help;
 
 // $tooltip-padding: rem-calc(12);
-// $tooltip-bg: $oil;
+$tooltip-bg: rgba(241,90,34,1);
 // $tooltip-font-size: rem-calc(14);
 // $tooltip-font-weight: $font-weight-normal;
 // $tooltip-font-color: $white;
@@ -1381,8 +1381,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
- $topbar-bg-color: rgb(38, 147, 242);
-$topbar-bg: $topbar-bg-color;
+ $topbar-bg-color: rgba(38,147,242,1);
+//$topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: rem-calc(45);
@@ -1400,10 +1400,11 @@ $topbar-bg: $topbar-bg-color;
 // $topbar-link-weight: $font-weight-normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg: rgb(38, 147, 242);
-$topbar-link-bg-hover: rgb(10, 114, 204);
+$topbar-link-bg:  $topbar-bg-color;
+$topbar-link-bg-hover: rgba(10,114,204,1);
 // $topbar-link-bg-color-hover: rgb(38, 147, 242);
- $topbar-link-bg-active: rgb(0, 196, 255);
+ $topbar-link-bg-active: rgba(0,196,255,1);
+ $topbar-link-bg-active-hover: scale-color( $topbar-bg-color, $lightness: -14%);
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
@@ -1414,11 +1415,11 @@ $topbar-link-bg-hover: rgb(10, 114, 204);
 // $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
+// $topbar-dropdown-bg:  $oil;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
 // $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-bg-hover: $oil;
+$topbar-dropdown-link-bg-hover: $topbar-link-bg-hover;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
@@ -1454,7 +1455,7 @@ $topbar-link-bg-hover: rgb(10, 114, 204);
 // $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
 
 // Sticky Class
-// $topbar-sticky-class: ".sticky";
+$topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 // $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li// 
 

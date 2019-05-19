@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Tag Archive
+ * The template for displaying portfolio taxonomy lists
  *
  * @package WordPress
  */
@@ -14,27 +14,34 @@ get_template_part('navigation');
         <article id="post-<?php
             //TODO from id onwards placed to pass the the theme checker test
             the_ID(); ?>" <?php post_class();
-             ?>>
+             ?>
+        >
             <div class="row">
                 <div class="large-4 small-12 columns">
                     <div class="row portfolio_type">
                         <div class="large-12 small-6 columns">
                             <?php 
                                 $hero = get_term_by( 'slug', $term, 'jetpack-portfolio-type');
-                                //print_r($hero);
                                 $the_taxonomy = $hero->taxonomy;
                                 $taxonomy_name = $hero->name;
                                 $taxonomy_id = $hero->term_id;
                                 $taxonomy_parent = $hero->parent;
                                 $term_slug = $hero->slug;
                                 $term_type_image = get_option( 'project_type_image_data_' . $term_slug );
+                                if ( $term_type_image ) {
+                                    $image_data = json_decode( stripslashes( $term_type_image ) );
+                                    $taxonomy_image = $image_data[0]->url;
+                                }
+                                else {
+                                    $taxonomy_image = 'http://placehold.it/500x500&amp;text=' . $term_slug;
+                                }
+                                echo "<img class=\"taxonomy_image\" src=\"{$taxonomy_image}\">";
                             ?>
                         </div>
                         <div class="large-12 small-6 columns">
                             <?php
-                                //Using this function ensures that title prefixes like Category: are removed
+                                //Using this function ensures that ttile prefixes like Category: are removed
                                 echo "<h2>". single_cat_title( '', false ) . "</h2>";
-                            echo "<hr>";
                                 the_archive_description( '<div class="taxonomy-description">', '</div>' );
                             ?>
                         </div>
@@ -42,11 +49,6 @@ get_template_part('navigation');
                 </div>
 
                 <div class="large-8 columns">
-                    <div class="row">
-                        <div class="large-12 columns">
-                        <h4>Projects applying this skill</h4>
-                        </div>
-                    </div>
                 <?php
                     //Initialise a counter
                     $row = 0;
@@ -88,23 +90,23 @@ get_template_part('navigation');
                     //TODO placed to pass the the theme checker test
                     //Check whether paginate_lincks() better fits the test: if not why not?
                     //wp_link_pages();
-                    ?>
+                ?>
                
-                    <!-- pagination links -->
-                    <div class="row ">
-                        <div class="large-12 columns">
-                            <div id="pagination_bar">
-                            <?php
-                                echo paginate_links(
-                                    array(
-                                    'before_page_number' => '<i class="paginator">',
-                                    'after_page_number' => '</i>',
-                                    )
-                                ); 
-                            ?>
-                            </div>
+                <!-- pagination links -->
+                <div class="row ">
+                    <div class="large-12 columns">
+                        <div id="pagination_bar">
+                    <?php
+                        echo paginate_links(
+                            array(
+                            'before_page_number' => '<i class="paginator">',
+                            'after_page_number' => '</i>',
+                            )
+                        ); 
+                    ?>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
             
@@ -112,28 +114,21 @@ get_template_part('navigation');
                 <div class="large-12 columns">
                     <div class="panel">
                         <div class="row">
-                            <div class="large-12 columns">
-                                <h3>Skills tag cloud</h3>
-                                <?php  
-                                    $args = array(
-                                        'smallest'                  => 8, 
-                                        'largest'                   => 22,
-                                        'unit'                      => 'pt', 
-                                        'number'                    => 45,  
-                                        'format'                    => 'flat',
-                                        'separator'                 => "\n",
-                                        'orderby'                   => 'name', 
-                                        'order'                     => 'ASC',
-                                        'exclude'                   => null, 
-                                        'include'                   => null, 
-                                        'topic_count_text_callback' => default_topic_count_text,
-                                        'link'                      => 'view', 
-                                        'taxonomy'                  => array('post_tag', 'jetpack-portfolio-tag'), 
-                                        'echo'                      => true,
-                                        'child_of'                  => null,
-                                    ); 
-                                    wp_tag_cloud( $args );
+                            <div class="large-6 small-12 columns">
+                                <h3>Skills Tag Cloud</h3>
+                                <?php wp_tag_cloud( array( 'taxonomy' => 'jetpack-portfolio-tag' ) ); ?>
+                            </div>
+                            <div class="large-6 small-12 columns">
+                                <h3>Project Categories</h3>
+                                <p>
+                                <?php             
+                                    $args = array('orderby' => 'term_order');
+                                    $terms = wp_get_object_terms( $post->ID, 'jetpack-portfolio-type', $args );
+                                    foreach ( $terms as $term ){
+                                        echo '&bull; <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>  ';
+                                    } 
                                 ?>
+                                </p>
                             </div>
                         </div>
                     </div>

@@ -4,11 +4,20 @@ SatDar Theme custom Themes
 
 @import "hero";
 @import "footer";
+@import "footer-upper";
 
-$text-color: #fff;
+acronym {
+    text-decoration: none;
+}
 
-.row {
-  //max-width: 1200px;
+table {
+    caption {
+        padding-bottom:.5rem;
+    }
+    td:not(:last-child ) {
+        font-weight: bold;
+        text-align: right;
+    }
 }
 
 .logo {
@@ -21,14 +30,60 @@ $text-color: #fff;
 }
 
 article, .one-column-sidebar {
-margin-top: 1em;
+    margin-top: 1em;
 }
 
 .screen-reader-text {
 	// the label is aimed at screen-reader users but redundant otherwise
-display: none;
+    display: none;
 }
 
+img {
+	max-width: 100%;
+}
+
+.taxonomy_image {
+    border: 1px solid gray;
+}
+
+.project { 
+	margin-bottom: 1rem;
+	
+	h5 {       
+        color: $white; 
+        z-index: 2;
+        position:absolute; 
+        top: 0px;
+        width:95%;
+		margin: 3px; 
+        font-size: 90%;
+	} 
+    
+    img {
+        display: block; 
+        margin: 0;
+    }
+    
+	p {   
+        z-index: 1;
+        background-color: #2693F2; 
+        position: absolute;
+        top: 0;
+        height: 0; 
+        width: 100%;
+        
+        a { 
+            //border: 1px solid red;
+            display: block; 
+            height: 100%;
+        }
+	}
+	
+}
+    #test2 {
+        //TODO recover what this does
+        margin-bottom: 1rem;
+    }
 
 .contact {
 	list-style-type: none;
@@ -46,4 +101,113 @@ display: none;
 			}
 		}
 	}
+}
+
+.widget_container {
+    border: 1px solid $iron;
+    background-color: $white;
+    border-radius: 6px;
+}
+
+.portfolio_type { 
+    background-color: beige;
+    margin-bottom: 2rem !important;
+}
+
+.artist-statement {
+    border-top: 1px dotted #EDE6CE; 
+    padding-top: 1rem;
+}
+
+#pagination_bar {  
+    text-align: center;
+    width: auto; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+
+    .page-numbers, .prev, .next { 
+        display: inline-block; 
+        text-align: center; 
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+
+    a {
+        color: $white;
+        background-color: $oil;  
+    }
+    
+    i {
+        display: inline-block; 
+        width: 25px;
+    }
+    
+    .current {
+        border: 1px solid $oil; 
+        border-radius: 3px;
+    }
+    
+    .paginator {  
+        width: 25px; 
+    }
+    
+    .prev, .next { 
+        padding: 0 6px 3px 6px;
+    }
+}
+
+.project_thumb_detail_caption {
+    margin-top: 1.5rem;
+}
+
+.project_summary {
+    width: 100%;
+}
+.wp-caption, .project {
+    -webkit-box-shadow: 10px 10px 23px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 23px -4px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 23px -4px rgba(0,0,0,0.5);
+    img {
+        border: 1px solid silver;
+    }
+}
+
+//Blog
+
+.blog_posts {
+    margin-top: 2rem;
+}
+
+.blog_sidebar {
+    margin-top: 3rem;
+}
+
+.blog_sidebar_thumbnail {
+    margin-top: 2rem; 
+    margin-bottom: 2rem; 
+    padding: 0;
+    background-color: #EDE6CE;
+    img {
+        margin: 0;
+    }
+    .tags_and_categories {
+        margin: 1rem;
+    }
+}
+
+.post_excerpt {
+    @media only screen and (min-width: 64.063em) {
+        margin-bottom: 2rem;
+        img {
+            width: 400px;
+            margin-left: -1rem;
+        }
+        h3 {
+            margin-top: 1rem;
+        }
+    }
+}
+.post_excerpt:not(:first-child) {
+    border-top: 1px dotted silver;
 }
