@@ -1,29 +1,29 @@
-# Foundation Compass Template
+# SatDar WordPress Theme
 
-The easiest way to get started with Foundation + Compass.
+Contributors: Satyadarshin Perry
+Tags: 
+Requires at least: 4.0
+Tested up to:
+Stable tag: 1.5
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+SatDar is an original WordPress Theme based on the [Zurb Foundation] (https://foundation.zurb.com/sites/docs/v/5.5.3/) front-end Framework, version 5.
 
 ## Requirements
 
-  * Ruby 1.9+
-  * [Node.js](http://nodejs.org)
-  * [compass](http://compass-style.org/): `gem install compass`
-  * [bower](http://bower.io): `npm install bower -g`
+No Special reqyirements.
 
-## Quickstart
+## Installation 
 
-  * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
-  * Run `bower install` to install the latest version of Foundation
-  
-Then when you're working on your project, just run the following command:
-
-```bash
-bundle exec compass watch
-```
+* 1. In your admin panel, go to Appearance > Themes and click the Add New button.
+* 2. Click Upload and Choose File, then select the theme's ZIP file. Click Install Now.
+* 3. Click Activate.
 
 ## Upgrading
 
-If you'd like to upgrade to a newer version of Foundation down the road just run:
+Stable branch is master.
 
 ```bash
-bower update
+git clone git@github.com:Satyadarshin/satdar-wordpress-theme.git
 ```
