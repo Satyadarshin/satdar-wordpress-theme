@@ -1,6 +1,8 @@
 <section class="hero odysseus">
+    
     <div class="row intro">
-        <div class="small-centered medium-uncentered medium-6 large-6 columns">
+            <img src="http://localhost:8888/Satyadarshin/stdn_wordpress/wp-content/themes/satdar-wordpress-theme/images/www.svg" alt="">
+        <div class="small-centered medium-uncentered medium-6 large-6 columns site_name">
             <h1><a href="/"><?php bloginfo('name'); ?></a></h1>
             <p><?php bloginfo('description'); ?></p>
         </div>
