@@ -4,7 +4,7 @@ Template Name: Contact
 Based on http://foundation.zurb.com/templates/workspace.html
 */
 get_header();
-get_header('hero');
+get_header('portfolio-hero');
 get_template_part('navigation');
 ?>
 	<div class="row">

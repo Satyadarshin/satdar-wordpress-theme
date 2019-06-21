@@ -8,7 +8,7 @@
                         <h1><a href="/"><?php bloginfo('name'); ?></a></h1>
                         <p><?php bloginfo('description'); ?></p>
                     </div>
-                    <div class="rocketman"></div>
+                    <!-- <div class="rocketman"></div> -->
                 </div>
             </div>
         </div>

@@ -1,26 +1,22 @@
 .hero {
     @media #{$small-only} {
-        .rocketman {
+        .intro {
             border: 1px solid red;
         }
         @media #{$landscape} {
-            .rocketman {}
+            .intro {
+                border: 1px solid red;
+            }
         }
     }
     @media #{$medium-only} {
         @media #{$landscape} {
             @media (min-height: 761px) {
-                .intro {}
-                .rocketman {
+                .intro {
                     border: 1px solid blue;
                 }
+                .rocketman {}
             }
-            //probably redundant
-            // @media (max-height: 760px) {
-            //     .rocketman {
-            //         border: 1px solid orange;
-            //     }
-            // }
         }
     }
     //tablets Landscape and portrait
@@ -39,7 +35,7 @@
             .branding {
                 display: flex;
                 position: absolute;
-                transform: translateY(-75vh);
+                //transform: translateY(-75vh);
                 left: 30vw;
                 z-index: 1;
                 height: 8rem;
@@ -62,17 +58,7 @@
                         margin-top: -1rem;
                     }
                 }
-                .rocketman {
-                    margin-top: 6.5rem;
-                    margin-left: -4rem;
-                    width: 20vw;
-                    height: 30vh;
-                    background: url('images/rocketship.svg') no-repeat center center;
-                    background-size: contain;
-                    a {
-                        text-decoration: none;
-                    }
-                }
+                .rocketman {}
             }
         }
     }
@@ -81,23 +67,24 @@
         .intro {
             height: 30vh;
             img {
-                margin-left: -3rem;
+                margin-left: -3%;
                 position: relative;
                 z-index: 10;
-                width: 80%;
-                margin-top: 3rem;
+                width: calc(60vh);
+                margin-top: 3%;
             }
             color: white;
             margin: auto;
             .branding {
-                display: flex;
+                //display: flex;
                 position: absolute;
                 transform: translateY(-27vh);
-                left: 30vw;
+                left: 50%;
                 z-index: 1;
-                height: 8rem;
+                height: 10%;
+                width: 45%;
                 .site_name {
-                    margin-top: 1rem;
+                    margin-top: 2%;
                     border: 6px solid rgba(41, 26, 227, 1);
                     padding-left: 6rem;
                     padding-right: .25rem;
@@ -115,17 +102,7 @@
                         margin-top: -1rem;
                     }
                 }
-                .rocketman {
-                    margin-top: 5rem;
-                    margin-left: -2rem;
-                    width: 10vw;
-                    height: 10vh;
-                    background: url('images/rocketship.svg') no-repeat center center;
-                    background-size: contain;
-                    a {
-                        text-decoration: none;
-                    }
-                }
+                .rocketman {}
             }
         }
     }
