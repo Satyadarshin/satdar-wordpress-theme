@@ -6439,7 +6439,7 @@ a img .aligncenter {
 .bypostauthor {
   background-color: red; }
 
-/*
+        /*
 SatDar Theme custom Themes
 */
 @media only screen and (max-width: 40em) {
@@ -6810,45 +6810,36 @@ img {
   border-top: 1px dotted silver; }
 
 .skillset {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  align-content: flex-start; }
-  .skillset div:nth-child(2) {
-    margin-left: 3%;
-    margin-right: 3%; }
+  height: 26rem;
+  margin-bottom: 1rem; }
 
-.skillset_panel {
-  width: 30%;
-  padding: .5rem;
-  background: #ede6ce; }
-  .skillset_panel .skillset_icon {
-    height: 200px;
-    background: #40e0d0;
-    margin: -.5rem -.5rem .75rem -.5rem; }
-
-/*
-<div class="row">
-<div class="large-4 columns">
-<div class="skillset_panel">
-<div>
-<h3>Web Content Developer</h3>
-<p>Not only does this website feature both professional and personal portfolios, it is itself an example of my work. An original WordPress Theme, the site demonstrates a fully responsive layout and the extensive use of tags and categories to organise content. I'm practically always using the site to practise and apply new skills: you can <a href="http://localhost:8888/portfolio/satdar-wordpress-theme/">find out where this theme is evolving</a> on its project page.</p>
-</div>
-</div>
-<div class="large-4 columns">
-<div class="skillset_panel">
-<h3>Graphic Designer</h3>
-<p>Unless otherwise credited, everything you see on the site was written, designed, illustrated, created, photographed, developed, or programmed by me. I demonstrate how I use the skills routinely at my disposal by tagging each project with the skills that were used to create it. If you’re looking to recruit someone with a particular skill set, pick the relevant keywords from the tag cloud to see examples of their application. This is a demonstration of the key skill I bring: editorial development. I apply principles of clarity, structure, and flexibility to presenting ideas and information. If there’s a project you think I can help you with, please <a href="http://localhost:8888/contact-me/">get in touch</a>.</p>
-</div>
-</div>
-<div class="large-4 columns">
-<div class="skillset_panel">
-<h3>Artist</h3>
-<p>You can also find out about me and my personal enthusiasms. I have and ongoing set of <a href="http://localhost:8888/project-type/drawing/">drawing</a>, <a href="http://localhost:8888/project-type/painting/">painting</a>, and <a href="http://localhost:8888/project-type/typo-graphics/">typo/graphic</a> projects. Periodically I make <a href="http://localhost:8888/portfolio/ceramics/">pottery</a> (mostly tableware). I'm a vegan and vegetarian cook, and recent convert to the craft of <a href="http://localhost:8888/portfolio/baking/">baking</a>!</p>
-</div>
-</div>
-</div>
-</div>
-*/
+@media only screen and (min-width: 64.063em) {
+  .skillset_panel {
+    height: 40rem;
+    padding: .5rem;
+    margin: 0 1rem 1rem 1rem;
+    background: #ede6ce; }
+    .skillset_panel .skillset_icon {
+      height: 15rem;
+      background: #40e0d0;
+      margin: -.5rem -1.4rem 0 -1.4rem; }
+      .skillset_panel .skillset_icon img {
+        height: 280px;
+        margin-top: -1rem;
+        margin-left: 1rem;
+        margin-right: auto; } }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .skillset_panel {
+    height: 25rem;
+    padding: .5rem;
+    margin: 0 1rem 1rem 1rem;
+    background: #ede6ce; }
+    .skillset_panel .skillset_icon {
+      height: 25rem;
+      background: #40e0d0;
+      margin: -.5rem 0 0 -2rem; }
+      .skillset_panel .skillset_icon img {
+        height: 250px;
+        margin-top: -1rem;
+        margin-left: 1rem;
+        margin-right: auto; } }
