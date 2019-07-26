@@ -5,102 +5,94 @@ SatDar Theme custom Themes
 @import "hero";
 @import "footer";
 @import "footer-upper";
-
 acronym {
     text-decoration: none;
 }
 
 table {
     caption {
-        padding-bottom:.5rem;
+        padding-bottom: .5rem;
     }
-    td:not(:last-child ) {
+    td:not(:last-child) {
         font-weight: bold;
         text-align: right;
     }
 }
 
 .logo {
-	color: #fff;
-	font-size: 1.5rem;
-
-	i {
-		margin-right: 0.5rem;
-	}
+    color: #fff;
+    font-size: 1.5rem;
+    i {
+        margin-right: 0.5rem;
+    }
 }
 
-article, .one-column-sidebar {
+article,
+.one-column-sidebar {
     margin-top: 1em;
 }
 
 .screen-reader-text {
-	// the label is aimed at screen-reader users but redundant otherwise
+    // the label is aimed at screen-reader users but redundant otherwise
     display: none;
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .taxonomy_image {
     border: 1px solid gray;
 }
 
-.project { 
-	margin-bottom: 1rem;
-	
-	h5 {       
-        color: $white; 
+.project {
+    margin-bottom: 1rem;
+    h5 {
+        color: $white;
         z-index: 2;
-        position:absolute; 
+        position: absolute;
         top: 0px;
-        width:95%;
-		margin: 3px; 
+        width: 95%;
+        margin: 3px;
         font-size: 90%;
-	} 
-    
+    }
     img {
-        display: block; 
+        display: block;
         margin: 0;
     }
-    
-	p {   
+    p {
         z-index: 1;
-        background-color: #2693F2; 
+        background-color: #2693F2;
         position: absolute;
         top: 0;
-        height: 0; 
+        height: 0;
         width: 100%;
-        
-        a { 
+        a {
             //border: 1px solid red;
-            display: block; 
+            display: block;
             height: 100%;
         }
-	}
-	
-}
-    #test2 {
-        //TODO recover what this does
-        margin-bottom: 1rem;
     }
+}
+
+#test2 {
+    //TODO recover what this does
+    margin-bottom: 1rem;
+}
 
 .contact {
-	list-style-type: none;
-	margin: 0;
-	text-align: left;
-
-	li {
-		margin-bottom: 2rem;
-
-		a {
-			color: #fff;
-
-			&:hover {
-				color: #92999f;
-			}
-		}
-	}
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    li {
+        margin-bottom: 2rem;
+        a {
+            color: #fff;
+            &:hover {
+                color: #92999f;
+            }
+        }
+    }
 }
 
 .widget_container {
@@ -109,50 +101,47 @@ img {
     border-radius: 6px;
 }
 
-.portfolio_type { 
+.portfolio_type {
     background-color: beige;
     margin-bottom: 2rem !important;
 }
 
 .artist-statement {
-    border-top: 1px dotted #EDE6CE; 
+    border-top: 1px dotted #EDE6CE;
     padding-top: 1rem;
 }
 
-#pagination_bar {  
+#pagination_bar {
     text-align: center;
-    width: auto; 
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-
-    .page-numbers, .prev, .next { 
-        display: inline-block; 
-        text-align: center; 
+    .page-numbers,
+    .prev,
+    .next {
+        display: inline-block;
+        text-align: center;
         padding-bottom: 3px;
         border-radius: 3px;
     }
-
     a {
         color: $white;
-        background-color: $oil;  
+        background-color: $oil;
     }
-    
     i {
-        display: inline-block; 
+        display: inline-block;
         width: 25px;
     }
-    
     .current {
-        border: 1px solid $oil; 
+        border: 1px solid $oil;
         border-radius: 3px;
     }
-    
-    .paginator {  
-        width: 25px; 
+    .paginator {
+        width: 25px;
     }
-    
-    .prev, .next { 
+    .prev,
+    .next {
         padding: 0 6px 3px 6px;
     }
 }
@@ -164,17 +153,18 @@ img {
 .project_summary {
     width: 100%;
 }
-.wp-caption, .project {
-    -webkit-box-shadow: 10px 10px 23px -4px rgba(0,0,0,0.5);
-    -moz-box-shadow: 10px 10px 23px -4px rgba(0,0,0,0.5);
-    box-shadow: 10px 10px 23px -4px rgba(0,0,0,0.5);
+
+.wp-caption,
+.project {
+    -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
     img {
         border: 1px solid silver;
     }
 }
 
 //Blog
-
 .blog_posts {
     margin-top: 2rem;
 }
@@ -184,8 +174,8 @@ img {
 }
 
 .blog_sidebar_thumbnail {
-    margin-top: 2rem; 
-    margin-bottom: 2rem; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 0;
     background-color: #EDE6CE;
     img {
@@ -208,6 +198,57 @@ img {
         }
     }
 }
+
 .post_excerpt:not(:first-child) {
     border-top: 1px dotted silver;
 }
+
+.skillset {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: flex-start;
+    div:nth-child(2) {
+        //border: 1px solid red;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+.skillset_panel {
+    .skillset_icon {
+        height: 200px;
+        background: #40e0d0;
+        margin: -.5rem -.5rem .75rem -.5rem;
+    }
+    width: 30%;
+    padding: .5rem;
+    background: $mid-tone;
+}
+
+
+/*
+<div class="row">
+<div class="large-4 columns">
+<div class="skillset_panel">
+<div>
+<h3>Web Content Developer</h3>
+<p>Not only does this website feature both professional and personal portfolios, it is itself an example of my work. An original WordPress Theme, the site demonstrates a fully responsive layout and the extensive use of tags and categories to organise content. I'm practically always using the site to practise and apply new skills: you can <a href="http://localhost:8888/portfolio/satdar-wordpress-theme/">find out where this theme is evolving</a> on its project page.</p>
+</div>
+</div>
+<div class="large-4 columns">
+<div class="skillset_panel">
+<h3>Graphic Designer</h3>
+<p>Unless otherwise credited, everything you see on the site was written, designed, illustrated, created, photographed, developed, or programmed by me. I demonstrate how I use the skills routinely at my disposal by tagging each project with the skills that were used to create it. If you’re looking to recruit someone with a particular skill set, pick the relevant keywords from the tag cloud to see examples of their application. This is a demonstration of the key skill I bring: editorial development. I apply principles of clarity, structure, and flexibility to presenting ideas and information. If there’s a project you think I can help you with, please <a href="http://localhost:8888/contact-me/">get in touch</a>.</p>
+</div>
+</div>
+<div class="large-4 columns">
+<div class="skillset_panel">
+<h3>Artist</h3>
+<p>You can also find out about me and my personal enthusiasms. I have and ongoing set of <a href="http://localhost:8888/project-type/drawing/">drawing</a>, <a href="http://localhost:8888/project-type/painting/">painting</a>, and <a href="http://localhost:8888/project-type/typo-graphics/">typo/graphic</a> projects. Periodically I make <a href="http://localhost:8888/portfolio/ceramics/">pottery</a> (mostly tableware). I'm a vegan and vegetarian cook, and recent convert to the craft of <a href="http://localhost:8888/portfolio/baking/">baking</a>!</p>
+</div>
+</div>
+</div>
+</div>
+*/

@@ -6444,18 +6444,6 @@ SatDar Theme custom Themes
 */
 @media only screen and (max-width: 40em) {
   .hero .intro {
-    border: 1px solid red; } }
-@media only screen and (max-width: 40em) and (orientation: landscape) {
-  .hero .intro {
-    border: 1px solid red; } }
-
-@media only screen and (min-width: 40.0625em) and (max-width: 64em) and (orientation: landscape) and (min-height: 761px) {
-  .hero .intro {
-    border: 1px solid blue; } }
-
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  .hero .intro {
-    height: 90vh;
     color: white;
     margin: auto; }
     .hero .intro img {
@@ -6465,16 +6453,47 @@ SatDar Theme custom Themes
       width: 80%;
       margin-top: 4rem; }
     .hero .intro .branding {
+      width: 100%;
       display: flex;
       position: absolute;
-      left: 30vw;
-      z-index: 1;
-      height: 8rem; }
+      left: 10%;
+      top: -2%;
+      z-index: 1; }
       .hero .intro .branding .site_name {
         margin-top: 1rem;
         border: 6px solid #291ae3;
-        padding-left: 6rem;
-        padding-right: .25rem;
+        padding-left: 20%;
+        padding-right: .35rem;
+        background-color: #00ced1;
+        text-align: right; }
+        .hero .intro .branding .site_name h1 a {
+          color: white; }
+          .hero .intro .branding .site_name h1 a:hover {
+            color: #f15a22; }
+        .hero .intro .branding .site_name p {
+          margin-top: -1rem; } }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .hero .intro {
+    color: white;
+    margin: auto; }
+    .hero .intro img {
+      margin-left: 0;
+      position: relative;
+      z-index: 10;
+      width: 80%;
+      margin-top: 4rem; }
+    .hero .intro .branding {
+      width: 45%;
+      display: flex;
+      position: absolute;
+      left: 45%;
+      top: 5%;
+      z-index: 1; }
+      .hero .intro .branding .site_name {
+        margin-top: 1rem;
+        border: 6px solid #291ae3;
+        padding-left: 20%;
+        padding-right: .35rem;
         background-color: #00ced1;
         text-align: right; }
         .hero .intro .branding .site_name h1 a {
@@ -6516,8 +6535,16 @@ SatDar Theme custom Themes
           margin-top: -1rem; } }
 
 .jason {
-  background: url("http://www.satyadarshin.com/wp-content/uploads/2016/04/arcadia-stage.jpg") no-repeat center center;
-  background-size: cover;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#40e0d0+0,48d1cc+60,afeeee+100 */
+  background: #40e0d0;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  /* IE6-9 */
   height: 100vh; }
 
 .theseus .intro {
@@ -6647,7 +6674,8 @@ table td:not(:last-child) {
   .logo i {
     margin-right: 0.5rem; }
 
-article, .one-column-sidebar {
+article,
+.one-column-sidebar {
   margin-top: 1em; }
 
 .screen-reader-text {
@@ -6716,7 +6744,9 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem; }
-  #pagination_bar .page-numbers, #pagination_bar .prev, #pagination_bar .next {
+  #pagination_bar .page-numbers,
+  #pagination_bar .prev,
+  #pagination_bar .next {
     display: inline-block;
     text-align: center;
     padding-bottom: 3px;
@@ -6732,7 +6762,8 @@ img {
     border-radius: 3px; }
   #pagination_bar .paginator {
     width: 25px; }
-  #pagination_bar .prev, #pagination_bar .next {
+  #pagination_bar .prev,
+  #pagination_bar .next {
     padding: 0 6px 3px 6px; }
 
 .project_thumb_detail_caption {
@@ -6741,11 +6772,13 @@ img {
 .project_summary {
   width: 100%; }
 
-.wp-caption, .project {
+.wp-caption,
+.project {
   -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
   box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5); }
-  .wp-caption img, .project img {
+  .wp-caption img,
+  .project img {
     border: 1px solid silver; }
 
 .blog_posts {
@@ -6775,3 +6808,47 @@ img {
 
 .post_excerpt:not(:first-child) {
   border-top: 1px dotted silver; }
+
+.skillset {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: flex-start; }
+  .skillset div:nth-child(2) {
+    margin-left: 3%;
+    margin-right: 3%; }
+
+.skillset_panel {
+  width: 30%;
+  padding: .5rem;
+  background: #ede6ce; }
+  .skillset_panel .skillset_icon {
+    height: 200px;
+    background: #40e0d0;
+    margin: -.5rem -.5rem .75rem -.5rem; }
+
+/*
+<div class="row">
+<div class="large-4 columns">
+<div class="skillset_panel">
+<div>
+<h3>Web Content Developer</h3>
+<p>Not only does this website feature both professional and personal portfolios, it is itself an example of my work. An original WordPress Theme, the site demonstrates a fully responsive layout and the extensive use of tags and categories to organise content. I'm practically always using the site to practise and apply new skills: you can <a href="http://localhost:8888/portfolio/satdar-wordpress-theme/">find out where this theme is evolving</a> on its project page.</p>
+</div>
+</div>
+<div class="large-4 columns">
+<div class="skillset_panel">
+<h3>Graphic Designer</h3>
+<p>Unless otherwise credited, everything you see on the site was written, designed, illustrated, created, photographed, developed, or programmed by me. I demonstrate how I use the skills routinely at my disposal by tagging each project with the skills that were used to create it. If you’re looking to recruit someone with a particular skill set, pick the relevant keywords from the tag cloud to see examples of their application. This is a demonstration of the key skill I bring: editorial development. I apply principles of clarity, structure, and flexibility to presenting ideas and information. If there’s a project you think I can help you with, please <a href="http://localhost:8888/contact-me/">get in touch</a>.</p>
+</div>
+</div>
+<div class="large-4 columns">
+<div class="skillset_panel">
+<h3>Artist</h3>
+<p>You can also find out about me and my personal enthusiasms. I have and ongoing set of <a href="http://localhost:8888/project-type/drawing/">drawing</a>, <a href="http://localhost:8888/project-type/painting/">painting</a>, and <a href="http://localhost:8888/project-type/typo-graphics/">typo/graphic</a> projects. Periodically I make <a href="http://localhost:8888/portfolio/ceramics/">pottery</a> (mostly tableware). I'm a vegan and vegetarian cook, and recent convert to the craft of <a href="http://localhost:8888/portfolio/baking/">baking</a>!</p>
+</div>
+</div>
+</div>
+</div>
+*/
