@@ -1,39 +1,41 @@
 .hero {
     @media only screen and (max-width: 40em) {
-        .intro {
-            img {
-                margin-left: 0;
-                position: relative;
-                z-index: 10;
-                width: 80%;
-                margin-top: 4rem;
-            }
-            color: white;
-            margin: auto;
-            .branding {
-                width: 100%;
-                display: flex;
-                position: absolute;
-                left: 10%;
-                top: -2%;
-                z-index: 1;
-                .site_name {
-                    margin-top: 1rem;
-                    border: 6px solid rgba(41, 26, 227, 1);
-                    padding-left: 20%;
-                    padding-right: .35rem;
-                    background-color: #00ced1;
-                    text-align: right;
-                    h1 {
-                        a {
-                            color: white;
-                            &:hover {
-                                color: #f15a22;
+        :not(.jason) { 
+            .intro {
+                img {
+                    margin-left: 0;
+                    position: relative;
+                    z-index: 10;
+                    width: 80%;
+                    margin-top: 4rem;
+                }
+                color: white;
+                margin: auto;
+                .branding {
+                    width: 100%;
+                    display: flex;
+                    position: absolute;
+                    left: 10%;
+                    top: -2%;
+                    z-index: 1;
+                    .site_name {
+                        margin-top: 1rem;
+                        border: 6px solid rgba(41, 26, 227, 1);
+                        padding-left: 20%;
+                        padding-right: .35rem;
+                        background-color: #00ced1;
+                        text-align: right;
+                        h1 {
+                            a {
+                                color: white;
+                                &:hover {
+                                    color: #f15a22;
+                                }
                             }
                         }
-                    }
-                    p {
-                        margin-top: -1rem;
+                        p {
+                            margin-top: -1rem;
+                        }
                     }
                 }
             }
@@ -41,40 +43,42 @@
     }
     //tablets Landscape and portrait
     @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-        .intro {
-            img {
-                margin-left: 0;
-                position: relative;
-                z-index: 10;
-                width: 80%;
-                margin-top: 4rem;
-            }
-            color: white;
-            margin: auto;
-            .branding {
-                width: 45%;
-                display: flex;
-                position: absolute;
-                left: 45%;
-                top: 5%;
-                z-index: 1;
-                .site_name {
-                    margin-top: 1rem;
-                    border: 6px solid rgba(41, 26, 227, 1);
-                    padding-left: 20%;
-                    padding-right: .35rem;
-                    background-color: #00ced1;
-                    text-align: right;
-                    h1 {
-                        a {
-                            color: white;
-                            &:hover {
-                                color: #f15a22;
+    :not(.jason) {
+            .intro {
+                img {
+                    margin-left: 0;
+                    position: relative;
+                    z-index: 10;
+                    width: 80%;
+                    margin-top: 4rem;
+                }
+                color: white;
+                margin: auto;
+                .branding {
+                    width: 45%;
+                    display: flex;
+                    position: absolute;
+                    left: 45%;
+                    top: 5%;
+                    z-index: 1;
+                    .site_name {
+                        margin-top: 1rem;
+                        border: 6px solid rgba(41, 26, 227, 1);
+                        padding-left: 20%;
+                        padding-right: .35rem;
+                        background-color: #00ced1;
+                        text-align: right;
+                        h1 {
+                            a {
+                                color: white;
+                                &:hover {
+                                    color: #f15a22;
+                                }
                             }
                         }
-                    }
-                    p {
-                        margin-top: -1rem;
+                        p {
+                            margin-top: -1rem;
+                        }
                     }
                 }
             }
@@ -82,14 +86,16 @@
     }
     //large screens
     @media only screen and (min-width: 64.063em) {
-        .intro {
-            height: 30vh;
-            img {
-                margin-left: -3%;
-                position: relative;
-                z-index: 10;
-                width: calc(60vh);
-                margin-top: 3%;
+        :not(.jason) {
+            .intro {
+                height: 30vh;
+                    img {
+                    margin-left: -3%;
+                    position: relative;
+                    z-index: 10;
+                    width: calc(60vh);
+                    margin-top: 3%;
+                }
             }
             color: white;
             margin: auto;
@@ -125,6 +131,27 @@
 }
 
 .jason {
+    @media screen and (orientation:portrait) { 
+        h1 {
+            margin-top: 40%;
+            width: auto;
+            img { 
+                display: block; 
+                //height: 80vh        
+            }
+        }
+    }
+    @media screen and (orientation:landscape) {
+        h1 {
+            margin-top: 3%;
+            margin-left: 8%;
+            width: auto;
+            img { 
+                display: block; 
+                height: 90vh        
+            }
+        }
+    }
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#40e0d0+0,48d1cc+60,afeeee+100 */
     background: #40e0d0;
     /* Old browsers */
@@ -144,6 +171,8 @@
     .intro {
         top: 10%;
     }
+      
+
 }
 
 //Portfolio pages
