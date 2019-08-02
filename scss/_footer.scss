@@ -41,10 +41,9 @@
 	}
 
 	.about {
-		color: $aluminum;
-		font-size: 0.875rem;
-		margin: 0 0 1rem 0;
-
+		img {
+			height: 250px;
+		}
 	}
 
 	.footer-links a {

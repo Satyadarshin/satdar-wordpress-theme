@@ -204,14 +204,10 @@ SatDar Theme custom Themes
         }
         
     .skillset {
-        // height: 26rem;
-        // margin-bottom: 1rem;
         .skillset_panel {
-            border: 1px solid red;
             background: $mid-tone;
             //Large screens
             @media only screen and ( min-width: 64.063em ) {
-                height: 40rem;
                 .skillset_icon {
                     img {
                         height: 280px;
@@ -226,49 +222,28 @@ SatDar Theme custom Themes
                 padding: .5rem;
                 margin: 0 1rem 1rem 1rem;
             }
-       
             //Small to medium screens
             @media only screen and  ( max-width: 64em ) {
-                //@media screen and (orientation:landscape) { }
-
-                .skillset_icon {
-                    border: 1px solid blue;
-                    img {
-                        border: 1px solid yellow;
-                //         height: 250px;
-                //         margin-top: -1rem;
-                //         margin-left: 1rem;
-                //         margin-right: auto;
-                    }
-                //     height: 15rem;
-                //     background: #40e0d0;
-                //     margin: -.5rem 0 0 -2rem;
+                @media screen and (orientation:landscape) { 
+                    height: 20rem;
                 }
-                // padding: .5rem;
-                // margin: 0 1rem 1rem 1rem;
-                
+                .skillset_icon {
+                        height: 20rem;
+                    img {
+                        height: 350px;
+                        display: block;
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
+                    @media screen and (orientation:landscape) { 
+                        margin: 0 0 0 -1rem;
+                    }
+                    @media screen and (orientation:portrait) { 
+                        margin: 0 -1rem 0 -1rem;
+                    }
+                    background: #40e0d0;
+                }
+                margin: 0 1rem 1rem 1rem;
             }
-            // @media screen and (orientation:portrait) { * {border: 1px solid red} }
-            //small
         }
     }
-
-    /*
-
-<div class="row skillset">
-    <div class="large-4 medium-12 columns">
-        <div class="row">
-            <div class="skillset_panel">
-                <div class="large-12 medium-6 columns">
-                    <div class="skillset_icon"><img src="https://www.satyadarshin.com/wp-content/uploads/2019/06/www1.png"></div>
-                </div>
-                <div class="large-12 medium-6 columns">
-                    <h3>Web Content Developer</h3>
-                    <p>Not only does this website feature both professional and personal portfolios, it is itself an example of my work. An original WordPress Theme, the site demonstrates a fully responsive layout and the extensive use of tags and categories to organise content. I'm practically always using the site to practise and apply new skills.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    */

@@ -33,12 +33,15 @@
 <footer class="lower_footer" >
 	<div class="row">
 		<div class="small-12 medium-12 large-5 columns" >
+        <p class="about"><img src="https://www.satyadarshin.com/wp-content/themes/SatDar/images/rocketship.svg" /></p>
             <?php
             //TODO widgetize this as footer left
-                echo '<p class="about"><i class="fi-book-bookmark"></i> Recommended reading:</p><p class="footer-links">';
+            
+            /*    
+            echo '<p class="about"><i class="fi-book-bookmark"></i> Recommended reading:</p><p class="footer-links">';
                 if (is_active_sidebar('sidebar17')) dynamic_sidebar('sidebar17'); 
                 echo '</p>';
-
+            */
             ?>
 		</div>
 
@@ -84,7 +87,7 @@
 	}
 
 ?>
-			<p class="copyright">© <?php echo get_bloginfo( 'name' ); ?> <? echo date('Y');?><br />Designed &amp; programmed by Satyadarshin.<br />I care about your <a href="<?php echo home_url(); ?>/privacy">privacy</a>.</p>
+			<p class="copyright">© <?php echo get_bloginfo( 'name' ); echo date('Y');?><br />Designed &amp; programmed by Satyadarshin.<br />I care about your <a href="<?php echo home_url(); ?>/privacy">privacy</a>.</p>
 
 		</div>
 	</div>
