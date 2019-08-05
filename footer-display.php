@@ -87,7 +87,7 @@
 	}
 
 ?>
-			<p class="copyright">© <?php echo get_bloginfo( 'name' ); echo date('Y');?><br />Designed &amp; programmed by Satyadarshin.<br />I care about your <a href="<?php echo home_url(); ?>/privacy">privacy</a>.</p>
+			<p class="copyright">© <?php echo get_bloginfo( 'name' ); echo " " . date('Y');?><br />Designed &amp; programmed by Satyadarshin.<br />I care about your <a href="<?php echo home_url(); ?>/privacy">privacy</a>.</p>
 
 		</div>
 	</div>
