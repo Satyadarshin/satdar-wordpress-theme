@@ -3882,6 +3882,39 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/images\/Bash.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 245091,
+		"inputAbbreviatedPath": "\/images\/Bash.png",
+		"outputAbbreviatedPath": "\/images\/Bash.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/Bish.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45916,
+		"inputAbbreviatedPath": "\/images\/Bish.png",
+		"outputAbbreviatedPath": "\/images\/Bish.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/Bosh.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 79007,
+		"inputAbbreviatedPath": "\/images\/Bosh.png",
+		"outputAbbreviatedPath": "\/images\/Bosh.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/buddhafieldMasthead_bw.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3977,6 +4010,17 @@
 		"initialSize": 866441,
 		"inputAbbreviatedPath": "\/images\/SatyaDarshinDotCom.png",
 		"outputAbbreviatedPath": "\/images\/SatyaDarshinDotCom.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/welcomeTo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 94167,
+		"inputAbbreviatedPath": "\/images\/welcomeTo.png",
+		"outputAbbreviatedPath": "\/images\/welcomeTo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4435,6 +4479,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/searchform.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/services.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/services.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

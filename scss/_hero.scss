@@ -1,6 +1,6 @@
 .hero {
     @media only screen and (max-width: 40em) {
-        :not(.jason) { 
+         :not(.jason) {
             .intro {
                 img {
                     margin-left: 0;
@@ -43,7 +43,7 @@
     }
     //tablets Landscape and portrait
     @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-    :not(.jason) {
+         :not(.jason) {
             .intro {
                 img {
                     margin-left: 0;
@@ -86,10 +86,10 @@
     }
     //large screens
     @media only screen and (min-width: 64.063em) {
-        :not(.jason) {
+         :not(.jason) {
             .intro {
                 height: 30vh;
-                    img {
+                img {
                     margin-left: -3%;
                     position: relative;
                     z-index: 10;
@@ -131,24 +131,38 @@
 }
 
 .jason {
-    @media screen and (orientation:portrait) { 
+    height: 100vh;
+    .the_welcome {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    @media screen and (orientation: portrait) {
         h1 {
-            margin-top: 40%;
+            position: relative;
+            z-index: 10;
+            margin-top: -6% !important;
             width: auto;
-            img { 
-                display: block; 
-                //height: 80vh        
+            .the_url {
+                display: block;
+                width: 100vw;
             }
         }
     }
     @media screen and (orientation:landscape) {
         h1 {
-            margin-top: 3%;
-            margin-left: 8%;
+            @media only screen and ( min-width: 64.063em) {
+                margin-top: -8% !important;
+            }
+            @media only screen and ( max-width: 64em) {
+                margin-top: 8% !important;
+            }
             width: auto;
-            img { 
-                display: block; 
-                height: 90vh        
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                height: 80vh;
+                display: block;
             }
         }
     }
@@ -163,16 +177,12 @@
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#40e0d0', endColorstr='#afeeee', GradientType=1);
     /* IE6-9 */
-    height: 100vh;
-    .intro {}
 }
 
 .theseus {
     .intro {
         top: 10%;
     }
-      
-
 }
 
 //Portfolio pages

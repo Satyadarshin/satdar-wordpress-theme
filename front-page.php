@@ -22,6 +22,7 @@ get_template_part('navigation');
 				the_ID(); ?>" <?php post_class();
 					 ?>
 			>
+			<section>
 			<?php
 				if ( have_posts() ) :
 					while ( have_posts() ) : the_post();
@@ -39,9 +40,13 @@ get_template_part('navigation');
 //TODO placed to pass the the theme checker test
 wp_link_pages();
 			?>
-			</article>
-		</div>
+			</section>
+		</article>
 	</div>
+</div>
+<section class="my_services">
+	<?php get_template_part('services'); ?>
+</section>
 <?php
 	get_sidebar('front-page');
 	get_footer('display');

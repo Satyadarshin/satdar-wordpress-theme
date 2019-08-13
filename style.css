@@ -6536,6 +6536,7 @@ SatDar Theme custom Themes
           margin-top: -1rem; } }
 
 .jason {
+  height: 100vh;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#40e0d0+0,48d1cc+60,afeeee+100 */
   background: #40e0d0;
   /* Old browsers */
@@ -6545,22 +6546,35 @@ SatDar Theme custom Themes
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  /* IE6-9 */
-  height: 100vh; }
+  /* IE6-9 */ }
+  .jason .the_welcome {
+    width: 100%;
+    margin-top: 1rem; }
   @media screen and (orientation: portrait) {
     .jason h1 {
-      margin-top: 40%;
+      position: relative;
+      z-index: 10;
+      margin-top: -6% !important;
       width: auto; }
-      .jason h1 img {
-        display: block; } }
+      .jason h1 .the_url {
+        display: block;
+        width: 100vw; } }
   @media screen and (orientation: landscape) {
     .jason h1 {
-      margin-top: 3%;
-      margin-left: 8%;
-      width: auto; }
+      width: auto; } }
+  @media only screen and (orientation: landscape) and (min-width: 64.063em) {
+    .jason h1 {
+      margin-top: -8% !important; } }
+  @media only screen and (orientation: landscape) and (max-width: 64em) {
+    .jason h1 {
+      margin-top: 8% !important; } }
+  @media screen and (orientation: landscape) {
       .jason h1 img {
         display: block;
-        height: 90vh; } }
+        margin-left: auto;
+        margin-right: auto;
+        height: 80vh;
+        display: block; } }
 
 .theseus .intro {
   top: 10%; }
@@ -6822,39 +6836,45 @@ img {
 .post_excerpt:not(:first-child) {
   border-top: 1px dotted silver; }
 
-.skillset .skillset_panel {
-  background: #ede6ce; }
-  @media only screen and (min-width: 64.063em) {
-    .skillset .skillset_panel {
-      padding: .5rem;
-      margin: 0 1rem 1rem 1rem; }
+.skillset {
+  padding-bottom: 2rem; }
+  .skillset .skillset_panel {
+    margin-right: .25rem;
+    background: #ede6ce; }
+    @media only screen and (min-width: 64.063em) {
       .skillset .skillset_panel .skillset_icon {
-        height: 15rem;
-        background: #40e0d0;
-        margin: -.5rem -1.4rem 0 -1.4rem; }
-        .skillset .skillset_panel .skillset_icon img {
-          height: 280px;
-          margin-top: -1rem;
-          margin-left: 1rem;
-          margin-right: auto; } }
-  @media only screen and (max-width: 64em) {
-    .skillset .skillset_panel {
-      margin: 0 1rem 1rem 1rem; } }
+        margin: 0 -.9rem;
+        height: 14rem;
+        background: #40e0d0; }
+        .skillset .skillset_panel .skillset_icon figure {
+          margin: 0; }
+          .skillset .skillset_panel .skillset_icon figure img {
+            display: block; } }
+    @media only screen and (max-width: 64em) {
+      .skillset .skillset_panel {
+        margin-left: .15rem;
+        margin-bottom: 1rem; } }
   @media only screen and (max-width: 64em) and (orientation: landscape) {
     .skillset .skillset_panel {
       height: 20rem; } }
-  @media only screen and (max-width: 64em) {
-      .skillset .skillset_panel .skillset_icon {
-        height: 20rem;
-        background: #40e0d0; }
-        .skillset .skillset_panel .skillset_icon img {
-          height: 350px;
-          display: block;
-          margin-right: auto;
-          margin-left: auto; } }
+    @media only screen and (max-width: 64em) {
+        .skillset .skillset_panel .skillset_icon {
+          height: 18rem;
+          background: #40e0d0; }
+          .skillset .skillset_panel .skillset_icon figure {
+            margin: 0rem; }
+            .skillset .skillset_panel .skillset_icon figure img {
+              display: block;
+              margin-right: auto;
+              margin-left: auto; } }
     @media only screen and (max-width: 64em) and (orientation: landscape) {
       .skillset .skillset_panel .skillset_icon {
         margin: 0 0 0 -1rem; } }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .skillset .skillset_panel .skillset_icon {
         margin: 0 -1rem 0 -1rem; } }
+
+.my_services {
+  width: 100%;
+  border-top: 1px dotted #e5e5e5;
+  background-color: #f9f9f9; }
