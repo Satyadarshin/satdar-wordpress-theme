@@ -132,11 +132,11 @@
 
 .jason {
     height: 100vh;
-    .the_welcome {
-        width: 100%;
-        margin-top: 1rem;
-    }
     @media screen and (orientation: portrait) {
+        .the_welcome {
+            width: 100%;
+            margin-top: 1rem;
+        }
         h1 {
             position: relative;
             z-index: 10;
@@ -149,14 +149,19 @@
         }
     }
     @media screen and (orientation:landscape) {
+        .the_welcome {
+            @media only screen and ( max-width: 64em) {
+                display: none;
+            }
+        }
         h1 {
             @media only screen and ( min-width: 64.063em) {
                 margin-top: -8% !important;
             }
             @media only screen and ( max-width: 64em) {
-                margin-top: 8% !important;
+                margin-top: 1.5rem !important;
             }
-            width: auto;
+            //width: auto;
             img {
                 display: block;
                 margin-left: auto;

@@ -32,6 +32,10 @@ SatDar Theme custom Themes
             margin-top: 1em;
         }
         
+        article {
+            margin-bottom: 2rem;
+        }
+        
         .screen-reader-text {
             // the label is aimed at screen-reader users but redundant otherwise
             display: none;
@@ -203,13 +207,42 @@ SatDar Theme custom Themes
             border-top: 1px dotted silver;
         }
         
+        .my_services {
+            #professional_services {
+                padding: .5rem 0;
+                margin: 0;
+            }
+            width: 100%;
+            border-top: 1px dotted rgba(229, 229, 229, 1);
+            background-color: rgb(250, 250, 245);
+        }
+        
+        .static_page_sidebar {
+            min-height: 25rem;
+            p {
+                border-top: 2px dotted #ede6ce;
+                border-bottom: 1px dotted #ede6ce;
+                padding: 1rem 0;
+                text-align: center;
+            }
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ede6ce+1,ffffff+100 */
+            background: #ede6ce;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #ede6ce 1%, #ffffff 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+        
         .skillset {
             padding-bottom: 2rem;
             .skillset_panel {
-                margin-right: .25rem;
                 background: $mid-tone;
                 //Large screens
                 @media only screen and ( min-width: 64.063em) {
+                    margin-left: .05rem;
                     .skillset_icon {
                         margin: 0 -.9rem;
                         height: 14rem;
@@ -218,11 +251,6 @@ SatDar Theme custom Themes
                             margin: 0;
                             img {
                                 display: block;
-                                //margin: auto;
-                                //height: 280px;
-                                // margin-top: -1rem;
-                                // margin-left: .5rem;
-                                // margin-right: auto;
                             }
                         }
                     }
@@ -231,23 +259,23 @@ SatDar Theme custom Themes
                 @media only screen and ( max-width: 64em) {
                     margin-left: .15rem;
                     @media screen and (orientation: landscape) {
-                        height: 20rem;
+                        // height: 20rem;
                     }
                     .skillset_icon {
-                        height: 18rem;
                         figure {
                             margin: 0rem;
                             img {
-                                //height: 350px;
                                 display: block;
                                 margin-right: auto;
                                 margin-left: auto;
                             }
                         }
                         @media screen and (orientation:landscape) {
+                            height: 20rem;
                             margin: 0 0 0 -1rem;
                         }
                         @media screen and (orientation:portrait) {
+                            height: 16rem;
                             margin: 0 -1rem 0 -1rem;
                         }
                         background: #40e0d0;
@@ -255,10 +283,4 @@ SatDar Theme custom Themes
                     margin-bottom: 1rem;
                 }
             }
-        }
-        
-        .my_services {
-            width: 100%;
-            border-top: 1px dotted rgba(229, 229, 229, 1);
-            background-color: rgba(249, 249, 249, 1);
         }
