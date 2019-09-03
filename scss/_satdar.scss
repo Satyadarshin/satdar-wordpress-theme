@@ -5,6 +5,11 @@ SatDar Theme custom Themes
         @import "hero";
         @import "footer";
         @import "footer-upper";
+        * {
+            /* So 100% means 100% */
+            box-sizing: border-box;
+        }
+        
         acronym {
             text-decoration: none;
         }

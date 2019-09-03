@@ -7,7 +7,7 @@
    <div class="large-4 medium-12 columns">
         <div class="row skillset_panel">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon"><figure><a href="https://www.satyadarshin.com/web-content-admin/"><img src="http://localhost:8888/Satyadarshin/stdn_wordpress/wp-content/themes/satdar-wordpress-theme/images/Bish.png"></a></figure></div>
+                <div class="skillset_icon"><figure><a href="https://www.satyadarshin.com/web-content-admin/"><img src="https://www.satyadarshin.com/wp-content/uploads/2019/08/Bish.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns">
                 <h3>Web content admin</h3>
@@ -18,7 +18,7 @@
     <div class="large-4 medium-12 columns">
         <div class="row skillset_panel ">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon"><figure><a href="https://www.satyadarshin.com/web-developer/"><img src="http://localhost:8888/Satyadarshin/stdn_wordpress/wp-content/themes/satdar-wordpress-theme/images/Bash.png"></a></figure></div>
+                <div class="skillset_icon"><figure><a href="https://www.satyadarshin.com/web-developer/"><img src="https://www.satyadarshin.com/wp-content/uploads/2019/08/Bash.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns">
                 <h3>Web development</h3>
@@ -31,7 +31,7 @@
     <div class="large-4 medium-12 columns">
         <div class="row skillset_panel">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon"><figure><a href="https://www.satyadarshin.com/graphic-designer/"><img src="http://localhost:8888/Satyadarshin/stdn_wordpress/wp-content/themes/satdar-wordpress-theme/images/Bosh.png"></a></figure></div>
+                <div class="skillset_icon"><figure><a href="https://www.satyadarshin.com/graphic-designer/"><img src="https://www.satyadarshin.com/wp-content/uploads/2019/08/Bosh.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns">
                 <h3>Graphic design</h3>

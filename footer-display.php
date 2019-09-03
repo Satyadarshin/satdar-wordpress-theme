@@ -1,48 +1,32 @@
 <footer class="upper_footer">
     <div class="row">
-		<div class="small-12 medium-6 large-6 columns">    
-            <div class="row">
-                <div class="small-12 medium-12 large-6 columns">
-                    <div class="row">
-                        <div class="small-4 medium-4 large-4 columns">
-                            <?php  if (is_active_sidebar('sidebar12')) dynamic_sidebar('sidebar12'); ?>
-                        </div> 
-                        <div class="small-4 medium-4 large-4 columns">
-                            <?php  if (is_active_sidebar('sidebar13')) dynamic_sidebar('sidebar13'); ?>
-                        </div> 
-                        <div class="small-4 medium-4 large-4 columns">
-                            <?php  if (is_active_sidebar('sidebar14')) dynamic_sidebar('sidebar14'); ?>
-                        </div> 
-                    </div>  
-                </div>
-                <div class="small-12 medium-12 large-6 columns">
-                    <?php  if (is_active_sidebar('sidebar15')) dynamic_sidebar('sidebar15'); ?>
-                </div>
-            </div>
+		<div class="small-12 medium-6 large-6 columns">  
+            <div class="skills_cloud">
+                <h3>Skills tag cloud</h3>
+                <?php wp_tag_cloud( array( 'taxonomy' => 'jetpack-portfolio-tag' ) ); ?>
+            </div>  
         </div>
-        
         <div class="small-12 medium-6 large-6 columns">
-            <div class="small-12 medium-12 large-12 columns">
-                <?php  if (is_active_sidebar('sidebar16')) dynamic_sidebar('sidebar16'); ?>
+            <div class="category_cloud">
+                <h3>Project categories</h3>
+                <p>
+                    <?php             
+                    $args = array('orderby' => 'term_order');
+                    $terms = wp_get_object_terms( $post->ID, 'jetpack-portfolio-type', $args );
+                    foreach ( $terms as $term ){
+                        echo '&bull; <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>  ';
+                    } 
+                    ?>
+                </p>
             </div>
         </div>
-       
     </div>
 </footer>
 
 <footer class="lower_footer" >
 	<div class="row">
 		<div class="small-12 medium-12 large-5 columns" >
-        <p class="about"><img src="https://www.satyadarshin.com/wp-content/themes/SatDar/images/rocketship.svg" /></p>
-            <?php
-            //TODO widgetize this as footer left
-            
-            /*    
-            echo '<p class="about"><i class="fi-book-bookmark"></i> Recommended reading:</p><p class="footer-links">';
-                if (is_active_sidebar('sidebar17')) dynamic_sidebar('sidebar17'); 
-                echo '</p>';
-            */
-            ?>
+            <p class="about"><img src="https://www.satyadarshin.com/wp-content/themes/SatDar/images/rocketship.svg" /></p>
 		</div>
 
 		<div class="small-12 medium-6 large-3 columns">
@@ -92,16 +76,3 @@
 		</div>
 	</div>
 </footer>
-
- <!--   <span id="bf">
-    <a id="mobiles" href="http://www.buddhafield.com" title="Boutique Festival, field Cafe, and camping retreat provider"> 
-        <img class="bottom" src="http://www.satyadarshin.com/wp-content/uploads/2016/05/buddhafieldMasthead_clr_alt.png" />
-        <img class="top" src="http://www.satyadarshin.com/wp-content/uploads/2016/05/buddhafieldMasthead_bw_alt.png" />
-    </a>
-
-<a id="desktop" href="http://www.buddhafield.com" title="Boutique Festival, field Cafe, and camping retreat provider"> 
-        <img class="bottom" src="http://www.satyadarshin.com/wp-content/uploads/2016/05/buddhafieldMasthead_clr.png" />
-        <img class="top" src="http://www.satyadarshin.com/wp-content/uploads/2016/05/buddhafieldMasthead_bw.png" />
-    </a>
-</span>
--->

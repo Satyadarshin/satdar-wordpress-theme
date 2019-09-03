@@ -3846,15 +3846,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/header-hero.bkp.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/header-hero.bkp.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/header-hero.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -3881,127 +3872,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/images\/Bash.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 245091,
-		"inputAbbreviatedPath": "\/images\/Bash.png",
-		"outputAbbreviatedPath": "\/images\/Bash.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Bish.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 45916,
-		"inputAbbreviatedPath": "\/images\/Bish.png",
-		"outputAbbreviatedPath": "\/images\/Bish.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/Bosh.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 79007,
-		"inputAbbreviatedPath": "\/images\/Bosh.png",
-		"outputAbbreviatedPath": "\/images\/Bosh.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/buddhafieldMasthead_bw.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 56646,
-		"inputAbbreviatedPath": "\/images\/buddhafieldMasthead_bw.png",
-		"outputAbbreviatedPath": "\/images\/buddhafieldMasthead_bw.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/buddhafieldMasthead_bw_alt.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 58301,
-		"inputAbbreviatedPath": "\/images\/buddhafieldMasthead_bw_alt.png",
-		"outputAbbreviatedPath": "\/images\/buddhafieldMasthead_bw_alt.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/buddhafieldMasthead_clr.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 58818,
-		"inputAbbreviatedPath": "\/images\/buddhafieldMasthead_clr.png",
-		"outputAbbreviatedPath": "\/images\/buddhafieldMasthead_clr.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/buddhafieldMasthead_clr_alt.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 60392,
-		"inputAbbreviatedPath": "\/images\/buddhafieldMasthead_clr_alt.png",
-		"outputAbbreviatedPath": "\/images\/buddhafieldMasthead_clr_alt.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/coexist.jpeg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 26221,
-		"inputAbbreviatedPath": "\/images\/coexist.jpeg",
-		"outputAbbreviatedPath": "\/images\/coexist.jpeg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/coexist.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 151449,
-		"inputAbbreviatedPath": "\/images\/coexist.png",
-		"outputAbbreviatedPath": "\/images\/coexist.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/coexist_alt.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 48676,
-		"inputAbbreviatedPath": "\/images\/coexist_alt.png",
-		"outputAbbreviatedPath": "\/images\/coexist_alt.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/forward_slash.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1081,
-		"inputAbbreviatedPath": "\/images\/forward_slash.png",
-		"outputAbbreviatedPath": "\/images\/forward_slash.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/images\/SatyaDarshinDotCom.png": {
 		"fileType": 32768,
@@ -4433,22 +4303,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/scss\/hero.bkp.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scss\/hero.bkp.scss",
-		"outputAbbreviatedPath": "\/hero.bkp.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/scss\/style.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -4670,15 +4524,6 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
-		},
-	"\/style copy.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/style copy.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/style.css": {
 		"fileType": 16,

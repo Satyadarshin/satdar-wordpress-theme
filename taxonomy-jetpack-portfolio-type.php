@@ -109,31 +109,6 @@ get_template_part('navigation');
                 </div>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="panel">
-                        <div class="row">
-                            <div class="large-6 small-12 columns">
-                                <h3>Skills Tag Cloud</h3>
-                                <?php wp_tag_cloud( array( 'taxonomy' => 'jetpack-portfolio-tag' ) ); ?>
-                            </div>
-                            <div class="large-6 small-12 columns">
-                                <h3>Project Categories</h3>
-                                <p>
-                                <?php             
-                                    $args = array('orderby' => 'term_order');
-                                    $terms = wp_get_object_terms( $post->ID, 'jetpack-portfolio-type', $args );
-                                    foreach ( $terms as $term ){
-                                        echo '&bull; <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>  ';
-                                    } 
-                                ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </article>
     </div>
 </div>
