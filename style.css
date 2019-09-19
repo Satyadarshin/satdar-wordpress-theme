@@ -6913,7 +6913,6 @@ img {
               display: block; } }
     @media only screen and (max-width: 64em) {
       .skillset .skillset_panel {
-        margin-left: .15rem;
         margin-bottom: 1rem; }
         .skillset .skillset_panel .skillset_icon {
           background: #40e0d0; }
@@ -6929,5 +6928,5 @@ img {
         margin: 0 0 0 -1rem; } }
     @media only screen and (max-width: 64em) and (orientation: portrait) {
       .skillset .skillset_panel .skillset_icon {
-        height: 16rem;
+        height: 18rem;
         margin: 0 -1rem 0 -1rem; } }

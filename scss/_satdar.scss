@@ -262,10 +262,6 @@ SatDar Theme custom Themes
                 }
                 //Small to medium screens
                 @media only screen and ( max-width: 64em) {
-                    margin-left: .15rem;
-                    @media screen and (orientation: landscape) {
-                        // height: 20rem;
-                    }
                     .skillset_icon {
                         figure {
                             margin: 0rem;
@@ -280,7 +276,7 @@ SatDar Theme custom Themes
                             margin: 0 0 0 -1rem;
                         }
                         @media screen and (orientation:portrait) {
-                            height: 16rem;
+                            height: 18rem;
                             margin: 0 -1rem 0 -1rem;
                         }
                         background: #40e0d0;

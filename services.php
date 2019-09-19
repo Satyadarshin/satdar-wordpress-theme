@@ -22,9 +22,7 @@
             </div>
             <div class="large-12 medium-6 columns">
                 <h3>Web development</h3>
-                <p>I’m skilled with HTML, CSS, JavaScript, and PHP; if we can’t create a Wordpress-based site to fit your needs, then we’ll design and build a site from scratch. <a href="https://www.satyadarshin.com/web-developer/">L
-                    
-                    et’s look at what my skills can do for you.</a></p>
+                <p>I’m skilled with HTML, CSS, JavaScript, and PHP; if we can’t create a Wordpress-based site to fit your needs, then we’ll design and build a site from scratch. <a href="https://www.satyadarshin.com/web-developer/">Let’s look at what my skills can do for you.</a></p>
             </div>
         </div>
     </div>
