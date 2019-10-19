@@ -6548,10 +6548,10 @@ SatDar Theme custom Themes
   /* IE6-9 */ }
 @media only screen and (orientation: portrait) and (max-width: 64em) {
   .jason {
-    height: 80vh; } }
+    height: 75vh; } }
 @media only screen and (orientation: portrait) and (min-width: 64.063em) {
   .jason {
-    height: 70vh; } }
+    height: 65vh; } }
   @media screen and (orientation: portrait) {
     .jason .the_welcome {
       width: 100%;
@@ -6573,9 +6573,6 @@ SatDar Theme custom Themes
   @media screen and (orientation: landscape) {
     .jason {
       height: 80vh; } }
-  @media only screen and (orientation: landscape) and (max-width: 64em) {
-    .jason .the_welcome {
-      display: none; } }
   @media only screen and (orientation: landscape) and (min-width: 64.063em) {
     .jason h1 {
       margin-top: -8% !important; }
@@ -6589,6 +6586,7 @@ SatDar Theme custom Themes
       .jason h1 .deep_viewport {
         display: none; }
       .jason h1 .narrow_viewport {
+        margin-top: -3.5rem;
         display: visible; } }
   @media screen and (orientation: landscape) {
       .jason h1 img {

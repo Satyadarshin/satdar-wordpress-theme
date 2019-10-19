@@ -133,10 +133,10 @@
 .jason {
     @media screen and (orientation: portrait) {
         @media only screen and ( max-width: 64em) {
-            height: 80vh;
+            height: 75vh;
         }
         @media only screen and ( min-width: 64.063em) {
-            height: 70vh;
+            height: 65vh;
         }
         .the_welcome {
             width: 100%;
@@ -165,7 +165,7 @@
         height: 80vh;
         .the_welcome {
             @media only screen and ( max-width: 64em) {
-                display: none;
+                // display: none;
             }
         }
         h1 {
@@ -184,6 +184,7 @@
                     display: none;
                 }
                 .narrow_viewport {
+                    margin-top: -3.5rem;
                     display: visible;
                 }
             }
