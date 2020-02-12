@@ -170,12 +170,21 @@
         }
         h1 {
             @media only screen and ( min-width: 64.063em) {
-                margin-top: -8% !important;
-                .deep_viewport {
-                    display: visible;
+                @media only screen and (min-height: 850.063px) {
+                    .deep_viewport {
+                        display: visible;
+                    }
+                    .narrow_viewport {
+                        display: none;
+                    }
                 }
-                .narrow_viewport {
-                    display: none;
+                @media only screen and (max-height: 850px) {
+                    .deep_viewport {
+                        display: none;
+                    }
+                    .narrow_viewport {
+                        display: visible;
+                    }
                 }
             }
             @media only screen and ( max-width: 64em) {
