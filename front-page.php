@@ -14,13 +14,10 @@ get_header('hero');
 get_template_part('navigation');
 ?>
 	<div class="row">
-
 		<div class="large-12 columns" role="content">
-
 			<article id="post-<?php
 				//TODO from id onwards placed to pass the the them checker test
-				the_ID(); ?>" <?php post_class();
-					 ?>
+				the_ID(); ?>" <?php post_class();?>
 			>
 			<section>
 			<?php
@@ -31,11 +28,8 @@ get_template_part('navigation');
 			<?php
                     the_content();
 					endwhile;
-
 				else:
-
 					echo '<p>No content found</p>';
-
 				endif;
 //TODO placed to pass the the theme checker test
 wp_link_pages();

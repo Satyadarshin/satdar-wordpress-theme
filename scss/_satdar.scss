@@ -1,287 +1,322 @@
-        /*
-SatDar Theme custom Themes
-*/
-        
-        @import "hero";
-        @import "footer";
-        @import "footer-upper";
-        * {
-            /* So 100% means 100% */
-            box-sizing: border-box;
+/* SatDar Theme custom Themes */  
+@import "hero";
+@import "footer";
+@import "footer-upper";
+* {
+    /* So 100% means 100% */
+    box-sizing: border-box;
+}
+
+acronym {
+    text-decoration: none;
+}
+
+table {
+    caption {
+        padding-bottom: .5rem;
+    }
+    td:not(:last-child) {
+        font-weight: bold;
+        text-align: right;
+    }
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    i {
+        margin-right: 0.5rem;
+    }
+}
+
+article,
+.one-column-sidebar {
+    margin-top: 1em;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+.screen-reader-text {
+    // the label is aimed at screen-reader users but redundant otherwise
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.taxonomy_image {
+    border: 1px solid gray;
+}
+
+.project {
+    margin-bottom: 1rem;
+    h5 {
+        color: $white;
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        width: 95%;
+        margin: 3px;
+        font-size: 90%;
+    }
+    img {
+        display: block;
+        margin: 0;
+    }
+    p {
+        z-index: 1;
+        background-color: #2693F2;
+        position: absolute;
+        top: 0;
+        height: 0;
+        width: 100%;
+        a {
+            //border: 1px solid red;
+            display: block;
+            height: 100%;
         }
-        
-        acronym {
-            text-decoration: none;
-        }
-        
-        table {
-            caption {
-                padding-bottom: .5rem;
-            }
-            td:not(:last-child) {
-                font-weight: bold;
-                text-align: right;
-            }
-        }
-        
-        .logo {
+    }
+}
+
+#test2 {
+    //TODO recover what this does
+    margin-bottom: 1rem;
+}
+
+.contact {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    li {
+        margin-bottom: 2rem;
+        a {
             color: #fff;
-            font-size: 1.5rem;
-            i {
-                margin-right: 0.5rem;
+            &:hover {
+                color: #92999f;
             }
         }
-        
-        article,
-        .one-column-sidebar {
-            margin-top: 1em;
-        }
-        
-        article {
-            margin-bottom: 2rem;
-        }
-        
-        .screen-reader-text {
-            // the label is aimed at screen-reader users but redundant otherwise
-            display: none;
-        }
-        
+    }
+}
+
+.widget_container {
+    border: 1px solid $iron;
+    background-color: $white;
+    border-radius: 6px;
+}
+
+.portfolio_type {
+    background-color: beige;
+    margin-bottom: 2rem !important;
+}
+
+.artist-statement {
+    border-top: 1px dotted #EDE6CE;
+    padding-top: 1rem;
+}
+
+#pagination_bar {
+    text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    .page-numbers,
+    .prev,
+    .next {
+        display: inline-block;
+        text-align: center;
+        padding-bottom: 3px;
+        border-radius: 3px;
+    }
+    a {
+        color: $white;
+        background-color: $oil;
+    }
+    i {
+        display: inline-block;
+        width: 25px;
+    }
+    .current {
+        border: 1px solid $oil;
+        border-radius: 3px;
+    }
+    .paginator {
+        width: 25px;
+    }
+    .prev,
+    .next {
+        padding: 0 6px 3px 6px;
+    }
+}
+
+.project_thumb_detail_caption {
+    margin: 1.5rem 1rem 1rem 1rem; 
+}
+
+.project_summary {
+    width: 100%;
+}
+
+@media only screen and (min-width: 64.063em) {
+    .wp-caption,
+    .project, 
+    .wp-block-image {
+        -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.wp-caption,
+.project, 
+.wp-block-image {
+    border: 1px solid silver;
+}
+
+figcaption {
+        text-align: center;
+        padding: .5rem 1rem;
+    }
+
+//Blog
+.blog_posts {
+    margin-top: 2rem;
+}
+
+.blog_sidebar {
+    margin-top: 3rem;
+}
+
+.blog_sidebar_thumbnail {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    background-color: #EDE6CE;
+    img {
+        margin: 0;
+    }
+    .tags_and_categories {
+        margin: 1rem;
+    }
+}
+
+.post_excerpt {
+    @media only screen and (min-width: 64.063em) {
+        margin-bottom: 2rem;
         img {
-            max-width: 100%;
+            width: 400px;
+            margin-left: -1rem;
         }
-        
-        .taxonomy_image {
-            border: 1px solid gray;
+        h3 {
+            margin-top: 1rem;
         }
-        
-        .project {
-            margin-bottom: 1rem;
-            h5 {
-                color: $white;
-                z-index: 2;
-                position: absolute;
-                top: 0px;
-                width: 95%;
-                margin: 3px;
-                font-size: 90%;
-            }
-            img {
-                display: block;
-                margin: 0;
-            }
-            p {
-                z-index: 1;
-                background-color: #2693F2;
-                position: absolute;
-                top: 0;
-                height: 0;
-                width: 100%;
-                a {
-                    //border: 1px solid red;
-                    display: block;
-                    height: 100%;
-                }
-            }
-        }
-        
-        #test2 {
-            //TODO recover what this does
-            margin-bottom: 1rem;
-        }
-        
-        .contact {
-            list-style-type: none;
-            margin: 0;
-            text-align: left;
-            li {
-                margin-bottom: 2rem;
-                a {
-                    color: #fff;
-                    &:hover {
-                        color: #92999f;
-                    }
-                }
-            }
-        }
-        
-        .widget_container {
-            border: 1px solid $iron;
-            background-color: $white;
-            border-radius: 6px;
-        }
-        
-        .portfolio_type {
-            background-color: beige;
-            margin-bottom: 2rem !important;
-        }
-        
-        .artist-statement {
-            border-top: 1px dotted #EDE6CE;
-            padding-top: 1rem;
-        }
-        
-        #pagination_bar {
-            text-align: center;
-            width: auto;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2rem;
-            .page-numbers,
-            .prev,
-            .next {
-                display: inline-block;
-                text-align: center;
-                padding-bottom: 3px;
-                border-radius: 3px;
-            }
-            a {
-                color: $white;
-                background-color: $oil;
-            }
-            i {
-                display: inline-block;
-                width: 25px;
-            }
-            .current {
-                border: 1px solid $oil;
-                border-radius: 3px;
-            }
-            .paginator {
-                width: 25px;
-            }
-            .prev,
-            .next {
-                padding: 0 6px 3px 6px;
-            }
-        }
-        
-        .project_thumb_detail_caption {
-            margin-top: 1.5rem;
-        }
-        
-        .project_summary {
-            width: 100%;
-        }
-        
-        .wp-caption,
-        .project {
-            -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-            -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-            box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-            img {
-                border: 1px solid silver;
-            }
-        }
-        
-        //Blog
-        .blog_posts {
-            margin-top: 2rem;
-        }
-        
-        .blog_sidebar {
-            margin-top: 3rem;
-        }
-        
-        .blog_sidebar_thumbnail {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            padding: 0;
-            background-color: #EDE6CE;
-            img {
-                margin: 0;
-            }
-            .tags_and_categories {
-                margin: 1rem;
-            }
-        }
-        
-        .post_excerpt {
-            @media only screen and (min-width: 64.063em) {
-                margin-bottom: 2rem;
-                img {
-                    width: 400px;
-                    margin-left: -1rem;
-                }
-                h3 {
-                    margin-top: 1rem;
-                }
-            }
-        }
-        
-        .post_excerpt:not(:first-child) {
-            border-top: 1px dotted silver;
-        }
-        
-        .my_services {
-            #professional_services {
-                padding: .5rem 0;
-                margin: 0;
-            }
-            width: 100%;
-            border-top: 1px dotted rgba(229, 229, 229, 1);
-            background-color: rgb(250, 250, 245);
-        }
-        
-        .static_page_sidebar {
-            min-height: 25rem;
-            p {
-                border-top: 2px dotted #ede6ce;
-                border-bottom: 1px dotted #ede6ce;
-                padding: 1rem 0;
-                text-align: center;
-            }
-            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ede6ce+1,ffffff+100 */
-            background: #ede6ce;
-            /* Old browsers */
-            background: -moz-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
-            /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
-            /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, #ede6ce 1%, #ffffff 100%);
-            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        }
-        
-        .skillset {
-            padding-bottom: 2rem;
-            .skillset_panel {
+    }
+}
+
+.post_excerpt:not(:first-child) {
+    border-top: 1px dotted silver;
+}
+
+.my_services {
+    #professional_services {
+        padding: .5rem 0;
+        margin: 0;
+        text-align: center;
+    }
+    width: 100%;
+    border-top: 1px dotted rgba(229, 229, 229, 1);
+    background-color: rgb(250, 250, 245);
+}
+
+.static_page_sidebar {
+    min-height: 25rem;
+    p {
+        border-top: 2px dotted #ede6ce;
+        border-bottom: 1px dotted #ede6ce;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ede6ce+1,ffffff+100 */
+    background: #ede6ce;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ede6ce 1%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.skillset { 
+    padding-bottom: 2rem;
+    .skillset_panel { 
+        //Large screens
                 background: $mid-tone;
-                //Large screens
-                @media only screen and ( min-width: 64.063em) {
-                    margin-left: .05rem;
-                    .skillset_icon {
-                        margin: 0 -.9rem;
-                        height: 14rem;
-                        background: #40e0d0;
-                        figure {
-                            margin: 0;
-                            img {
-                                display: block;
-                            }
-                        }
+            // .skillset_description {
+            // }
+        @media only screen and ( min-width: 64.063em) {
+            margin-left: .05rem;
+            .skillset_icon {
+                background: url('./images/RocketshipHalftone.png') no-repeat;
+                margin: 0 -.9rem;
+                height: 10rem;
+                padding: 0 .5rem;
+                display: grid;
+                place-items: center;
+                figure {
+                    margin: 0;
+                    img {
+                        display: block;
                     }
-                }
-                //Small to medium screens
-                @media only screen and ( max-width: 64em) {
-                    .skillset_icon {
-                        figure {
-                            margin: 0rem;
-                            img {
-                                display: block;
-                                margin-right: auto;
-                                margin-left: auto;
-                            }
-                        }
-                        @media screen and (orientation:landscape) {
-                            height: 20rem;
-                            margin: 0 0 0 -1rem;
-                        }
-                        @media screen and (orientation:portrait) {
-                            height: 18rem;
-                            margin: 0 -1rem 0 -1rem;
-                        }
-                        background: #40e0d0;
-                    }
-                    margin-bottom: 1rem;
                 }
             }
+            .bish {
+                background-position: 0% 50%;
+            }
+            .bash {
+                background-position: 50% 50%;
+            }
+            .bosh {
+                background-position: 100% 50%;
+            }
         }
+        //Small to medium screens
+        @media only screen and ( max-width: 64em) {
+            .skillset_icon {
+                 background: url('./images/RocketshipHalftone.png') no-repeat;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                figure { 
+                    margin: 0rem;
+                    img {
+                        display: block;
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
+                }
+                @media screen and (orientation:landscape) {
+                    height: 14rem;
+                    margin: 0 0 0 -1rem;
+                }
+                @media screen and (orientation:portrait) {
+                    height: 14rem;
+                    margin: 0 -1rem 0 -1rem;
+                }
+            }
+            .bish {
+                background-position: 51% 19%;
+            }
+            .bash {
+                background-position: 50% 50%;
+            }
+            .bosh {
+                background-position: 53% 81%;
+            }
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -1,212 +1,4 @@
 .hero {
-    @media only screen and (max-width: 40em) {
-         :not(.jason) {
-            .intro {
-                img {
-                    margin-left: 0;
-                    position: relative;
-                    z-index: 10;
-                    width: 80%;
-                    margin-top: 4rem;
-                }
-                color: white;
-                margin: auto;
-                .branding {
-                    width: 100%;
-                    display: flex;
-                    position: absolute;
-                    left: 10%;
-                    top: -2%;
-                    z-index: 1;
-                    .site_name {
-                        margin-top: 1rem;
-                        border: 6px solid rgba(41, 26, 227, 1);
-                        padding-left: 20%;
-                        padding-right: .35rem;
-                        background-color: #00ced1;
-                        text-align: right;
-                        h1 {
-                            a {
-                                color: white;
-                                &:hover {
-                                    color: #f15a22;
-                                }
-                            }
-                        }
-                        p {
-                            margin-top: -1rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //tablets Landscape and portrait
-    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-         :not(.jason) {
-            .intro {
-                img {
-                    margin-left: 0;
-                    position: relative;
-                    z-index: 10;
-                    width: 80%;
-                    margin-top: 4rem;
-                }
-                color: white;
-                margin: auto;
-                .branding {
-                    width: 45%;
-                    display: flex;
-                    position: absolute;
-                    left: 45%;
-                    top: 5%;
-                    z-index: 1;
-                    .site_name {
-                        margin-top: 1rem;
-                        border: 6px solid rgba(41, 26, 227, 1);
-                        padding-left: 20%;
-                        padding-right: .35rem;
-                        background-color: #00ced1;
-                        text-align: right;
-                        h1 {
-                            a {
-                                color: white;
-                                &:hover {
-                                    color: #f15a22;
-                                }
-                            }
-                        }
-                        p {
-                            margin-top: -1rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //large screens
-    @media only screen and (min-width: 64.063em) {
-         :not(.jason) {
-            .intro {
-                height: 30vh;
-                img {
-                    margin-left: -3%;
-                    position: relative;
-                    z-index: 10;
-                    width: calc(60vh);
-                    margin-top: 3%;
-                }
-            }
-            color: white;
-            margin: auto;
-            .branding {
-                position: absolute;
-                transform: translateY(-27vh);
-                left: 50%;
-                z-index: 1;
-                height: 10%;
-                width: 45%;
-                .site_name {
-                    margin-top: 2%;
-                    border: 6px solid rgba(41, 26, 227, 1);
-                    padding-left: 6rem;
-                    padding-right: .25rem;
-                    background-color: #00ced1;
-                    text-align: right;
-                    h1 {
-                        a {
-                            color: white;
-                            &:hover {
-                                color: #f15a22;
-                            }
-                        }
-                    }
-                    p {
-                        margin-top: -1rem;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.jason {
-    @media screen and (orientation: portrait) {
-        @media only screen and ( max-width: 64em) {
-            height: 75vh;
-        }
-        @media only screen and ( min-width: 64.063em) {
-            height: 65vh;
-        }
-        .the_welcome {
-            width: 100%;
-            margin-top: 1rem;
-        }
-        h1 {
-            position: relative;
-            z-index: 10;
-            margin-top: -6% !important;
-            img {
-                margin-left: auto;
-                margin-right: auto;
-                max-height: 55vh;
-                object-fit: scale-down;
-                display: block;
-            }
-            .deep_viewport {
-                display: visible;
-            }
-            .narrow_viewport {
-                display: none;
-            }
-        }
-    }
-    @media screen and (orientation:landscape) {
-        height: 80vh;
-        .the_welcome {
-            @media only screen and ( max-width: 64em) {
-                // display: none;
-            }
-        }
-        h1 {
-            @media only screen and ( min-width: 64.063em) {
-                @media only screen and (min-height: 850.063px) {
-                    .deep_viewport {
-                        display: visible;
-                    }
-                    .narrow_viewport {
-                        display: none;
-                    }
-                }
-                @media only screen and (max-height: 850px) {
-                    .deep_viewport {
-                        display: none;
-                    }
-                    .narrow_viewport {
-                        display: visible;
-                    }
-                }
-            }
-            @media only screen and ( max-width: 64em) {
-                margin-top: 1.5rem !important;
-                .deep_viewport {
-                    display: none;
-                }
-                .narrow_viewport {
-                    margin-top: -3.5rem;
-                    display: visible;
-                }
-            }
-            img {
-                object-fit: scale-down;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                max-height: 65vh;
-                display: block;
-            }
-        }
-    }
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#40e0d0+0,48d1cc+60,afeeee+100 */
     background: #40e0d0;
     /* Old browsers */
@@ -218,6 +10,60 @@
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#40e0d0', endColorstr='#afeeee', GradientType=1);
     /* IE6-9 */
+}
+
+.jason {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (orientation: portrait) {
+        @media only screen and ( max-width: 64em ) {
+            height: 40vh;
+        }
+        h1 { 
+            margin: 1rem 0;
+            img { 
+                margin-left: auto; 
+                margin-right: auto;
+                height: calc( 40vh - 2rem );                
+                display: block;
+            }
+            .deep_viewport {
+                display: visible;
+            }
+            .narrow_viewport {
+                display: none;
+            }
+        }
+    }
+    @media screen and (orientation:landscape) {
+        h1 { 
+            @media only screen and ( min-height: 800.063px ) {
+                .deep_viewport {
+                    display: visible;
+                }
+                .narrow_viewport {
+                    display: none;
+                }
+            }
+            @media only screen and ( max-height: 850px ) {
+                .deep_viewport {
+                    display: none;
+                }
+                .narrow_viewport {
+                    display: visible;
+                }
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 45vh;
+                display: block;
+            }
+        }
+    } 
 }
 
 .theseus {
