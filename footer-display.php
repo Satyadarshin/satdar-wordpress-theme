@@ -71,18 +71,11 @@
 		<?php //TODO have these lines optional / editable in Theme Options page ?>
 			<p class="about">This website was built with <a href="https://wordpress.org/">WordPress</a>.</p>
 			<p class="about"><a href="<?php echo home_url(); ?>/portfolio/satdar-wordpress-theme">SatDar</a> is an original <a href="https://codex.wordpress.org/Theme_Development">Theme</a> based on the <a href="http://foundation.zurb.com/">Foundation</a> front-end framework.</p> 
-            <?php
-            //TODO widgetize this as footer left	
-                echo'<p class="inline-list social">';
-                $args = array(
-                    'category_name' => 'Social Networking',
-                    'order' => 'DESC',
-                );
-                $links = get_bookmarks( $args );
-                foreach ($links as $link) {
-                    echo '<a href="' . $link->link_url . '"><i class="' . $link->link_notes . '"></i></a> ';
-                }
-            ?>
+            <p class="contact-social-network">
+                <span><a href="https://github.com/Satyadarshin"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/GitHub-Mark-64px_aluminum.png" title="Visit GitHub for portfolio code projects" alt="GitHub icon"></span>
+                <span><a href="https://www.linkedin.com/in/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/glyph-logo_May2016_aluminum.png" title="Personal, mainly street art documentary project" alt="Instagram icon"></a></span>
+                <span><a href="https://www.instagram.com/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/LI-In-Bug_aluminum.png" title="" alt="LinkedIn icon"></span>
+            </p>
 			<p class="copyright">© <?php echo get_bloginfo( 'name' ); echo " " . date('Y');?><br />Designed &amp; programmed by Satyadarshin.<br />I care about your <a href="<?php echo home_url(); ?>/privacy">privacy</a>.</p>
 		</div>
 	</div>

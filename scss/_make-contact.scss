@@ -1,0 +1,25 @@
+/*
+Styles for the cutsom template /page-template/makeContact.php
+*/
+
+.contact-social-network {
+    margin-top: 2rem;
+    img {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}
+.contact {
+    list-style-type: none;
+    margin: 0;
+    text-align: left;
+    li {
+        margin-bottom: 2rem;
+        a {
+            color: #fff;
+            &:hover {
+                color: #92999f;
+            }
+        }
+    }
+}

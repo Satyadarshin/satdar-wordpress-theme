@@ -31,8 +31,8 @@ get_template_part('navigation');
 				else:
 					echo '<p>No content found</p>';
 				endif;
-//TODO placed to pass the the theme checker test
-wp_link_pages();
+				//TODO placed to pass the the theme checker test
+				wp_link_pages();
 			?>
 			</section>
 		</article>
