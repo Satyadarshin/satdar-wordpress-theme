@@ -8,7 +8,9 @@
     /* So 100% means 100% */
     box-sizing: border-box;
 }
-
+h2,h3,h4,h5 {
+    line-height: 1.5; 
+}
 acronym {
     text-decoration: none;
 }
@@ -202,7 +204,14 @@ figcaption {
     border-top: 1px dotted silver;
 }
 
-
+ @media only screen and (max-width: 40.063em) {
+    .contact-social-network {
+        span {
+            display: block;
+            margin-top: .5rem
+        }
+    }
+}
 
 .static_page_sidebar {
     min-height: 25rem;

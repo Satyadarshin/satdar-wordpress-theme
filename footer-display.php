@@ -41,10 +41,10 @@
 </footer>
 <footer class="lower_footer" >
 	<div class="row">
-		<div class="small-12 medium-12 large-5 columns" >
-            <p class="about"><img src="https://www.satyadarshin.com/wp-content/themes/SatDar/images/rocketship.svg" /></p>
+		<div class="small-12 medium-3 large-5 columns" >
+            <img class="rocketship" src="https://www.satyadarshin.com/wp-content/themes/SatDar/images/rocketship.svg" />
 		</div>
-		<div class="small-12 medium-6 large-3 columns">
+		<div class="small-12 medium-3 large-3 columns">
             <?php
             if (has_nav_menu('secondary')) {          
                 wp_nav_menu(
@@ -73,8 +73,8 @@
 			<p class="about"><a href="<?php echo home_url(); ?>/portfolio/satdar-wordpress-theme">SatDar</a> is an original <a href="https://codex.wordpress.org/Theme_Development">Theme</a> based on the <a href="http://foundation.zurb.com/">Foundation</a> front-end framework.</p> 
             <p class="contact-social-network">
                 <span><a href="https://github.com/Satyadarshin"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/GitHub-Mark-64px_aluminum.png" title="Visit GitHub for portfolio code projects" alt="GitHub icon"></span>
-                <span><a href="https://www.linkedin.com/in/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/glyph-logo_May2016_aluminum.png" title="Personal, mainly street art documentary project" alt="Instagram icon"></a></span>
-                <span><a href="https://www.instagram.com/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/LI-In-Bug_aluminum.png" title="" alt="LinkedIn icon"></span>
+                <span><a href="https://www.instagram.com/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/glyph-logo_May2016_aluminum.png" title="Personal, mainly street art documentary project" alt="Instagram icon"></a></span>
+                <span><a href="https://www.linkedin.com/in/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/LI-In-Bug_aluminum.png" title="" alt="LinkedIn icon"></span>
             </p>
 			<p class="copyright">© <?php echo get_bloginfo( 'name' ); echo " " . date('Y');?><br />Designed &amp; programmed by Satyadarshin.<br />I care about your <a href="<?php echo home_url(); ?>/privacy">privacy</a>.</p>
 		</div>

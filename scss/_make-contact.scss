@@ -1,7 +1,26 @@
 /*
 Styles for the cutsom template /page-template/makeContact.php
 */
-
+.make-contact {
+    hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid $oil;
+    margin: 1em 0; padding: 0; }
+}
+#s-dog_emblem { 
+    margin: -1.25rem;
+    img {
+        display: block;//@media only screen and (min-width: 64.063em) 
+        @media only screen and (min-width: 60.063em)  {
+            margin-bottom: -4rem;
+        }
+        @media only screen and (min-width: 40.063em)and (max-width: 60em) {
+            margin-top: -4rem;
+        }
+        @media only screen and (max-width: 40em) {
+            display: none;
+        }
+    } 
+}
 .contact-social-network {
     margin-top: 2rem;
     img {

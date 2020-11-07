@@ -6509,6 +6509,28 @@ services.php / template part
 /*
 Styles for the cutsom template /page-template/makeContact.php
 */
+.make-contact hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #333333;
+  margin: 1em 0;
+  padding: 0; }
+
+#s-dog_emblem {
+  margin: -1.25rem; }
+  #s-dog_emblem img {
+    display: block; }
+    @media only screen and (min-width: 60.063em) {
+      #s-dog_emblem img {
+        margin-bottom: -4rem; } }
+    @media only screen and (min-width: 40.063em) and (max-width: 60em) {
+      #s-dog_emblem img {
+        margin-top: -4rem; } }
+    @media only screen and (max-width: 40em) {
+      #s-dog_emblem img {
+        display: none; } }
+
 .contact-social-network {
   margin-top: 2rem; }
   .contact-social-network img {
@@ -6620,8 +6642,9 @@ Styles for the cutsom template /page-template/makeContact.php
   .lower_footer .copyright {
     font-size: 0.875rem;
     margin: 1.75rem 0 0 0; }
-  .lower_footer .about img {
-    height: 250px; }
+  .lower_footer .rocketship {
+    margin-top: 0;
+    max-height: 250px; }
   .lower_footer .footer-links a {
     list-style: none;
     font-weight: normal;
@@ -6657,8 +6680,10 @@ Styles for the cutsom template /page-template/makeContact.php
   background-color: #000000; }
   .upper_footer h3 {
     color: #FFFFFF; }
-  .upper_footer .skills_cloud {
-    border-right: 1px dotted #999999; }
+  @media only screen and (min-width: 40.063em) {
+    .upper_footer .skills_cloud {
+      padding-right: 2rem;
+      border-right: 1px dotted #999999; } }
   .upper_footer .skills_cloud {
     margin-bottom: 2rem; }
   .upper_footer .footer_tags_categories {
@@ -6675,6 +6700,9 @@ Styles for the cutsom template /page-template/makeContact.php
 * {
   /* So 100% means 100% */
   box-sizing: border-box; }
+
+h2, h3, h4, h5 {
+  line-height: 1.5; }
 
 acronym {
   text-decoration: none; }
@@ -6822,6 +6850,10 @@ figcaption {
 .post_excerpt:not(:first-child) {
   border-top: 1px dotted silver; }
 
+@media only screen and (max-width: 40.063em) {
+  .contact-social-network span {
+    display: block;
+    margin-top: 0.5rem; } }
 .static_page_sidebar {
   min-height: 25rem;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ede6ce+1,ffffff+100 */

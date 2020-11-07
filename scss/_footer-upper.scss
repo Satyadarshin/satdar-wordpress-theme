@@ -5,8 +5,11 @@
     h3 {
         color: $white;
     }
-    .skills_cloud {
-        border-right: 1px dotted $aluminum;
+     @media only screen and (min-width: 40.063em) {
+        .skills_cloud {
+            padding-right: 2rem;
+            border-right: 1px dotted $aluminum;
+        }
     }
     .skills_cloud {
         margin-bottom: 2rem;
