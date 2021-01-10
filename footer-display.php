@@ -42,7 +42,7 @@
 <footer class="lower_footer" >
 	<div class="row">
 		<div class="small-12 medium-3 large-5 columns" >
-            <img class="rocketship" src="https://www.satyadarshin.com/wp-content/themes/SatDar/images/rocketship.svg" />
+            <img class="rocketship" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rocketship.svg" />
 		</div>
 		<div class="small-12 medium-3 large-3 columns">
             <?php
