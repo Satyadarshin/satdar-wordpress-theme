@@ -53,6 +53,8 @@ get_template_part('navigation');
 							echo '<img src="http://placehold.it/500x500&amp;text=Article" />';
 						}
 					?>
+					<h3>Style guides</h3>
+					<p>If you do a lot of writing or editing, I recommend keeping a copy of either the <a href="https://www.amazon.co.uk/Oxford-Style-Manual-University-Press/dp/0198767250/">Oxford Style Manual</a>, or the <a href="https://www.amazon.co.uk/Chicago-Manual-Style-Univ/dp/022628705X/">Chicago Manual of Style</a> to hand.</p>
 				</div>
 			</div>			
 		</article>

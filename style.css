@@ -6534,6 +6534,7 @@ Styles for the cutsom template /page-template/makeContact.php
 .contact-social-network {
   margin-top: 2rem; }
   .contact-social-network img {
+    margin-bottom: 1rem;
     display: inline-block;
     margin-right: 1rem; }
 
@@ -6737,14 +6738,14 @@ img {
 
 .project {
   margin-bottom: 1rem; }
-  .project h5 {
+  .project span {
     color: #FFFFFF;
     z-index: 2;
     position: absolute;
     top: 0px;
     width: 95%;
     margin: 3px;
-    font-size: 90%; }
+    font-size: 120%; }
   .project img {
     display: block;
     margin: 0; }
@@ -6816,6 +6817,11 @@ img {
 .wp-caption,
 .project,
 .wp-block-image {
+  border: 1px solid silver;
+  background-color: whitesmoke; }
+
+.wp-block-image .size-medium, .wp-block-image .size-thumbnail {
+  border-radius: 3px;
   border: 1px solid silver; }
 
 figcaption {

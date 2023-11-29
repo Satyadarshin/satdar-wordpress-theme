@@ -57,6 +57,7 @@ get_template_part('navigation');
                             //Establish If we need to build a new row
                             echo ($row == 0) ? '<div class="row">' : '';
                             echo '<div class="large-3 medium-6 small-12 columns">';
+                         
                             echo '<div class="project">';
                             //Check the post has a Post Thumbnail assigned to it; drop a default if not.
                             if ( has_post_thumbnail() ) { 
@@ -65,10 +66,12 @@ get_template_part('navigation');
                             else {
                                 echo '<img src="http://placehold.it/500x500"  />';
                             } 
-                            echo  the_title( '<h5>', '</h5>');
-                            echo '<p><a href="'; 
-                            echo the_permalink();
-                            echo '"></a></p>';
+                           echo '<a href="'; 
+                           echo the_permalink(); 
+                           echo '">';
+                            echo  the_title( '<span>', '</span>');
+                            echo '</a>';
+                            echo '<p></p>';
                             echo '</div>'; //Close the .project
                             echo '</div>'; //Close the content block
                             if ($row === 3 ) {

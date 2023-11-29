@@ -57,14 +57,14 @@ img {
 
 .project {
     margin-bottom: 1rem;
-    h5 {
+    span {
         color: $white;
         z-index: 2;
         position: absolute;
         top: 0px;
         width: 95%;
         margin: 3px;
-        font-size: 90%;
+        font-size: 120%;
     }
     img {
         display: block;
@@ -150,14 +150,20 @@ img {
     .wp-block-image {
         -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);      
     }
 }
 
 .wp-caption,
 .project, 
 .wp-block-image {
-    border: 1px solid silver;
+    border: 1px solid rgba(192,192,192,1);
+    background-color: rgba(245,245,245,1);
+}
+
+.wp-block-image .size-medium, .wp-block-image .size-thumbnail {
+    border-radius: 3px;
+    border: 1px solid rgba(192,192,192,1);
 }
 
 figcaption {
