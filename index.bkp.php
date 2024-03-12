@@ -32,7 +32,7 @@ get_template_part('navigation');
             //If there's a caption for the image, output that.
        } 
         else {
-            echo '<img src="http://placehold.it/125x125&amp;text=thumbnail" />';
+            echo '<img src="http://placehold.it/125x125&amp;text=placeholder" />';
         }
         ?>
                 </div>
@@ -95,7 +95,7 @@ endwhile;
         <article id="post-576" class="post-576 post type-post status-publish format-standard hentry category-critical-thinking tag-dharma"        >
             <div class="row" id="foopost">
                 <div class="large-3 columns" >
-                    <img src="http://placehold.it/125x125&amp;text=thumbnail" />                
+                    <img src="http://placehold.it/125x125&amp;text=placeholder" />                
                 </div>
                 <div class="large-9 columns">
                     <h3><a href="http://www.satyadarshin.com/second-test-post/">second test post</a></h3>
@@ -108,7 +108,7 @@ endwhile;
             </div>
             <div class="row" id="foopost">
                 <div class="large-3 columns" >
-                    <img src="http://placehold.it/125x125&amp;text=thumbnail" />                
+                    <img src="http://placehold.it/125x125&amp;text=placeholder" />                
                 </div>
                 <div class="large-9 columns">
                     <h3><a href="http://www.satyadarshin.com/hello-world/">Hello world!</a></h3>

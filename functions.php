@@ -279,7 +279,6 @@ add_action( 'admin_init', 'satdar_add_editor_styles' );
 function satdar_scripts() {
     //wp_enqueue_style( 'style-name', get_stylesheet_uri() );
     wp_enqueue_script( 'heroSmootheScroll', get_template_directory_uri() . '/js/heroSmootheScroll.js', array('jquery'), '1.0.0', true );
-    wp_enqueue_script( 'projectThumbnail', get_template_directory_uri() . '/js/projectThumbnail.js', array('jquery'), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'satdar_scripts' );
 ?>

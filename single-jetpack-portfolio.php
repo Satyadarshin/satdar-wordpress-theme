@@ -61,7 +61,7 @@ get_template_part('navigation');
                             echo (get_post( get_post_thumbnail_id() )->post_excerpt == true ) ? '<p class="project_thumb_detail_caption">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</p>' : '';
                         } 
                         else {
-                            echo '<img src="http://placehold.it/500x500&amp;text=thumbnail" />';
+                            echo '<img src="http://placehold.it/500x500&amp;text=placeholder" />';
                         }
                         $args = array('orderby' => 'term_order');
                         $terms = wp_get_object_terms( $post->ID, 'jetpack-portfolio-tag', $args );
@@ -96,20 +96,20 @@ get_template_part('navigation');
                 <div class="large-12 columns">
                     <div class="panel">
                         <div class="row">
-                            <div class="large-2 small-6 columns">
-                                <!-- <img src="http://placehold.it/300x300&amp;text=Site%20Owner"> -->
-                            </div>
-                            <div class="large-10 small-6 columns">
-                                <h4>Related Project Categories</h4>
-                                <p>
-                                <?php 
+                            <div class="large-12 columns">
+                                <div class="related-project-categories">
+
+                                    <h4>Related Project Categories</h4>
+                                    <p>
+                                        <?php 
                                     $args = array('orderby' => 'term_order');
                                     $terms = wp_get_object_terms( $post->ID, 'jetpack-portfolio-type', $args );
                                     foreach ( $terms as $term ){
                                         echo '&bull; <a href="' . get_term_link( $term ) . '">' . $term->name . '</a>  ';
                                     }
-                                ?>
-                                </p>
+                                    ?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

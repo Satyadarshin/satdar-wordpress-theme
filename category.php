@@ -31,7 +31,7 @@ get_template_part('navigation');
                             //If there's a caption for the image, output that.
                         } 
                         else {
-                            echo '<img src="http://placehold.it/400x400&amp;text=thumbnail" />';
+                            echo '<img src="http://placehold.it/400x400&amp;text=placeholder" />';
                         }
                     ?>
                 </div>

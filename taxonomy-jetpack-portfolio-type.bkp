@@ -19,7 +19,26 @@ get_template_part('navigation');
             <div class="row">
                 <div class="large-4 small-12 columns">
                     <div class="row portfolio_type">
-                        <div class="large-12 columns">
+                        <div class="large-12 small-6 columns">
+                            <?php 
+                                $hero = get_term_by( 'slug', $term, 'jetpack-portfolio-type');
+                                $the_taxonomy = $hero->taxonomy;
+                                $taxonomy_name = $hero->name;
+                                $taxonomy_id = $hero->term_id;
+                                $taxonomy_parent = $hero->parent;
+                                $term_slug = $hero->slug;
+                                $term_type_image = get_option( 'project_type_image_data_' . $term_slug );
+                                if ( $term_type_image ) {
+                                    $image_data = json_decode( stripslashes( $term_type_image ) );
+                                    $taxonomy_image = $image_data[0]->url;
+                                }
+                                else {
+                                    $taxonomy_image = 'http://placehold.it/500x500&amp;text=' . $term_slug;
+                                }
+                                echo "<img class=\"taxonomy_image\" src=\"{$taxonomy_image}\">";
+                            ?>
+                        </div>
+                        <div class="large-12 small-6 columns">
                             <?php
                                 //Using this function ensures that ttile prefixes like Category: are removed
                                 echo "<h2>". single_cat_title( '', false ) . "</h2>";

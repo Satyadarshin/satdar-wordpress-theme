@@ -52,36 +52,17 @@ img {
 }
 
 .taxonomy_image {
-    border: 1px solid gray;
+    border: 1px solid rgba(192,192,192,1);
 }
 
 .project {
+    min-height: 24em;
     margin-bottom: 1rem;
-    span {
-        color: $white;
-        z-index: 2;
-        position: absolute;
-        top: 0px;
-        width: 95%;
-        margin: 3px;
-        font-size: 120%;
-    }
-    img {
-        display: block;
-        margin: 0;
-    }
-    p {
-        z-index: 1;
-        background-color: #2693F2;
-        position: absolute;
-        top: 0;
-        height: 0;
-        width: 100%;
-        a {
-            //border: 1px solid red;
-            display: block;
-            height: 100%;
-        }
+    h5 {
+        margin: 1rem;
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
     }
 }
 
@@ -92,9 +73,28 @@ img {
 }
 
 .portfolio_type {
+    padding-bottom: 2rem;
     background-color: beige;
-    margin-bottom: 2rem !important;
-}
+    margin-bottom: 1rem; 
+    // h2 { 
+    //     background-color: #f15a22; 
+    //     margin: 0 -1rem 1rem -1rem; 
+    //     padding-left: 1rem; 
+    //     color: white;  
+    // }
+  }
+
+  
+  .taxonomy-description p:not:first-child {
+
+    padding: 0;
+    margin: 0 -1rem;
+  }
+  
+  .taxonomy-description img {
+    display: block;
+    width: 100%;
+  }  
 
 .artist-statement {
     border-top: 1px dotted #EDE6CE;
@@ -136,40 +136,71 @@ img {
     }
 }
 
+.panel {
+    padding: 0 !important;
+    border-radius: 5px;
+    p {
+        margin: 1rem;
+    }
+    h3 { 
+        padding: 1rem 1rem 0 1rem;
+        // text-align: center;
+        font-size: 125%; 
+        // font-weight: 700
+    }
+}
+
+.attachment-project-post_detail {
+    margin: .5rem 0 0;
+}
 .project_thumb_detail_caption {
-    margin: 1.5rem 1rem 1rem 1rem; 
+    margin: 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted grey 
 }
 
 .project_summary {
     width: 100%;
 }
+.related-project-categories {
+    margin: 1rem 0;
+    text-align: center;
+}
 
 @media only screen and (min-width: 64.063em) {
-    .wp-caption,
-    .project, 
-    .wp-block-image {
+    // .wp-caption,
+    .project:hover {
         -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
         box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);      
     }
 }
 
-.wp-caption,
-.project, 
-.wp-block-image {
-    border: 1px solid rgba(192,192,192,1);
-    background-color: rgba(245,245,245,1);
-}
+// .wp-caption,
+.project {
+  border-radius: 5px 5px 0 0;
+  border: 1px solid silver;
+  }
 
-.wp-block-image .size-medium, .wp-block-image .size-thumbnail {
-    border-radius: 3px;
-    border: 1px solid rgba(192,192,192,1);
-}
+.wp-block-image img { 
+    border-right: 1px solid silver;
+    border-top: 1px solid silver; 
+    border-left: 1px solid silver;
+    border-radius: 4px 4px 0 0;
+  display: block;
+  margin-bottom: 0 !important;
+}  
 
 figcaption {
-        text-align: center;
-        padding: .5rem 1rem;
-    }
+    text-align: center;
+    background-color: #fafaf5; 
+    margin-top: 0!important;
+    border-radius: 0 0 5px 5px;
+    padding: .5rem 1rem; 
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+    border-left: 1px solid silver;
+}
 
 //Blog
 .blog_posts {
