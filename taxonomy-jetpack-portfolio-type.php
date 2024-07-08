@@ -22,6 +22,7 @@ get_template_part('navigation');
                         <div class="large-12 columns">
                             <?php
                                 //Using this function ensures that ttile prefixes like Category: are removed
+                                echo '<p class="the_skill">Portfolio category</p>';
                                 echo "<h2>". single_cat_title( '', false ) . "</h2>";
                                 the_archive_description( '<div class="taxonomy-description">', '</div>' );
                             ?>

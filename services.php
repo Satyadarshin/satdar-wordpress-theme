@@ -7,18 +7,18 @@
    <div class="large-4 medium-12 columns">
         <div class="row skillset_panel">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon bish"><figure><a href="https://www.satyadarshin.com/web-content-admin/"><img src="https://www.satyadarshin.com/wp-content/uploads/2020/10/Bish.png"></a></figure></div>
+                <div class="skillset_icon bish"><figure><a href="https://www.satyadarshin.com/web-content-designer/"><img src="https://www.satyadarshin.com/wp-content/uploads/2024/06/bish.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns skillset_description">
-                <h3>Web content admin</h3>
-                <p>Need to delegate day-to-day Web content administration? I offer a range of services for people who really should be focusing on their core business, not wrangling with HTML. <a href="https://www.satyadarshin.com/web-content-admin/">Let’s look at how I can help.</a></p>
+                <h3>Web content designer</h3>
+                <p>Need help to organise your website? I offer a range of services for people who really should be focusing on their core business, not wrangling with words, or confounded by curating photos. <a href="https://www.satyadarshin.com/web-content-designer/">Let’s look at how I can help.</a></p>
             </div>
         </div>
     </div>
     <div class="large-4 medium-12 columns">
         <div class="row skillset_panel ">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon bash"><figure><a href="https://www.satyadarshin.com/web-developer/"><img src="https://www.satyadarshin.com/wp-content/uploads/2020/10/BashALTc.png"></a></figure></div>
+                <div class="skillset_icon bash"><figure><a href="https://www.satyadarshin.com/web-developer/"><img src="https://www.satyadarshin.com/wp-content/uploads/2024/06/bash.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns skillset_description">
                 <h3>Web development</h3>
@@ -29,7 +29,7 @@
     <div class="large-4 medium-12 columns">
         <div class="row skillset_panel">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon bosh"><figure><a href="https://www.satyadarshin.com/graphic-designer/"><img src="https://www.satyadarshin.com/wp-content/uploads/2020/10/Bosh.png"></a></figure></div>
+                <div class="skillset_icon bosh"><figure><a href="https://www.satyadarshin.com/graphic-designer/"><img src="https://www.satyadarshin.com/wp-content/uploads/2024/06/bosh.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns skillset_description">
                 <h3>Graphic design</h3>

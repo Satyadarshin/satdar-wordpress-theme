@@ -6547,7 +6547,6 @@ Styles for the cutsom template /page-template/makeContact.php
   /* IE6-9 */ }
 
 .jason {
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -6584,23 +6583,19 @@ Styles for the cutsom template /page-template/makeContact.php
       max-height: 45vh;
       display: block; } }
 
-.theseus .intro {
-  top: 10%; }
+.theseus .intro a {
+  display: block;
+  margin-top: 2rem; }
+.theseus h1 {
+  margin: 1rem 0; }
 
-.odysseus {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#40e0d0+0,48d1cc+60,afeeee+100 */
-  background: #40e0d0;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  /* IE6-9 */ }
-
-.achilles {
-  background: url("http://www.satyadarshin.com/wp-content/uploads/2016/06/woodenRupa.jpg") no-repeat center center; }
+.odysseus .intro a {
+  display: block;
+  margin-top: 2rem; }
+.odysseus h1 {
+  margin: 1rem 0; }
+.odysseus img {
+  margin: auto; }
 
 .lower_footer {
   min-height: 10rem;
@@ -6667,7 +6662,7 @@ Styles for the cutsom template /page-template/makeContact.php
   .upper_footer h3 {
     color: #FFFFFF; }
   @media only screen and (min-width: 40.063em) {
-    .upper_footer .skills_cloud {
+    .upper_footer .category_cloud {
       padding-right: 2rem;
       border-right: 1px dotted #999999; } }
   .upper_footer .skills_cloud {
@@ -6739,6 +6734,9 @@ img {
   padding-bottom: 2rem;
   background-color: beige;
   margin-bottom: 1rem; }
+  .portfolio_type h2 {
+    border-top: 1px dotted;
+    border-bottom: 1px dotted; }
 
 .taxonomy-description p:not:first-child {
   padding: 0;
@@ -6800,9 +6798,12 @@ img {
 .project_summary {
   width: 100%; }
 
-.related-project-categories {
+.related-project-categories, .related-post-categories {
   margin: 1rem 0;
   text-align: center; }
+
+.related-post-categories .panel {
+  padding: 1rem; }
 
 @media only screen and (min-width: 64.063em) {
   .project:hover {
@@ -6839,40 +6840,50 @@ figcaption {
 
 .blog_sidebar_thumbnail {
   margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 0;
-  background-color: #EDE6CE; }
+  padding: 0; }
   .blog_sidebar_thumbnail img {
+    border-radius: 5px 5px 0 0;
     margin: 0; }
   .blog_sidebar_thumbnail .tags_and_categories {
-    margin: 1rem; }
+    padding-bottom: 1rem; }
+    .blog_sidebar_thumbnail .tags_and_categories p {
+      margin: 1rem 0; }
+      .blog_sidebar_thumbnail .tags_and_categories p span {
+        font-weight: bold; }
 
-@media only screen and (min-width: 64.063em) {
-  .post_excerpt {
-    margin-bottom: 2rem; }
-    .post_excerpt img {
-      width: 400px;
-      margin-left: -1rem; }
-    .post_excerpt h3 {
-      margin-top: 1rem; } }
+.the_skill {
+  font-size: 110%;
+  font-weight: bold;
+  margin: 1rem 0 0; }
 
-.post_excerpt:not(:first-child) {
-  border-top: 1px dotted silver; }
+.post_excerpt {
+  border: 1px solid silver;
+  border-radius: 3px;
+  margin-bottom: 2rem; }
+  .post_excerpt img {
+    margin: 0 0 1rem  .75rem; }
+  .post_excerpt .post_meta {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-top: 1px dotted silver;
+    border-bottom: 1px dotted silver;
+    font-size: .8rem;
+    text-transform: uppercase; }
 
 @media only screen and (max-width: 40.063em) {
   .contact-social-network span {
     display: block;
     margin-top: 0.5rem; } }
 .static_page_sidebar {
+  background-image: url("images/octagon-texture-01.png");
   min-height: 25rem;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ede6ce+1,ffffff+100 */
-  background: #ede6ce;
+  background-color: #ede6ce;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
+  background-color: -webkit-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ede6ce 1%, #ffffff 100%);
+  background-color: url("images/octagon-texture.png") linear-gradient(to bottom, #ede6ce 1%, #ffffff 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
   .static_page_sidebar p {
     border-top: 2px dotted #ede6ce;

@@ -28,14 +28,6 @@
 		<title><?php wp_title(); ?></title>
 		<?php wp_head(); ?>
 		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/bower_components/modernizr/modernizr.js"></script>
-        <style>
-            /* Declaration placed in the <head> to allow for dynamic insertion of a background-image from the page's Featured Image meta */
-            .theseus {
-                background: url('<?php  $hero_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); echo $hero_image[0]; ?>') no-repeat center center;
-                background-size: cover;
-                height: 40vh;
-            }
-        </style>
         <script src='https://www.google.com/recaptcha/api.js'></script> <!--Google recaptcha test; TODO add to a plugin -->
 	</head>
 	

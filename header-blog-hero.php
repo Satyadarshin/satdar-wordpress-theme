@@ -1,4 +1,4 @@
-<section class="hero odysseus">
+<section class="hero theseus">
     <div class="row">
         <div class="large-12 columns">
             <div class="intro">

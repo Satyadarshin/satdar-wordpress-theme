@@ -1,3 +1,4 @@
+//Common styles
 .hero {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#40e0d0+0,48d1cc+60,afeeee+100 */
     background: #40e0d0;
@@ -12,8 +13,8 @@
     /* IE6-9 */
 }
 
+//Front page
 .jason {
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,28 +67,29 @@
     } 
 }
 
+//Blog
 .theseus {
-    .intro {
-        top: 10%;
+    .intro a {
+        display: block;
+        margin-top: 2rem;
+    }
+    h1 {
+        margin: 1rem 0;
     }
 }
 
 //Portfolio pages
 .odysseus {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#40e0d0+0,48d1cc+60,afeeee+100 */
-    background: #40e0d0;
-    /* Old browsers */
-    background: -moz-linear-gradient(left, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #40e0d0 0%, #48d1cc 60%, #afeeee 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#40e0d0', endColorstr='#afeeee', GradientType=1);
-    /* IE6-9 */
-}
-
-//Blog and service pages (404, search)
-.achilles {
-    background: url('http://www.satyadarshin.com/wp-content/uploads/2016/06/woodenRupa.jpg') no-repeat center center;
+    // height: 30vh;
+    .intro a {
+        display: block;
+        margin-top: 2rem;
+    }
+    h1 {
+        margin: 1rem 0;
+    }
+    img {
+        // border: 1px solid red;
+        margin: auto;
+    }
 }
