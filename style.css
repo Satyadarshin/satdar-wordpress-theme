@@ -6546,41 +6546,31 @@ Styles for the cutsom template /page-template/makeContact.php
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   /* IE6-9 */ }
 
-.jason {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-@media only screen and (orientation: portrait) and (max-width: 64em) {
+@media screen and (max-width: 715px) {
   .jason {
-    height: 40vh; } }
-  @media screen and (orientation: portrait) {
-    .jason h1 {
-      margin: 1rem 0; }
-      .jason h1 img {
-        margin-left: auto;
-        margin-right: auto;
-        height: calc( 40vh - 2rem );
-        display: block; }
-      .jason h1 .deep_viewport {
-        display: visible; }
-      .jason h1 .narrow_viewport {
-        display: none; } }
-@media only screen and (orientation: landscape) and (min-height: 800.063px) {
-  .jason h1 .deep_viewport {
-    display: visible; }
-  .jason h1 .narrow_viewport {
-    display: none; } }
-@media only screen and (orientation: landscape) and (max-height: 850px) {
-  .jason h1 .deep_viewport {
-    display: none; }
-  .jason h1 .narrow_viewport {
-    display: visible; } }
-  @media screen and (orientation: landscape) {
+    min-height: 500px; }
     .jason h1 img {
+      margin-left: auto;
+      margin-right: auto;
+      width: 786px;
+      display: block; }
+    .jason h1 .deep_viewport {
+      display: visible; }
+    .jason h1 .narrow_viewport {
+      display: none; } }
+@media screen and (min-width: 715.5px) {
+  .jason {
+    min-height: 250px; }
+    .jason h1 .deep_viewport {
+      display: none; }
+    .jason h1 .narrow_viewport {
+      display: visible; }
+    .jason h1 img {
+      margin-bottom: -2rem;
       display: block;
       margin-left: auto;
       margin-right: auto;
-      max-height: 45vh;
+      max-height: 60vh;
       display: block; } }
 
 .theseus .intro a {

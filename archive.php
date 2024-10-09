@@ -44,7 +44,7 @@ get_template_part('navigation');
                         <h3>Projects applying this skill</h3>
                         </div>
                     </div>
-                <?php
+                    <?php
                     //Initialise a counter
                     $row = 0;
                     if ( have_posts() ) :
@@ -53,6 +53,9 @@ get_template_part('navigation');
                             echo ($row == 0) ? '<div class="row">' : '';
                             echo '<div class="large-6 medium-6 small-12 columns">';
                             echo '<div class="project">';
+                            echo '<a href="'; 
+                            echo the_permalink(); 
+                            echo '">';
                             //Check the post has a Post Thumbnail assigned to it; drop a default if not.
                             if ( has_post_thumbnail() ) { 
                                 the_post_thumbnail('project-thumb');
@@ -61,12 +64,10 @@ get_template_part('navigation');
                                 echo '<img src="http://placehold.it/500x500"  />';
                             } 
                             echo  the_title( '<h5>', '</h5>');
-                            echo '<p><a href="'; 
-                            echo the_permalink();
-                            echo '"></a></p>';
+                            echo '</a>';
                             echo '</div>'; //Close the .project
                             echo '</div>'; //Close the content block
-                            if ($row === 6 ) {
+                            if ($row === 3 ) {
                               echo '</div>';
                                 $row = 0;
                             } else {
