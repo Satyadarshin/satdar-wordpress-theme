@@ -48,7 +48,13 @@ get_template_part('navigation');
             </div>
         <?php
         endwhile;
-            else :
+        ?>
+        <!-- Start the pagination functions after the loop. -->
+        <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+        <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+        <!-- End the pagination functions after the loop. -->
+        <?php    
+        else :
             echo '<p>Sorry buddy, no posts in this category so far.</p>';
             endif;
         ?>      

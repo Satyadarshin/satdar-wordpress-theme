@@ -24,13 +24,6 @@ get_template_part('navigation');
                 <h2><?php the_title(); ?></h2>
             <?php
                 the_content();
-                // TODO post pagination doesn't output anything. 
-            ?>
-                            <div class="pagination">
-                                <div class="paginate_left"><?php previous_posts_link( '&laquo; Previous Entries' ); ?></div>
-                                <div class="paginate_right"><?php next_posts_link( 'Next Entries &raquo;', '' ); ?></div>
-                            </div>
-            <?php
                 comments_template( );
             // TODO these were simply inserted to pass the them checker test. Need detailed insertion
                 paginate_comments_links();
@@ -83,7 +76,17 @@ get_template_part('navigation');
                 </div>
             </div>
         </div>
+        <div class="row">
+        <div class="large-12 medium-6 small-12 columns" role="content">
+        <div class="pagination">
+            <p>
+                <span class="paginate_left"><?php previous_post_link(  ); ?></span> |
+                <span class="paginate_right"><?php next_post_link(  ); ?></span>
+        </div>
+    </div>
+    </div>
 </div>
+
 <?php
 	get_footer('display');
 	get_footer();

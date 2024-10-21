@@ -30,7 +30,6 @@ get_template_part('navigation');
 				</div>
 			</div>
 			<div class="row">
-
 				<div class="small-12 medium-8 large-8 columns artist-statement">
 					<?php
 					the_content();
