@@ -16,7 +16,7 @@ get_header('blog-hero');
 get_template_part('navigation');
 ?>
 	<div class="row">
-		<div class="large-8 columns" role="content">
+		<div class="large-8 medium-12 small-12 columns" role="content">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php
                 while ( have_posts() ) : the_post();
@@ -33,59 +33,64 @@ get_template_part('navigation');
             ?>
             </article>
 		</div>
-        <div class="large-4 columns blog_sidebar_thumbnail">
+        <div class="large-4 medium-12 small-12 columns blog_sidebar_thumbnail">
             <div class="panel">
-                <div class="row">
-                    <div class="large-12 medium-6 small-12 columns" role="content">
-                
-                        <?php  
-                            if ( has_post_thumbnail() ) { 
-                                the_post_thumbnail( 'project-post_detail' );
-                                //If there's a caption for the image, output that.
-                                echo (get_post( get_post_thumbnail_id() )->post_excerpt == true ) ? '<p class="project_thumb_detail_caption">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</p>' : '';
-                            } 
-                            else {
-                                echo '<img src="http://placehold.it/500x500&amp;text=placeholder" />';
-                        }
-                        ?>
-                        <div class="large-12 medium-6 small-12 columns" role="content">
-                            <div class="tags_and_categories">
-                                <p><span>Post published:</span> <?php the_date('j F Y'); ?></p>
-                                <p><span>This post in categories:</span><br>
-                                <?php
-                                    $categories = get_the_category();
-                                    $separator = ", ";
-                                    $output = " ";
-                                    if ($categories) {
-                                        foreach ($categories as $category) {
-                                            $output .= '<a href="' . get_category_link( $category->term_id ) . '">' .$category->cat_name . '</a>'. $separator;
-                                        }
-                                        //TODO build a page to display a list of categoried posts
-                                        echo trim( $output, $separator) . '</p>';
-                                    } 
-                                ?>
-                                <p><span>This post is tagged:</span><br>
-                                <?php
-                                    //TODO build a page to display a list of tagged posts
-                                    echo the_tags( '', ', ', '' ) . '</p>';
-                                endwhile;
-                                ?>
-                            </div>
-                        </div>
-                    </div>
+                <?php  
+                    echo '<div class="the-post-thumbnail">';
+                    if ( has_post_thumbnail() ) { 
+                        the_post_thumbnail( 'project-post_detail' );
+                        //If there's a caption for the image, park that.
+                        $theCaption = (get_post( get_post_thumbnail_id() )->post_excerpt == true ) ?  get_post( get_post_thumbnail_id() )->post_excerpt : '&nbsp;';
+                    } 
+                    else {
+                        echo '<img src="http://placehold.it/500x500&amp;text=placeholder" />';
+                    }
+                    echo '</div>';
+                    echo '<div class="project_thumb_detail_caption"><p>' . $theCaption .'</p></div>'
+                ?>
+                <div class="tags_and_categories">
+                    <p><span>Post published:</span> <?php the_date('j F Y'); ?></p>
+                    <p><span>This post in categories:</span><br>
+                    <?php
+                        $categories = get_the_category();
+                        $separator = ", ";
+                        $output = " ";
+                        if ($categories) {
+                            foreach ($categories as $category) {
+                                $output .= '<a href="' . get_category_link( $category->term_id ) . '">' .$category->cat_name . '</a>'. $separator;
+                            }
+                            //TODO build a page to display a list of categoried posts
+                            echo trim( $output, $separator) . '</p>';
+                        } 
+                    ?>
+                    <p><span>This post is tagged:</span><br>
+                    <?php
+                        //TODO build a page to display a list of tagged posts
+                        echo the_tags( '', ', ', '' ) . '</p>';
+                    endwhile;
+                    ?>
                 </div>
             </div>
         </div>
-        <div class="row">
-        <div class="large-12 medium-6 small-12 columns" role="content">
-        <div class="pagination">
-            <p>
-                <span class="paginate_left"><?php previous_post_link(  ); ?></span> |
-                <span class="paginate_right"><?php next_post_link(  ); ?></span>
-        </div>
     </div>
-    </div>
-</div>
+    <div class="row">
+        <div class="large-12 columns" role="content">
+            <p class="single-post-pagination">Post navigation</p>
+            <div class="single-post-pagination_buttons">
+            <?php
+                $next = get_permalink(get_adjacent_post(false,'',false)); //next post url
+                $prev= get_permalink(get_adjacent_post(false,'',true)); //previous post url
+                if (get_the_permalink()!=$next):
+            ?>
+                <div class="paginate_left"> <a href='<?php echo $next ?>'>Next</a></div>
+            <?php endif; ?>
+                <div class="all_posts"><a href="/blog">All </a></div>
+            <?php if (get_the_permalink()!=$prev): ?>
+                <div class="paginate_right"><a href="<?php echo $prev ?>">Previous</a></div>
+            <?php endif; ?>
+            </div>
+        </div> 
+    </div>    
 
 <?php
 	get_footer('display');

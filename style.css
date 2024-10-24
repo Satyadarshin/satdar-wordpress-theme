@@ -6780,11 +6780,6 @@ img {
 .attachment-project-post_detail {
   margin: .5rem 0 0; }
 
-.project_thumb_detail_caption {
-  margin: 1.5rem 0;
-  padding-bottom: 1rem;
-  border-bottom: 1px dotted grey; }
-
 .project_summary {
   width: 100%; }
 
@@ -6851,17 +6846,37 @@ figcaption {
 .blog_sidebar {
   margin-top: 3rem; }
 
-.blog_sidebar_thumbnail {
+.blog_sidebar_thumbnail .panel {
   margin-top: 2rem;
-  padding: 0; }
-  .blog_sidebar_thumbnail img {
-    border-radius: 5px 5px 0 0;
-    margin: 0; }
-  .blog_sidebar_thumbnail .tags_and_categories {
+  padding: 0;
+  display: grid; }
+  @media screen and (max-width: 1025px) {
+    .blog_sidebar_thumbnail .panel {
+      grid-template-columns: 250px 1fr 2fr;
+      grid-template-areas: "thumbnail caption meta"; } }
+  @media screen and (min-width: 1025.5px) {
+    .blog_sidebar_thumbnail .panel {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "thumbnail thumbnail thumbnail " " caption caption caption " " meta meta meta"; } }
+  .blog_sidebar_thumbnail .panel .the-post-thumbnail {
+    grid-area: thumbnail; }
+    .blog_sidebar_thumbnail .panel .the-post-thumbnail img {
+      display: block;
+      margin: 0; }
+      @media screen and (max-width: 1025px) {
+        .blog_sidebar_thumbnail .panel .the-post-thumbnail img {
+          border-radius: 5px 0 0 5px; } }
+      @media screen and (min-width: 1025.5px) {
+        .blog_sidebar_thumbnail .panel .the-post-thumbnail img {
+          border-radius: 5px 5px 0 0; } }
+  .blog_sidebar_thumbnail .panel .project_thumb_detail_caption {
+    grid-area: caption; }
+  .blog_sidebar_thumbnail .panel .tags_and_categories {
+    grid-area: meta;
     padding-bottom: 1rem; }
-    .blog_sidebar_thumbnail .tags_and_categories p {
-      margin: 1rem 0; }
-      .blog_sidebar_thumbnail .tags_and_categories p span {
+    .blog_sidebar_thumbnail .panel .tags_and_categories p {
+      margin: 1rem; }
+      .blog_sidebar_thumbnail .panel .tags_and_categories p span {
         font-weight: bold; }
 
 .the_skill {
@@ -6870,18 +6885,137 @@ figcaption {
   margin: 1rem 0 0; }
 
 .post_excerpt {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fafafa;
   border: 1px solid silver;
-  border-radius: 3px;
+  border-radius: 6px;
   margin-bottom: 2rem; }
-  .post_excerpt img {
-    margin: 0 0 1rem  .75rem; }
-  .post_excerpt .post_meta {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    border-top: 1px dotted silver;
-    border-bottom: 1px dotted silver;
-    font-size: .8rem;
-    text-transform: uppercase; }
+  .post_excerpt .the_post_container {
+    display: flex;
+    align-items: stretch; }
+    .post_excerpt .the_post_container .thumbnail-frame {
+      margin: 0; }
+      .post_excerpt .the_post_container .thumbnail-frame img {
+        margin: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .post_excerpt .the_post_container .the_actual_excerpt {
+      padding: 1rem; }
+      .post_excerpt .the_post_container .the_actual_excerpt .post_meta {
+        padding-bottom: .5rem;
+        font-size: .8rem;
+        text-transform: uppercase;
+        color: silver; }
+    @media screen and (min-width: 800.5px) {
+      .post_excerpt .the_post_container {
+        flex-direction: row; }
+        .post_excerpt .the_post_container .thumbnail-frame {
+          padding: 1px 0 1px 2px;
+          flex-shrink: 1;
+          max-width: 25%; }
+          .post_excerpt .the_post_container .thumbnail-frame img {
+            border-radius: 4px 0 0 4px; }
+        .post_excerpt .the_post_container .the_actual_excerpt {
+          flex-shrink: 2; } }
+    @media screen and (max-width: 800px) {
+      .post_excerpt .the_post_container {
+        padding: 1px 1px 0 1px;
+        flex-direction: column; }
+        .post_excerpt .the_post_container .thumbnail-frame {
+          border-bottom: 1px dotted silver; }
+          .post_excerpt .the_post_container .thumbnail-frame img {
+            border-radius: 4px 4px 0 0; } }
+
+.blog-pagination {
+  display: flex;
+  gap: .5rem;
+  justify-content: center; }
+  .blog-pagination div {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 3rem;
+    border: 1px solid  #f15a22;
+    align-content: center; }
+    .blog-pagination div a {
+      padding: 2.25rem 0;
+      display: block;
+      text-align: center;
+      height: 6rem;
+      width: 6rem;
+      border-radius: 3rem;
+      transition: all 1s;
+      color: #f15a22; }
+      .blog-pagination div a:hover {
+        background-color: #f15a22;
+        color: white; }
+
+.single-post-pagination {
+  text-align: center;
+  padding-top: 1rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  width: 21rem;
+  border-bottom: 1px dotted silver;
+  color: silver; }
+  @media screen and (min-width: 1025.5px) {
+    .single-post-pagination {
+      border-top: 1px dotted silver; } }
+
+.single-post-pagination_buttons {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: .5rem; }
+  @media screen and (min-width: 850.5px) {
+    .single-post-pagination_buttons {
+      justify-content: center;
+      align-content: stretch;
+      align-items: baseline; } }
+  @media screen and (max-width: 850px) {
+    .single-post-pagination_buttons {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      flex-direction: column; } }
+  .single-post-pagination_buttons div {
+    padding: 0 1rem .5rem;
+    font-size: 1.75rem;
+    color: #f15a22;
+    height: 3.25rem;
+    border: 1px solid  #f15a22;
+    transition: all 1s; }
+    .single-post-pagination_buttons div:hover {
+      background-color: #f15a22;
+      color: white; }
+      .single-post-pagination_buttons div:hover a {
+        color: white; }
+    .single-post-pagination_buttons div a {
+      font-size: 1rem;
+      color: #f15a22;
+      margin: 0;
+      text-align: center;
+      padding: .75rem 0;
+      display: block; }
+  .single-post-pagination_buttons .all_posts {
+    border-radius: 3rem;
+    text-align: center; }
+  .single-post-pagination_buttons .paginate_left {
+    height: 3.25rem;
+    border-radius: 2rem; }
+    .single-post-pagination_buttons .paginate_left a {
+      width: 6rem;
+      height: 3.25rem; }
+      .single-post-pagination_buttons .paginate_left a::before {
+        content: ' « '; }
+  .single-post-pagination_buttons .paginate_right {
+    border-radius: 2rem; }
+    .single-post-pagination_buttons .paginate_right a {
+      width: 6rem;
+      height: 3.25rem; }
+      .single-post-pagination_buttons .paginate_right a::after {
+        content: ' » '; }
 
 @media only screen and (max-width: 40.063em) {
   .contact-social-network span {
