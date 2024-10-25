@@ -17,23 +17,25 @@ get_template_part('navigation');
              ?>>
             <div class="row">
                 <div class="large-4 small-12 columns">
-                    <div class="row portfolio_type">
+                    <div class="row">
                         <div class="large-12 columns">
-                            <?php 
-                                $hero = get_term_by( 'slug', $term, 'jetpack-portfolio-type');
-                                //print_r($hero);
-                                $the_taxonomy = $hero->taxonomy;
-                                $taxonomy_name = $hero->name;
-                                $taxonomy_id = $hero->term_id;
-                                $taxonomy_parent = $hero->parent;
-                                $term_slug = $hero->slug;
-                                $term_type_image = get_option( 'project_type_image_data_' . $term_slug );
-                           
-                                //Using this function ensures that title prefixes like Category: are removed
-                                echo '<p class="the_skill">Skill</p>';
-                                echo "<h2>". single_cat_title( '', false ) . "</h2>";
-                                the_archive_description( '<div class="taxonomy-description">', '</div>' );
-                            ?>
+                            <div class="portfolio_type">  
+                                <?php 
+                                    $hero = get_term_by( 'slug', $term, 'jetpack-portfolio-type');
+                                    //print_r($hero);
+                                    $the_taxonomy = $hero->taxonomy;
+                                    $taxonomy_name = $hero->name;
+                                    $taxonomy_id = $hero->term_id;
+                                    $taxonomy_parent = $hero->parent;
+                                    $term_slug = $hero->slug;
+                                    $term_type_image = get_option( 'project_type_image_data_' . $term_slug );
+                            
+                                    //Using this function ensures that title prefixes like Category: are removed
+                                    echo '<p class="the_skill">Skill</p>';
+                                    echo "<h2>". single_cat_title( '', false ) . "</h2>";
+                                    the_archive_description( '<div class="taxonomy-description">', '</div>' );
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>

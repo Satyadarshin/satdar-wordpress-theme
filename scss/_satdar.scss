@@ -58,6 +58,13 @@ img {
 .project {
     min-height: 24em;
     margin-bottom: 1rem;
+    img { 
+        margin: 1px 1px 0 1px; 
+        height:  calc(100% - 1px);
+        display: block;
+        width: calc(100% - 2px);
+        border-radius: 6px 6px 0 0;
+    }
     h5 {
         margin: 1rem;
         font-size: 100%;
@@ -72,13 +79,16 @@ img {
     border-radius: 6px;
 }
 
-.portfolio_type {
-    padding-bottom: 2rem;
+.portfolio_type, .blog_category {
+    border-radius: 6px;
+    padding: .5rem 1rem 1rem;
     background-color: beige;
     margin-bottom: 1rem; 
     h2 { 
-       border-top: 1px dotted;
-       border-bottom: 1px dotted;
+        margin: .5rem -1rem;
+        padding: .5rem 1rem;
+        border-top: 1px dotted;
+        border-bottom: 1px dotted;
     }
   }
 
@@ -136,7 +146,7 @@ img {
 
 .panel {
     padding: 0 !important;
-    border-radius: 5px;
+    border-radius: 6px;
     p {
         margin: 1rem;
     }
@@ -163,7 +173,7 @@ img {
 }
 @media only screen and (min-width: 64.063em) {
     // .wp-caption,
-    .project:hover {
+    .project {
         -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
         box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);      
@@ -172,7 +182,7 @@ img {
 
 // .wp-caption,
 .project {
-  border-radius: 5px 5px 0 0;
+  border-radius: 6px;
   border: 1px solid silver;
   }
 
@@ -197,7 +207,7 @@ figcaption {
     text-align: center;
     background-color: #fafaf5; 
     margin-top: 0!important;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 6px 6px;
     padding: .5rem 1rem; 
     border-right: 1px solid silver;
     border-bottom: 1px solid silver;
@@ -238,6 +248,9 @@ figcaption {
         margin-top: 2rem;
         padding: 0;
         display: grid;
+        -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);  
         @media screen and ( max-width: 1025px ) {
             // margin: 0 1rem !important; 
             grid-template-columns: 250px 1fr 2fr;
@@ -278,14 +291,14 @@ figcaption {
                     font-weight: bold;
                 }
             }
-        }    
+        }     
     }
 }
 
-.the_skill {
+.the_skill, .the_post_category {
     font-size: 110%;
     font-weight: bold;
-    margin: 1rem 0 0;
+    margin: 0 0;
 }
 .post_excerpt {
     box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
@@ -298,7 +311,7 @@ figcaption {
         align-items: stretch;
         .thumbnail-frame { 
             margin:0;
-            img { 
+            img {
                 margin: 0;
                 display: block;
                 width: 100%;
@@ -390,7 +403,6 @@ figcaption {
     margin-bottom: 2rem;
     display: flex;
     gap: .5rem;
-    // height:3.5rem;
     @media screen and (min-width: 850.5px) {
         justify-content: center;
         align-content: stretch;
@@ -422,42 +434,25 @@ figcaption {
             margin: 0;
             text-align: center;
             padding: .75rem 0;     
-            display: block;
-            // @media screen and ( min-width: 850.5px ) {
-            //     display: block;
-            // }
-            // @media screen and ( max-width: 850px ) {
-            //     display: block;   
-            //     height: 3.2rem; 
-            // }    
+            display: block;    
         }
     }
     .all_posts {
-        // height: 6rem; width: 6rem;
         border-radius: 3rem;
         text-align: center;
     }
     .paginate_left {
-        // width: 8rem;
         height: 3.25rem;
         a { 
             width: 6rem;
             height: 3.25rem;
-            // border: 1px solid red;
-            // text-align: right;
             &::before {
                 content: ' « ';
             }
         }
-        border-radius: 2rem;
-        // @media screen and (min-width: 850.5px) {
-        //     border-radius: 2rem 3px 3px 2rem;
-        // }
-        // @media screen and (max-width: 850px) {
-        // }    
+        border-radius: 2rem;  
     }
     .paginate_right {
-        // width: 8rem;
         a{
             width: 6rem;
             height: 3.25rem;
@@ -465,11 +460,7 @@ figcaption {
             content: ' » ';
         }}
         border-radius: 2rem;
-        // @media screen and (min-width: 850.5px) {
-        //     border-radius: 3px 2rem 2rem 3px;
-        // }
-        // @media screen and (max-width: 850px) {
-        // }  
+
     }
 }
 

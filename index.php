@@ -22,28 +22,30 @@ get_template_part('navigation');
         ?>
             <div class="post_excerpt">
                 <div class="row ">
-                    <div class="large-12 columns the_post_container" >
-                        <div class="thumbnail-frame">
-                            <?php 
-                                if ( has_post_thumbnail() ) {        
-                                    the_post_thumbnail( 'project-post_detail' );
-                                    //If there's a caption for the image, output that.
-                                } 
-                                else {
-                                    echo '<img src="http://placehold.it/400x400&amp;text=placeholder" />';
-                                }
-                            ?>
-                        </div>
-                        <div class="the_actual_excerpt">
-                            <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-                            <?php 
-                                echo   '<p class="post_meta"><span class="post_date">';
-                                the_date('j F Y');
-                                echo '</span> / <span class="post_date">';
-                                the_category( ', ') ;
-                                echo   '</span></p>';
-                                the_excerpt(); 
-                            ?>
+                    <div class="large-12 columns " >
+                        <div class="the_post_container">
+                            <div class="thumbnail-frame">
+                                <?php 
+                                    if ( has_post_thumbnail() ) {        
+                                        the_post_thumbnail( 'project-post_detail' );
+                                        //If there's a caption for the image, output that.
+                                    } 
+                                    else {
+                                        echo '<img src="http://placehold.it/400x400&amp;text=placeholder" />';
+                                    }
+                                ?>
+                            </div>
+                            <div class="the_actual_excerpt">
+                                <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                                <?php 
+                                    echo   '<p class="post_meta"><span class="post_date">';
+                                    the_date('j F Y');
+                                    echo '</span> / <span class="post_date">';
+                                    the_category( ', ') ;
+                                    echo   '</span></p>';
+                                    the_excerpt(); 
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>

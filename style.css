@@ -6709,6 +6709,12 @@ img {
 .project {
   min-height: 24em;
   margin-bottom: 1rem; }
+  .project img {
+    margin: 1px 1px 0 1px;
+    height: calc(100% - 1px);
+    display: block;
+    width: calc(100% - 2px);
+    border-radius: 6px 6px 0 0; }
   .project h5 {
     margin: 1rem;
     font-size: 100%;
@@ -6720,11 +6726,14 @@ img {
   background-color: #FFFFFF;
   border-radius: 6px; }
 
-.portfolio_type {
-  padding-bottom: 2rem;
+.portfolio_type, .blog_category {
+  border-radius: 6px;
+  padding: .5rem 1rem 1rem;
   background-color: beige;
   margin-bottom: 1rem; }
-  .portfolio_type h2 {
+  .portfolio_type h2, .blog_category h2 {
+    margin: .5rem -1rem;
+    padding: .5rem 1rem;
     border-top: 1px dotted;
     border-bottom: 1px dotted; }
 
@@ -6770,7 +6779,7 @@ img {
 
 .panel {
   padding: 0 !important;
-  border-radius: 5px; }
+  border-radius: 6px; }
   .panel p {
     margin: 1rem; }
   .panel h3 {
@@ -6791,12 +6800,12 @@ img {
   padding: 1rem; }
 
 @media only screen and (min-width: 64.063em) {
-  .project:hover {
+  .project {
     -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
     box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5); } }
 .project {
-  border-radius: 5px 5px 0 0;
+  border-radius: 6px;
   border: 1px solid silver; }
 
 .wp-block-image img {
@@ -6818,7 +6827,7 @@ figcaption {
   text-align: center;
   background-color: #fafaf5;
   margin-top: 0 !important;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 6px 6px;
   padding: .5rem 1rem;
   border-right: 1px solid silver;
   border-bottom: 1px solid silver;
@@ -6849,7 +6858,10 @@ figcaption {
 .blog_sidebar_thumbnail .panel {
   margin-top: 2rem;
   padding: 0;
-  display: grid; }
+  display: grid;
+  -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5); }
   @media screen and (max-width: 1025px) {
     .blog_sidebar_thumbnail .panel {
       grid-template-columns: 250px 1fr 2fr;
@@ -6879,10 +6891,10 @@ figcaption {
       .blog_sidebar_thumbnail .panel .tags_and_categories p span {
         font-weight: bold; }
 
-.the_skill {
+.the_skill, .the_post_category {
   font-size: 110%;
   font-weight: bold;
-  margin: 1rem 0 0; }
+  margin: 0 0; }
 
 .post_excerpt {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);

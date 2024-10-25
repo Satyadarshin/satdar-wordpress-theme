@@ -17,10 +17,14 @@ get_template_part('navigation');
              ?>>
             <div class="row">
                 <div class="large-4 small-12 columns">
-                    <h4>About this post category</h4>
-                    <?php
-                        echo '<p>' . category_description() .'</p>';
-                    ?>
+                    <div class="blog_category">
+                        <?php
+                            echo '<p class="the_post_category">Post category</p>';
+                            echo '<h2>'; // Didn't seem able to concatenate with the nexytline?!
+                            echo single_cat_title() . '</h2>';
+                            echo '<p>' . category_description() .'</p>';
+                        ?>
+                    </div>
                 </div>
                 <div class="large-8 columns">
                     <?php
