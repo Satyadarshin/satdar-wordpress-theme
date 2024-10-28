@@ -6506,6 +6506,35 @@ services.php / template part
         .skillset .skillset_panel .bosh {
           background-position: 53% 81%; } }
 
+.gallery_latest_post {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  border-top: 1px dotted; }
+  .gallery_latest_post .the_gallery {
+    width: 70%;
+    border: 1px solid; }
+  .gallery_latest_post .the_latest_post {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fafafa;
+    border: 1px solid silver;
+    text-align: center;
+    border-radius: 6px;
+    width: 30%; }
+    .gallery_latest_post .the_latest_post .thumbnail-frame {
+      border-top: 1px solid silver;
+      border-bottom: 1px solid silver; }
+      .gallery_latest_post .the_latest_post .thumbnail-frame img {
+        margin: 0;
+        margin: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .gallery_latest_post .the_latest_post h4 {
+      padding: .5rem;
+      font-size: 1rem !important; }
+
 /*
 Styles for the cutsom template /page-template/makeContact.php
 */

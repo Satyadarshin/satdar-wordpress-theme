@@ -281,4 +281,41 @@ function satdar_scripts() {
     wp_enqueue_script( 'heroSmootheScroll', get_template_directory_uri() . '/js/heroSmootheScroll.js', array('jquery'), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'satdar_scripts' );
+
+//Pulls out a single, latest post, for the home page.
+function latest_post() {
+    $args = array(
+        'posts_per_page' => 1, /* how many post you need to display */
+        'offset' => 0,
+        'orderby' => 'post_date',
+        'order' => 'DESC',
+        'post_type' => 'post', /* your post type name */
+        'post_status' => 'publish'
+    );
+    $query = new WP_Query($args);
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post();
+            ?>
+			<div class="the_post_container">
+
+                <div class="thumbnail-frame">
+					<a href="<?php the_permalink() ?>">
+					<?php
+					if ( has_post_thumbnail() ) {        
+					the_post_thumbnail( 'project-post_detail' );
+					//If there's a caption for the image, output that.
+					} else {
+						echo '<img src="http://placehold.it/400x400&amp;text=placeholder" />';
+					}
+					?>
+					</a>
+				</div>
+				<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+			</div>
+            <?php
+        endwhile;
+    endif;
+}
+
+add_shortcode('lastest-post', 'latest_post');
 ?>
