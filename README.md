@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SatDar WordPress Theme
 
 Contributors: Satyadarshin Perry
@@ -27,3 +28,9 @@ Stable branch is master.
 ```bash
 git clone git@github.com:Satyadarshin/satdar-wordpress-theme.git
 ```
+=======
+# SatDar Wordpress Theme
+
+Built on Zurb Foundation
+
+>>>>>>> 00ca434b85d03b7cea0cf9264a9e3cb04dc1bea1

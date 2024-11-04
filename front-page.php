@@ -37,22 +37,12 @@ get_template_part('navigation');
 			</section>
 		</div>
 	</div>
-	<div class="row">
-		<div class="large-12 columns" role="content">
-			<section class="gallery_latest_post">
-				<div class="the_gallery">
-					<h3>Gallery</h3>
-				</div>
-				<div class="the_post_container the_latest_post">
-					<h3>Latest blog post</h3>
-					<?php echo do_shortcode("[lastest-post]"); ?>
-				</div>
-			</section>
-		</div>
-	</div>
 </article>
+<section class="gallery_latest_post">
+	<?php get_template_part('gallery-partial'); ?>
+</section>
 <section class="my_services">
-	<?php get_template_part('services'); ?>
+	<?php get_template_part('services-partial'); ?>
 </section>
 <?php
 	get_sidebar('front-page');

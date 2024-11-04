@@ -44,18 +44,19 @@ get_template_part('navigation');
 					endif;
 					?>
 				</div>
-			<div class="small-12 medium-4 large-4 columns" >
-				<div class="static_page_sidebar">
-					<?php
-						if ( has_post_thumbnail() ) { 
-							the_post_thumbnail( 'project-post_detail' );
-							//If there's a caption for the image, output that.
-							echo (get_post( get_post_thumbnail_id() )->post_excerpt == true ) ? '<p class="project_thumb_detail_caption">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</p>' : '';
-						} 
-						else {
-							echo '<img src="http://placehold.it/500x500&amp;text=placeholder" />';
-						}
-					?>
+				<div class="small-12 medium-4 large-4 columns" >
+					<div class="panel static_page_sidebar">
+						<?php
+							if ( has_post_thumbnail() ) { 
+								the_post_thumbnail( 'project-post_detail' );
+								//If there's a caption for the image, output that.
+								echo (get_post( get_post_thumbnail_id() )->post_excerpt == true ) ? '<p class="project_thumb_detail_caption">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</p>' : '';
+							} 
+							else {
+								echo '<img src="http://placehold.it/500x500&amp;text=placeholder" />';
+							}
+						?>
+					</div>
 				</div>
 			</div>			
 		</article>

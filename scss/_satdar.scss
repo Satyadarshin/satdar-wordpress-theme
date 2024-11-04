@@ -33,6 +33,10 @@ table {
     }
 }
 
+strong {
+    font-weight: bold !important;
+}
+
 article,
 .one-column-sidebar {
     margin-top: 1em;
@@ -40,6 +44,15 @@ article,
 
 article {
     margin-bottom: 2rem;
+    li {
+       margin: .5rem 0;
+    }
+}
+
+.article-content-list {
+    padding: 1rem 2rem;
+    border: 1px solid rgba(192,192,192,1);
+    border-radius: 6px;
 }
 
 .screen-reader-text {
@@ -474,7 +487,8 @@ figcaption {
 }
 
 .static_page_sidebar { 
-    background-image: url('images/octagon-texture-01.png');
+    padding: 2rem 1rem;
+    border-radius: 6px;
     min-height: 25rem;
     p {
         border-top: 2px dotted #ede6ce;
@@ -482,13 +496,76 @@ figcaption {
         padding: 1rem 0;
         text-align: center;
     }
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ede6ce+1,ffffff+100 */
-    background-color: #ede6ce;
-    /* Old browsers */
-    // background: -moz-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
-    /* FF3.6-15 */
-    background-color: -webkit-linear-gradient(top, #ede6ce 1%, #ffffff 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background-color: url('images/octagon-texture.png') linear-gradient(to bottom, #ede6ce 1%, #ffffff 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.gallery-button-set { 
+    padding: 2rem 0 3rem;
+    border: 1px solid #ede6ce;
+    border-radius: 12px;
+    p { 
+        @media screen and (min-width: 760px) {
+            width: 73%;
+        }
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dotted rgb(192, 192, 192);
+    }
+}
+
+.viewport-first-bar {
+    .page-top-bar { padding: 6px 0;
+        max-width: 1000px; 
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between !important;
+        .top-bar-left { 
+            margin:0;
+            width: 3rem;
+            display: flex;
+            .badge {
+                @media screen and (max-width:999px) {
+                    padding-left: .5rem;
+                }  
+                max-height:  45px;
+                margin-top: -10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                filter: invert(0);
+                transition: all 500ms;
+                &:hover {
+                    filter: invert(100%);
+                }
+                img { 
+                    height:  35px;
+                    width: 35px;
+                    display: block;
+                    margin: 5px 0;
+                }
+            }
+        }
+        .top-bar-right { 
+            margin-top: .25rem;
+            max-height: 1.75rem;
+            input {
+                height: 1.75rem;
+            }
+            .search-form {  
+                @media screen and (max-width:999px) {
+                    padding-right: .5rem;
+                }
+                max-height: 1.75rem;
+                display: flex;
+                justify-content: flex-end;
+                .alert {
+                    padding: 0;
+                    width: 6rem;
+                }
+                label {
+                    max-width: 21rem;
+                }
+            }
+        }
+    }
 }

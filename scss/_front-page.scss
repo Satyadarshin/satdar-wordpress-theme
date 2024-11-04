@@ -11,14 +11,20 @@ services.php / template part
     border-top: 1px dotted rgba(229, 229, 229, 1);
     background-color: rgb(250, 250, 245);
 }
+.primary-services {
+    display: flex;
+    gap: 1rem;
+}
 .skillset { 
     padding-bottom: 2rem;
     .skillset_panel { 
+        border-radius: 6px;
         //Large screens
         background: $mid-tone;
         @media only screen and ( min-width: 64.063em) {
             margin-left: .05rem;
             .skillset_icon {
+                border-radius: 6px 6px  0 0;
                 background: url('./images/RocketshipHalftone.png') no-repeat;
                 margin: 0 -.9rem;
                 height: 10rem;
@@ -28,6 +34,7 @@ services.php / template part
                 figure {
                     margin: 0;
                     img {
+                        border-radius: 6px 6px  0 0;
                         display: block;
                     }
                 }
@@ -44,11 +51,14 @@ services.php / template part
         }
         //Small to medium screens
         @media only screen and ( max-width: 64em) {
+            margin-left: .25rem;
+            margin-right: .25rem;
             .skillset_icon {
-                 background: url('./images/RocketshipHalftone.png') no-repeat;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                border-radius: 6px 6px  0 0;
+                background: url('./images/RocketshipHalftone.png') no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 figure { 
                     margin: 0rem;
                     img {
@@ -81,24 +91,41 @@ services.php / template part
 
 }
 .gallery_latest_post {
-    padding-top: 1rem;
-    display: flex;
-    gap: 1rem;
-    border-top: 1px dotted;
-    
+    background-color:  rgb(235, 235, 220);
+    padding: 2rem 0;
+    .the_cards {
+        display: flex;
+        gap: 1rem;
+        flex-direction: row;
+        @media screen and (max-width: 640px) {
+            flex-direction: column;
+        }
+    }
     .the_gallery {
-        // flex-shrink: 2;
-        width: 70%;
-        border: 1px solid;        
+        display:flex;
+        align-items: center;
+        min-height: 22rem;
+        border: 1px solid rgba(192,192,192,1);
+        border-radius: 6px;     
+        h3 {
+            width: 100%;
+            padding: 0 2rem;
+            font-size: 4rem;
+            text-align: center;
+        }
+        @media screen and (min-width: 640.05px) {
+            width: 70%;
+        }
     }
     .the_latest_post {
         box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
-    background-color: rgb(250,250,250);
-    border: 1px solid rgb(192, 192, 192);
+        background-color: rgb(250,250,250);
+        border: 1px solid rgb(192, 192, 192);
         text-align: center;
         border-radius: 6px;
-        width: 30%;
-        
+        @media screen and (min-width: 640.05px) {
+            width: 33%;
+        }
         .thumbnail-frame { 
             border-top: 1px solid rgb(192, 192, 192);
             border-bottom: 1px solid rgb(192, 192, 192);
