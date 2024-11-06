@@ -55,7 +55,6 @@ get_template_part('navigation');
                     <div class="panel">
                     <?php
                         if ( has_post_thumbnail() ) { 
-                            echo "<h3>Project Highlight</h3> ";
                             the_post_thumbnail( 'project-post_detail' );
                             //If there's a caption for the image, output that.
                             echo (get_post( get_post_thumbnail_id() )->post_excerpt == true ) ? '<p class="project_thumb_detail_caption">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</p>' : '';
