@@ -1,3 +1,12 @@
+<?php
+/*
+* Header first row.
+*
+* @package SatDar
+*/
+?>
+
+
 <div class="viewport-first-bar contain-to-grid ">
     <div class="page-top-bar">
         <div class="top-bar-left">

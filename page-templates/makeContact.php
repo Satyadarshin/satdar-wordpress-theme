@@ -1,8 +1,10 @@
 <?php
 /*
-Template Name: Contact
-Based on http://foundation.zurb.com/templates/workspace.html
+* Template Name: Contact
+*
+* @package SatDar
 */
+
 get_header();
 get_header('portfolio-hero');
 get_template_part('navigation');
@@ -28,10 +30,12 @@ get_template_part('navigation');
                                 echo "<h5>This message is the programming equivalent of a red alert!</h5><hr>";
                                 echo '<p>Something has gone horribly wrong with Wordpress, which is why you&rsquo;re seeing this not my email-contact form.<p></p>I&rsquo;d still love to hear from you ... but most especially because I&rsquo;d really like to know summat&rsquo;s up with my website!</p><p>Call me on my mobile number.</p>';
                             endif;
+
                             ?>
                         </div> 
                     </div>
                     <div class="large-8 columns">
+            
                         <div class="panel contact-social-network">
                             <p>
                                 <a href="https://www.facebook.com/satyadarshin.is.interested.in/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook-logo-colour.png" title="" alt="Facebook icon">

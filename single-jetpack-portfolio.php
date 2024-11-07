@@ -2,7 +2,7 @@
 /**
  * The template for displaying portfolio taxonomy lists
  *
- * @package WordPress
+ * @package SatDar
  */
 
 get_header();

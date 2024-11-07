@@ -1,6 +1,8 @@
 <?php
 /*
-Template Name: Search Page
+* Template Name: Search results
+*
+* @package SatDar
 */
 
 global $query_string;

@@ -1,10 +1,10 @@
 <?php
 /**
- * The template for displaying media files, ;'/
+ * The template for displaying media files,
  *
- * @package WordPress
-
- */
+ * @package SatDar
+*
+*/
 
 get_header();
 get_header('blog-hero');

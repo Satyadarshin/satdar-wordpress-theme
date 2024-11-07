@@ -1,12 +1,8 @@
 <?php
 /**
- * The template for displaying pages
+ * The template for displaying the home page.
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
- * @package WordPress
+ * @package SatDar
  */
 
 get_header();
@@ -39,13 +35,13 @@ get_template_part('navigation');
 	</div>
 </article>
 <section class="gallery_latest_post">
-	<?php get_template_part('gallery-partial'); ?>
+	<?php get_template_part('partials/gallery-partial'); ?>
 </section>
 <section class="my_services">
-	<?php get_template_part('services-partial'); ?>
+	<?php get_template_part('partials/services-partial'); ?>
 </section>
 <?php
-	get_sidebar('front-page');
+	// get_sidebar('front-page');
 	get_footer('display');
 	get_footer();
 ?>
