@@ -150,3 +150,25 @@ a {
 		background-color: rgb(255,255,255);
 	}
 }
+.wp-block-image img { 
+    border-right: 1px solid silver;
+    border-top: 1px solid silver; 
+    border-left: 1px solid silver;
+    border-radius: 3px 3px 0 0;
+    display: block;
+    margin-bottom: 0 !important;
+}  
+.wp-block-gallery {
+	padding: 3px;
+	border: 1px solid silver;
+	border-radius: 6px;
+	background-color: #fafaf5; ;
+	img {
+		border-radius: 3px;
+		border-bottom: 1px solid silver;
+	}
+	.blocks-gallery-caption {
+		border: none;
+		border-radius: 0;
+	}
+}

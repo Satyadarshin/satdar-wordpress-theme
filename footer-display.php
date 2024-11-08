@@ -77,7 +77,7 @@
                 <span><a href="https://www.instagram.com/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/glyph-logo_May2016_aluminum.png" title="Personal, mainly street art documentary project" alt="Instagram icon"></a></span>
                 <span><a href="https://www.linkedin.com/in/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/LI-In-Bug_aluminum.png" title="" alt="LinkedIn icon"></a></span>
             </p>
-			<p class="copyright">© <?php echo get_bloginfo( 'name' ); echo " " . date('Y');?><br />Designed &amp; programmed by Satyadarshin.<br />I care about your <a href="<?php echo home_url(); ?>/privacy">privacy</a>.</p>
+			<p class="copyright">© <?php echo get_bloginfo( 'name' ); echo " " . date('Y');?><br />Designed &amp; programmed by <a href="<?php echo home_url(); ?>/author/granddesigner/">Satyadarshin</a>.<br />I care about your <a href="<?php echo home_url(); ?>/privacy">privacy</a>.</p>
 		</div>
 	</div>
 </footer>

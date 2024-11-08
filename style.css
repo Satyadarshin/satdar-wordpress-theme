@@ -6454,6 +6454,26 @@ a img .aligncenter {
     color: #2693f2;
     background-color: white; }
 
+.wp-block-image img {
+  border-right: 1px solid silver;
+  border-top: 1px solid silver;
+  border-left: 1px solid silver;
+  border-radius: 3px 3px 0 0;
+  display: block;
+  margin-bottom: 0 !important; }
+
+.wp-block-gallery {
+  padding: 3px;
+  border: 1px solid silver;
+  border-radius: 6px;
+  background-color: #fafaf5; }
+  .wp-block-gallery img {
+    border-radius: 3px;
+    border-bottom: 1px solid silver; }
+  .wp-block-gallery .blocks-gallery-caption {
+    border: none;
+    border-radius: 0; }
+
 /* SatDar Theme custom Themes */
 /*
 Front-page template
@@ -6889,14 +6909,6 @@ img {
 .project {
   border-radius: 6px;
   border: 1px solid silver; }
-
-.wp-block-image img {
-  border-right: 1px solid silver;
-  border-top: 1px solid silver;
-  border-left: 1px solid silver;
-  border-radius: 4px 4px 0 0;
-  display: block;
-  margin-bottom: 0 !important; }
 
 .attachment-page img, .lightbox-image-container img {
   border-bottom: 1px solid silver;
