@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying portfolio taxonomy lists
+ * The template for displaying Jetctpack portfolio taxonomy lists
  *
  * @package WordPress
  */

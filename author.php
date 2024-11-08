@@ -6,78 +6,53 @@
  * Please note that this is the WordPress construct of pages and that
  * other "pages" on your WordPress site will use a different template.
  *
- * @package WordPress
+ * @package SatDar
  */
 
 get_header();
 get_template_part('navigation');
 ?>
 
-
-	<div class="row">
-
-		<div class="large-9 columns" role="content">
-
-			<article id="post-<?php
-				//TODO from id onwards placed to pass the the them checker test
-				the_ID(); ?>" <?php post_class();
-					 ?>>
-			<div class="row">
-				<div class="large-12 columns">
-			<?php
-					the_archive_title( '<h2 class="page-title">', '</h2>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-			?>
-				</div>
+<div class="row">
+	<div class="large-9 columns" role="content">
+		<article id="post-<?php
+			//TODO from id onwards placed to pass the the them checker test
+			the_ID(); ?>" <?php post_class();
+					?>>
+		<div class="row">
+			<div class="large-12 columns">
+				<?php
+					$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+				?>
+				<h2>About: <?php echo $curauth->nickname; ?></h2>
+				<dl>
+					<dt>Website</dt>
+					<dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
+					<dt>Profile</dt>
+					<dd><?php echo $curauth->user_description; ?></dd>
+				</dl>
+				<h2>Posts by <?php echo $curauth->nickname; ?>:</h2>
+				<ul>
+				<!-- The Loop -->
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<li>
+							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
+							<?php the_title(); ?></a>,
+							<?php the_time('d M Y'); ?> in <?php the_category('&');?>
+						</li>
+					<?php endwhile; else: ?>
+						<p><?php _e('No posts by this author.'); ?></p>
+					<?php endif; ?>
+				<!-- End Loop -->
 			</div>
-			<?php
-				//Initialise a counter
-				$i = 1;
-				if ( have_posts() ) :
-					while ( have_posts() ) : the_post();
-					//Establish If we need to build a new row
-					if ($i == 1) {
-						//build a new row
-						echo '<div class="row" data-equalizer>';
-
-					}
-						echo '<div class="large-6 columns">';
-						echo '<div class="panel" data-equalizer-watch>';
-						//TODO feautured Image or default
-						echo '<p><img src="http://placehold.it/400x300"/></p>';
-						echo  the_title( '<h5>', '</h5>');
-						echo  the_excerpt( '<p>', '</p>');
-						echo '</div>'; //Close the panel
-						echo '</div>';//Close the column
-						$i++;
-
-					if ($i > 2) {
-						//close the row
-						echo '</div>';
-						//Reset the counter
-						$i = 1;
-					}
-					endwhile;
-
-
-				else :
-					echo '<div class="large-4 offset-4 columns">';
-					echo '<div class="panel">';
-					echo '<p>No content found</p>';
-					echo '</div>'; //Close the panel
-					echo '</div>';//Close the column
-				endif;
-//TODO placed to pass the the them checker test
-wp_link_pages();
-			?>
-			</article>
 		</div>
-
-        <div class="large-3 columns">
-			<?php get_sidebar('panels'); ?>
-        </div>
-
-      </div>
+		<?php
+			//TODO placed to pass the the them checker test
+			wp_link_pages();
+		?>
+		</article>
+	</div>
+</div>
 
 <?php
 	get_footer('display');

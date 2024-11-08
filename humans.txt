@@ -1,0 +1,24 @@
+/* TEAM */
+    Design and programming: Satyadarshin Perry
+    Contact: s.dog@satyadarshin.com
+    From: Bristol, England
+
+/* SITE */
+    Published: August 2016
+    Standards: HTML5, CSS3
+    Language: English (British)
+    Components: 
+        WordPress [ https://wordpress.org/ ], Content Management System; 
+        PHP [ http://php.net/ ], server-side scripting;
+        Zurb Foundation [ http://foundation.zurb.com/ ], CSS framework;
+        SASS [ http://sass-lang.com/ ], CSS preporcessor; 
+        jQuery [ https://jquery.com/ ], JavaScript library;
+        Bower [ https://bower.io/ ], package manager;
+    Development apps: 
+        Brackets [ http://brackets.io/ ], code editor;
+        MAMP [ https://www.mamp.info/en/ ], local server environment;
+        CodeKit [ https://incident57.com/codekit/index.html ], compiler and package manager; 
+        Cyberduck [ https://cyberduck.io/?l=en ] FTP client; 
+        Adobe Photoshop and Adobe Illustrator, image editors
+
+/* More about this document at humanstxt.org */

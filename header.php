@@ -14,7 +14,9 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<?php //TODO store the lines above <title> as variable options ?>
+		<!-- //TODO store the lines above <title> as variable options 
+			// TODO what does p:domain_verify do?
+		-->
 		<meta name="p:domain_verify" content="966fcaad9bea4b0feecdbd184905d579"/>  
         <link type="text/plain" rel="author" href="http://www.satyadarshin.com/humans.txt" />
 		<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
