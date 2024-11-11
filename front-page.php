@@ -9,10 +9,10 @@ get_header();
 get_header('hero');
 get_template_part('navigation');
 ?>
-		<article id="post-<?php
-			//TODO from id onwards placed to pass the the them checker test
-			the_ID(); ?>" <?php post_class();?>
-		>
+	<article id="post-<?php
+		//TODO from id onwards placed to pass the the them checker test
+		the_ID(); ?>" <?php post_class();?>
+	>
 	<div class="row">
 		<div class="large-12 columns" role="content">
 			<section>
