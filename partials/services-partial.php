@@ -7,7 +7,7 @@
    <div class="large-4 medium-12 columns">
         <div class="row skillset_panel">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon bish"><figure><a href="<?php echo get_bloginfo('url'); ?>/web-content-designer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/wp-content/uploads/2024/06/bish.png"></a></figure></div>
+                <div class="skillset_icon bish"><figure><a href="<?php echo get_bloginfo('url'); ?>/web-content-designer/"><img src="<?php echo get_bloginfo('url'); ?>/wp-content/uploads/2024/06/bish.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns skillset_description">
                 <h3>Web content designer</h3>
@@ -18,7 +18,7 @@
     <div class="large-4 medium-12 columns">
         <div class="row skillset_panel ">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon bash"><figure><a href="<?php echo get_bloginfo('url'); ?>/web-developer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/wp-content/uploads/2024/06/bash.png"></a></figure></div>
+                <div class="skillset_icon bash"><figure><a href="<?php echo get_bloginfo('url'); ?>/web-developer/"><img src="<?php echo get_bloginfo('url'); ?>/wp-content/uploads/2024/06/bash.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns skillset_description">
                 <h3>Web development</h3>
@@ -29,7 +29,7 @@
     <div class="large-4 medium-12 columns">
         <div class="row skillset_panel">
             <div class="large-12 medium-6 columns">
-                <div class="skillset_icon bosh"><figure><a href="<?php echo get_bloginfo('url'); ?>/graphic-designer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/wp-content/uploads/2024/06/bosh.png"></a></figure></div>
+                <div class="skillset_icon bosh"><figure><a href="<?php echo get_bloginfo('url'); ?>/graphic-designer/"><img src="<?php echo get_bloginfo('url'); ?>/wp-content/uploads/2024/06/bosh.png"></a></figure></div>
             </div>
             <div class="large-12 medium-6 columns skillset_description">
                 <h3>Graphic design</h3>

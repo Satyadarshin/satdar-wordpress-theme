@@ -189,8 +189,30 @@ img {
     .project {
         -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);      
-    }
+        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);  
+        transition: all 250ms;    
+        &:hover {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;  
+            filter: grayscale(100%);
+        }
+    } 
+}
+@media only screen and (max-width: 64em) {
+    // .wp-caption,
+    .project {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;  
+        transition: all 250ms;    
+        &:hover {
+            -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+            box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);  
+            filter: grayscale(100%);
+        }
+    } 
 }
 
 // .wp-caption,
@@ -525,9 +547,11 @@ figcaption {
                 padding-top: 5px;
                 padding-bottom: 5px;
                 filter: invert(0);
-                transition: all 500ms;
+                transition: all 250ms;
                 &:hover {
-                    filter: invert(100%);
+                    // This tool calculated the colour transition:
+                    // https://isotropic.co/tool/hex-color-to-css-filter/
+                    filter: invert(41%) sepia(30%) saturate(4350%) hue-rotate(351deg) brightness(100%) contrast(90%);
                 }
                 img { 
                     height:  35px;
