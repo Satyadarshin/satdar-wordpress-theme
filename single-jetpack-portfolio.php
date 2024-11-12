@@ -60,7 +60,7 @@ get_template_part('navigation');
                             echo (get_post( get_post_thumbnail_id() )->post_excerpt == true ) ? '<p class="project_thumb_detail_caption">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</p>' : '';
                         } 
                         else {
-                            echo '<img src="http://placehold.it/500x500&amp;text=placeholder" />';
+                            echo '<img src="'. get_stylesheet_directory_uri() .'/images/image-placeholder.jpg" />';
                         }
                         $args = array('orderby' => 'term_order');
                         $terms = wp_get_object_terms( $post->ID, 'jetpack-portfolio-tag', $args );

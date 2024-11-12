@@ -6614,18 +6614,6 @@ Styles for the cutsom template /page-template/makeContact.php
     margin: 0 1rem;
     border: 1px solid #FFFFFF; }
 
-.vinnie {
-  display: block; }
-
-.contact-social-network p {
-  padding: 1rem 0 .5rem;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem; }
-  .contact-social-network p a:hover {
-    opacity: .5; }
-
 .hero {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#40e0d0+0,48d1cc+60,afeeee+100 */
   background: #40e0d0;
@@ -6686,6 +6674,14 @@ Styles for the cutsom template /page-template/makeContact.php
   font-size: 1.2rem;
   padding: 4rem;
   border-top: 1px dotted #999999; }
+  .lower_footer .social-media-buttons {
+    display: flex;
+    gap: 1rem; }
+    .lower_footer .social-media-buttons span {
+      filter: invert(0);
+      transition: all 250ms; }
+      .lower_footer .social-media-buttons span :hover {
+        filter: invert(50%); }
   .lower_footer p {
     color: #999999;
     font-size: .75rem; }
@@ -7140,10 +7136,26 @@ figcaption {
       .single-post-pagination_buttons .paginate_right a::after {
         content: ' » '; }
 
-@media only screen and (max-width: 40.063em) {
-  .contact-social-network span {
-    display: block;
-    margin-top: 0.5rem; } }
+.social-platform-set .social-platform {
+  padding: 1rem 0 !important;
+  display: flex;
+  gap: 1rem;
+  align-items: center; }
+  .social-platform-set .social-platform div {
+    margin-left: 1rem;
+    width: 60px;
+    height: 60px; }
+    .social-platform-set .social-platform div img {
+      display: block;
+      margin: 0;
+      filter: invert(0);
+      transition: all 250ms; }
+      .social-platform-set .social-platform div img:hover {
+        filter: invert(50%); }
+  .social-platform-set .social-platform p {
+    margin: 0;
+    width: 76%; }
+
 .static_page_sidebar {
   padding: 2rem 1rem;
   border-radius: 6px;
@@ -7212,3 +7224,21 @@ figcaption {
         width: 6rem; }
       .viewport-first-bar .page-top-bar .top-bar-right .search-form label {
         max-width: 21rem; }
+
+.skills-list {
+  margin: 2rem 0 3rem; }
+  .skills-list .cv-skill {
+    padding: .5rem 0;
+    border-top: 1px dotted silver; }
+    .skills-list .cv-skill summary {
+      font-weight: bold; }
+    .skills-list .cv-skill p {
+      padding-left: .9rem; }
+    .skills-list .cv-skill .term-description {
+      padding-top: .5rem;
+      margin-bottom: 0; }
+    .skills-list .cv-skill .term-link {
+      margin-top: .5rem; }
+
+.author-aside {
+  margin-top: 2rem; }

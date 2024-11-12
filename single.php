@@ -43,7 +43,7 @@ get_template_part('navigation');
                         $theCaption = (get_post( get_post_thumbnail_id() )->post_excerpt == true ) ?  get_post( get_post_thumbnail_id() )->post_excerpt : '&nbsp;';
                     } 
                     else {
-                        echo '<img src="http://placehold.it/500x500&amp;text=placeholder" />';
+                        echo '<img src="'. get_stylesheet_directory_uri() .'/images/image-placeholder.jpg" />';
                     }
                     echo '</div>';
                     echo '<div class="project_thumb_detail_caption"><p>' . $theCaption .'</p></div>'

@@ -50,7 +50,7 @@ get_template_part('navigation');
                                 the_post_thumbnail('project-thumb');
                             } 
                             else {
-                                echo '<img src="http://placehold.it/500x500"  />';
+                                echo '<img src="'. get_stylesheet_directory_uri() .'/images/image-placeholder.jpg" />';
                             } 
                             echo  the_title( '<h5>', '</h5>');
                             echo '</a>';

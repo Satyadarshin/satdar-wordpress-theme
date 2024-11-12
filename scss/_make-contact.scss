@@ -19,19 +19,3 @@ Styles for the cutsom template /page-template/makeContact.php
         border: 1px solid $white;
     }
 }
-.vinnie {
-    display: block;
-
-}
-.contact-social-network {
-    p {
-        padding: 1rem 0 .5rem;
-        justify-content: center;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        a:hover {
-            opacity: .5;
-        }
-    }
-}

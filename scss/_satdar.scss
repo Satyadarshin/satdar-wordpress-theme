@@ -491,14 +491,33 @@ figcaption {
     }
 }
 
- @media only screen and (max-width: 40.063em) {
-    .contact-social-network {
-        span {
-            display: block;
-            margin-top: .5rem
+//  @media only screen and (min-width: 40.063em) {
+    .social-platform-set {
+        .social-platform {
+            padding: 1rem 0 !important;
+            display: flex;
+            gap: 1rem;
+            align-items:center ;
+            div {
+                margin-left: 1rem; 
+                width: 60px; 
+                height: 60px;
+                img {
+                    display: block;
+                    margin: 0;
+                    filter: invert(0);
+                    transition: all 250ms;
+                    &:hover {
+                        filter: invert(50%); 
+                    }
+                }
+            }
+            p { margin: 0;
+                width: 76%;
+            }
         }
     }
-}
+// }
 
 .static_page_sidebar { 
     padding: 2rem 1rem;
@@ -584,4 +603,28 @@ figcaption {
             }
         }
     }
+}
+
+.skills-list {
+    margin: 2rem 0 3rem;
+   .cv-skill {
+        padding: .5rem 0;
+        border-top: 1px dotted silver;
+        summary {
+            font-weight: bold;
+        }
+        p {
+            padding-left: .9rem;
+        }
+        .term-description {
+            padding-top: .5rem;
+            margin-bottom: 0;
+        }
+        .term-link {
+            margin-top: .5rem;
+        }
+    }
+}
+.author-aside {
+    margin-top: 2rem;
 }

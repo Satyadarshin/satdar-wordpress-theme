@@ -35,16 +35,7 @@ get_template_part('navigation');
                         </div> 
                     </div>
                     <div class="large-8 columns">
-            
-                        <div class="panel contact-social-network">
-                            <p>
-                                <a href="https://www.facebook.com/satyadarshin.is.interested.in/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook-logo-colour.png" title="" alt="Facebook icon">
-                                <a href="https://www.linkedin.com/in/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/LI-In-Bug.png" title="" alt="LinkedIn icon">
-                                <a href="https://www.instagram.com/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/glyph-logo_May2016.png" title="Personal, mainly street art documentary project" alt="Instagram icon"></a>
-                                <!-- <a href="https://github.com/Satyadarshin"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/GitHub-Mark-64px.png" title="Visit GitHub for portfolio code projects" alt="GitHub icon"> -->
-                                <!-- <a href="https://open.spotify.com/user/21yu26kcdadiqgozb3o7tnvra"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/spotify-logo-colour.png" title="" alt="Spotify icon"> -->
-                            </p>
-                        </div>
+                    <?php get_template_part('partials/social-media-buttons-partial'); ?>
                     </div>
                 </div>
             </article>
