@@ -31,7 +31,7 @@ This project is part-demonstration of a structured development process:
 ### Branches
 
 * The published theme is always pulled from *master*. 
-* The *foundation* branch features the older, deprecated theme code that was created with Zurb Foundation. It accepts modest feature modifications, refinements, and bug fixes. Requires SASS and a Ruby runtime in order to build.
+* The *foundation* branch features the older, deprecated theme code that was created with Zurb Foundation. It accepts modest feature modifications, refinements, and bug fixes. Requires SASS and a Ruby runtime in order to build. 
 * The *empire* branch is a complete, framework-free rewrite, and entirely unstable. Requires Node.js and NPM for PostCSS for the build.
 
 ```bash
