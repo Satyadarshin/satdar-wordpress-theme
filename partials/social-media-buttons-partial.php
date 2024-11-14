@@ -2,12 +2,14 @@
 $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
 ?>
 <div class="social-platform-set">
+<?php if ( $curauth->linkedin ): ?>
     <div class="panel social-platform">
         <div> 
-            <a href="https://www.linkedin.com/in/satyadarshin/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/linkedin-logo-aluminum.png" title="" alt="LinkedIn icon" /></a>
+            <a href="<?php echo $curauth->linkedin; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/linkedin-logo-aluminum.png" title="" alt="LinkedIn icon" /></a>
         </div>
         <p>Follow me for more on my work history.</p>
     </div>
+    <?php endif; ?>
     <?php if ( $curauth->facebook ): ?>
     <div class="panel social-platform">
        <div>
