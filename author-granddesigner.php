@@ -23,10 +23,6 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
         ?>>
             <h2>About <?php echo $curauth->first_name; ?></h2>
             <p><?php echo $curauth->user_description; ?></p>
-            <?php
-                //TODO placed to pass the the them checker test
-			wp_link_pages();
-            ?>
             <?php get_template_part('partials/social-media-buttons-partial'); ?>
         </article>
 	</div>
