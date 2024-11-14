@@ -628,3 +628,22 @@ figcaption {
 .author-aside {
     margin-top: 2rem;
 }
+
+// overrides positioning of a button block to place it above an image block.
+.floating-button {
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+@media screen and ( min-width: 951.05px ) {
+    .floating-button {
+        top: -6rem;
+        margin-top: -3rem;
+    }
+}
+@media screen and ( max-width: 951px ) {
+    .floating-button {
+        top: -9rem;
+        margin-top: -6rem;
+    }
+}
