@@ -7141,16 +7141,16 @@ figcaption {
   display: flex;
   gap: 1rem;
   align-items: center; }
-  .social-platform-set .social-platform div {
+  .social-platform-set .social-platform span {
     margin-left: 1rem;
     width: 60px;
     height: 60px; }
-    .social-platform-set .social-platform div img {
+    .social-platform-set .social-platform span img {
       display: block;
       margin: 0;
       filter: invert(0);
       transition: all 250ms; }
-      .social-platform-set .social-platform div img:hover {
+      .social-platform-set .social-platform span img:hover {
         filter: invert(50%); }
   .social-platform-set .social-platform p {
     margin: 0;
@@ -7165,6 +7165,25 @@ figcaption {
     border-bottom: 1px dotted #ede6ce;
     padding: 1rem 0;
     text-align: center; }
+
+.bish-bash-bosh-sidebar {
+  border-top: 1px dotted silver;
+  min-height: 32rem; }
+  .bish-bash-bosh-sidebar h3 {
+    text-align: center; }
+  .bish-bash-bosh-sidebar .bish-bash-buttons .the-bash {
+    margin: -1.5rem 0; }
+  .bish-bash-bosh-sidebar .bish-bash-buttons .the-bosh {
+    margin-left: -.75rem;
+    margin-top: .5rem; }
+  .bish-bash-bosh-sidebar .bish-bash-buttons .grey-out {
+    opacity: .7;
+    filter: grayscale(3); }
+  .bish-bash-bosh-sidebar .bish-bash-buttons .hover-in {
+    transition: opacity 500ms; }
+    .bish-bash-bosh-sidebar .bish-bash-buttons .hover-in:hover {
+      opacity: 1;
+      filter: grayscale(3) drop-shadow(0 0 0.75rem gray); }
 
 .gallery-button-set {
   padding: 2rem 0 3rem;
@@ -7242,3 +7261,28 @@ figcaption {
 
 .author-aside {
   margin-top: 2rem; }
+
+.floating-button {
+  display: block;
+  position: relative;
+  z-index: 10; }
+
+@media screen and (min-width: 951.05px) {
+  .floating-button {
+    top: -6rem;
+    margin-top: -3rem; } }
+@media screen and (max-width: 951px) {
+  .floating-button {
+    top: -9rem;
+    margin-top: -6rem; } }
+@media screen and (min-width: 640.05px) {
+  .bish-bash-buttons {
+    background: 100% 10% no-repeat url("images/drips.png");
+    min-height: 32rem; } }
+@media screen and (max-width: 640px) {
+  .bish-bash-buttons {
+    min-height: 600px;
+    background-image: url("images/drops.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 390px 600px; } }

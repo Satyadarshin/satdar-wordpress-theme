@@ -40,15 +40,17 @@ get_template_part('navigation');
 					echo '<div class="row"><div class="large-12 columns">'; //Open the column / row
 					echo '<p>This page has no content</p>';
 					echo '</div></div>'; //Close the column / row
-
 					endif;
 					?>
 				</div>
 				<div class="small-12 medium-4 large-4 columns" >
-					<div class="panel static_page_sidebar">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bish.png" alt="" />
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bash.png" alt="" />
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bosh.png" alt="" />
+					<div class="bish-bash-bosh-sidebar">
+						<h3>I've got you covered!</h3>
+						<div class="bish-bash-buttons">
+							<a href="<?php echo site_url(); ?>/professional-services/web-content-designer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bish.png" class="the-bish <?php echo (is_page( 'web-content-designer' )) ? '' : 'grey-out hover-in'; ?>" alt="" /></a>
+							<a href="<?php echo site_url(); ?>/professional-services/web-developer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bash.png" class="the-bash <?php echo (is_page( 'web-developer' )) ? '' : 'grey-out hover-in'; ?>" alt="" /></a>
+							<a href="<?php echo site_url(); ?>/professional-services/graphic-designer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bosh.png" class="the-bosh <?php echo (is_page( 'graphic-designer' )) ? '' : 'grey-out hover-in'; ?>" alt="" /></a>
+						</div>
 					</div>
 				</div>
 			</div>			
