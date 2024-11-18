@@ -4,6 +4,13 @@
 @import "hero";
 @import "footer";
 @import "footer-upper";
+
+@mixin throw-shade {
+    -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);  
+}
+
 * {
     /* So 100% means 100% */
     box-sizing: border-box;
@@ -187,9 +194,7 @@ img {
 @media only screen and (min-width: 64.063em) {
     // .wp-caption,
     .project {
-        -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);  
+        @include throw-shade; 
         transition: all 250ms;    
         &:hover {
             -webkit-box-shadow: none;
@@ -275,9 +280,10 @@ figcaption {
         margin-top: 2rem;
         padding: 0;
         display: grid;
-        -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);  
+        @include throw-shade;
+        // -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        // -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        // box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);  
         @media screen and ( max-width: 1025px ) {
             // margin: 0 1rem !important; 
             grid-template-columns: 250px 1fr 2fr;
@@ -491,33 +497,33 @@ figcaption {
     }
 }
 
-//  @media only screen and (min-width: 40.063em) {
-    .social-platform-set {
-        .social-platform {
-            padding: 1rem 0 !important;
-            display: flex;
-            gap: 1rem;
-            align-items:center ;
-            div {
-                margin-left: 1rem; 
-                width: 60px; 
-                height: 60px;
-                img {
-                    display: block;
-                    margin: 0;
-                    filter: invert(0);
-                    transition: all 250ms;
-                    &:hover {
-                        filter: invert(50%); 
-                    }
+
+.social-platform-set {
+    .social-platform {
+        padding: 1rem 0 !important;
+        display: flex;
+        gap: 1rem;
+        align-items:center ;
+        span {
+            margin-left: 1rem; 
+            width: 60px; 
+            height: 60px;
+            img {
+                display: block;
+                margin: 0;
+                filter: invert(0);
+                transition: all 250ms;
+                &:hover {
+                    filter: invert(50%); 
                 }
             }
-            p { margin: 0;
-                width: 76%;
-            }
+        }
+        p { margin: 0;
+            width: 76%;
         }
     }
-// }
+}
+
 
 .static_page_sidebar { 
     padding: 2rem 1rem;
@@ -528,6 +534,39 @@ figcaption {
         border-bottom: 1px dotted #ede6ce;
         padding: 1rem 0;
         text-align: center;
+    }
+}
+
+
+.bish-bash-bosh-sidebar { 
+    border-top: 1px dotted silver;
+    min-height: 32rem;
+    h3 {
+        text-align: center;
+    }
+    .bish-bash-buttons {
+        // background: 50% 50% no-repeat url('images/drips.png');
+        // margin-top: 1rem;
+        .the-bish {
+        }
+        .the-bash {
+            margin: -1.5rem 0;
+        }
+        .the-bosh {
+            margin-left: -.75rem;
+            margin-top: .5rem;
+        }
+        .grey-out {
+            opacity: .7;
+            filter: grayscale(3);
+        }
+        .hover-in {
+            transition: opacity 500ms;
+            &:hover {
+                opacity: 1;
+                filter: grayscale(3) drop-shadow(0 0 0.75rem gray);
+            }
+        }
     }
 }
 
@@ -645,5 +684,22 @@ figcaption {
     .floating-button {
         top: -9rem;
         margin-top: -6rem;
+    }
+}
+
+@media screen and ( min-width: 640.05px ) {
+    .bish-bash-buttons { 
+        background: 100% 10% no-repeat url('images/drips.png');
+        min-height: 32rem;
+    }
+    
+}
+@media screen and ( max-width: 640px ) {
+    .bish-bash-buttons{ 
+        min-height: 600px;
+        background-image: url('images/drops.png');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 390px 600px;
     }
 }
