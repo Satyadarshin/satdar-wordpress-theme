@@ -7256,3 +7256,9 @@ figcaption {
   .floating-button {
     top: -9rem;
     margin-top: -6rem; } }
+.gravatar {
+  margin: 1rem 0 2rem;
+  display: flex;
+  gap: 1rem; }
+  .gravatar img {
+    border-radius: 75px; }

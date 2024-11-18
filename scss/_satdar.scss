@@ -647,3 +647,12 @@ figcaption {
         margin-top: -6rem;
     }
 }
+
+.gravatar {
+    margin: 1rem 0 2rem;
+    display: flex;
+    gap: 1rem;
+    img {
+        border-radius: 75px;
+    }
+}
