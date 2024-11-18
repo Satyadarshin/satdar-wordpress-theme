@@ -21,8 +21,11 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 			//TODO from id onwards placed to pass the the them checker test
 			the_ID(); ?>" <?php post_class();
         ?>>
-            <h2>About <?php echo $curauth->first_name; ?></h2>
-            <p><?php echo $curauth->user_description; ?></p>
+            <h2>About <?php echo $curauth->first_name . ' ' . $curauth->last_name; ?></h2>
+            <div class="gravatar">
+                <?php echo get_avatar( get_the_author_meta(), $ize='150' ); ?>
+                <p><?php echo $curauth->user_description; ?></p>
+            </div>
             <?php get_template_part('partials/social-media-buttons-partial'); ?>
         </article>
 	</div>

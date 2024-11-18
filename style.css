@@ -7275,6 +7275,14 @@ figcaption {
   .floating-button {
     top: -9rem;
     margin-top: -6rem; } }
+<<<<<<< HEAD
+.gravatar {
+  margin: 1rem 0 2rem;
+  display: flex;
+  gap: 1rem; }
+  .gravatar img {
+    border-radius: 75px; }
+=======
 
 @media screen and (min-width: 640.05px) {
   .bish-bash-buttons {
@@ -7287,3 +7295,4 @@ figcaption {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 390px 600px; } }
+>>>>>>> d17f50c88473efdd7af57ec2302b4cd33f58834e
