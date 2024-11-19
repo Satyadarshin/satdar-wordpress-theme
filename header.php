@@ -20,7 +20,6 @@
 		<meta name="p:domain_verify" content="966fcaad9bea4b0feecdbd184905d579"/>  
         <link type="text/plain" rel="author" href="http://www.satyadarshin.com/humans.txt" />
 		<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-		<!-- Check out the list of icons http://zurb.com/playground/foundation-icon-fonts-3 -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">

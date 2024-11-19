@@ -35,7 +35,59 @@ get_template_part('navigation');
                         </div> 
                     </div>
                     <div class="large-8 columns">
-                    <?php get_template_part('partials/social-media-buttons-partial'); ?>
+                        <div class="bish-bash-circles">
+                            <div class="button-panel">
+                                <span>
+                                    <a href="<?php echo site_url(); ?>/professional-services/web-content-designer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bish.png" class="the-bish" alt="" /></a>
+                                </span>
+                                <div>
+                                    <h4>Content design</h4>
+                                    <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-1 wp-block-buttons-is-layout-flex">
+                                        <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                                            <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/professional-services/web-content-designer/">What is it?</a>
+                                        </div>
+                                        <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                                            <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/project-type/content-design/">Projects</a>
+                                        </div>
+                                        <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                                            <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/portfolio/case-study-content-design/">Case study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-panel">
+                                <span>
+                                    <a href="<?php echo site_url(); ?>/professional-services/web-developer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bash.png" class="the-bash" alt="" /></a>
+                                </span>
+                                <div>
+                                    <h4>Web development</h4>
+                                    <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-1 wp-block-buttons-is-layout-flex">
+                                        <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                                            <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/project-type/web-development">Projects</a>
+                                        </div>
+                                        <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                                            <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/portfolio/">Case study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-panel">
+                                <span>
+                                    <a href="<?php echo site_url(); ?>/professional-services/graphic-designer/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/bosh.png" class="the-bosh" alt="" /></a>
+                                </span>
+                                <div>
+                                    <h4>Graphic design</h4>
+                                    <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-1 wp-block-buttons-is-layout-flex">
+                                        <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                                            <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/project-type/graphic-design">Projects</a>
+                                        </div>
+                                        <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                                            <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/portfolio/">Case study</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
                     </div>
                 </div>
             </article>
