@@ -677,21 +677,20 @@ figcaption {
     }
 }
 .bish-bash-circles {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
     .button-panel { 
         padding: 1rem .5rem;
         border-radius: 6px;
+        gap: 2rem;
         // border: 1px solid #ede6ce;
         display: flex;
-        align-items: center;
-        gap: 2rem;
-        &:nth-child(2) {
-            border-top: 1px dotted;
-            border-bottom: 1px dotted;
-            // margin: .5rem 0;
-        }
+        align-items: flex-start;
+        border:1px solid #ede6ce;
+        border-radius: 6px;
         div {
             width: 100%;
-            // border: 1px solid red;
         }
         span {  
             width: 200px;
