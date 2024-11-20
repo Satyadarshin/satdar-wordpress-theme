@@ -23,8 +23,16 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
         ?>>
             <h2>About <?php echo $curauth->first_name . ' ' . $curauth->last_name; ?></h2>
             <div class="gravatar">
-                <?php echo get_avatar( get_the_author_meta(), $ize='150' ); ?>
+                <?php echo get_avatar( get_the_author_meta('user_email'), $ize='150' ); ?>
                 <p><?php echo $curauth->user_description; ?></p>
+            </div>
+            <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-1 wp-block-buttons-is-layout-flex">
+                <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                    <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/contact-me/">What I can do for you</a>
+                </div>
+                <div class="wp-block-button has-custom-width wp-block-button__width-50">
+                    <a class="wp-block-button__link wp-element-button" href="<?php echo site_url(); ?>/gallery/">The gallery</a>
+                </div>
             </div>
             <?php get_template_part('partials/social-media-buttons-partial'); ?>
         </article>

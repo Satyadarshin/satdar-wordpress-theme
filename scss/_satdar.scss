@@ -667,12 +667,70 @@ figcaption {
     margin-top: 2rem;
 }
 
+.gravatar {
+    margin: 1rem 0 2rem;
+    display: flex;
+    align-items:flex-start ;
+    gap: 1rem;
+    img {
+        border-radius: 75px;
+    }
+}
+.bish-bash-circles {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    .button-panel { 
+        padding: 1rem .5rem;
+        border-radius: 6px;
+        gap: 2rem;
+        // border: 1px solid #ede6ce;
+        display: flex;
+        align-items: flex-start;
+        border:1px solid #ede6ce;
+        border-radius: 6px;
+        div {
+            width: 100%;
+        }
+        span {  
+            width: 200px;
+            height: 200px;
+            a { 
+                border-radius: 150px;
+                // background-color: #ede6ce;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 200px;
+                height: 200px;
+                transition: all 250ms;    
+                border: 1px solid #ede6ce;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;  
+                &:hover {
+                    background-color: transparent;
+                    @include throw-shade; 
+                    filter: grayscale(100%);
+                }
+                img {
+                    width: 300px;
+                    display: block;
+                    position: relative;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+}
+
 // overrides positioning of a button block to place it above an image block.
 .floating-button {
     display: block;
     position: relative;
     z-index: 10;
 }
+
 @media screen and ( min-width: 951.05px ) {
     .floating-button {
         top: -6rem;
@@ -701,13 +759,4 @@ figcaption {
         background-repeat: no-repeat;
         background-size: 390px 600px;
         }
-}
-
-.gravatar {
-    margin: 1rem 0 2rem;
-    display: flex;
-    gap: 1rem;
-    img {
-        border-radius: 75px;
-    }
 }
