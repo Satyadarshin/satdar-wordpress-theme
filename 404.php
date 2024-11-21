@@ -21,10 +21,12 @@ get_header();
 get_header('portfolio-hero');
 get_template_part('navigation');
 ?>
+<main>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<h2>Whoops! Now this is a trifle embarrasing isn&rsquo;t it?</h2>
 		<p>You&rsquo;ve been dropped off here because it seems you tried to vist a page that doesn&rsquo;t exist. Try the main navigation above, or peruse the categories and tags below.</p>
 	</article>
+</main>
 <?php
 	get_footer('display');
 	get_footer();
