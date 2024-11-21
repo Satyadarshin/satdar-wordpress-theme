@@ -1,0 +1,28 @@
+/*
+Theme Name: SatDar
+Theme URI: http://www.satyadarshin.com/SatDar
+Author: Satyadarshin Perry
+Author URI: http://www.satyadarshin.com/
+Description: Based on Zurb Foundation
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: satdar
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+$text-color: #000;
+$lower-tone: rgba(188,157,87,1);
+$mid-tone: rgba(237,230,206,1);
+$contrast-tone: rgba(201,180,133,1);
+// $aluminum value described in Foundation _global.scss
+// $iron value described in Foundation _global.scss
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import "settings";
+@import "foundation";
+@import "wordpress";
+@import "satdar";
