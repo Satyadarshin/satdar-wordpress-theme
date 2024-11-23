@@ -6,7 +6,7 @@ Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-SatDar is an original WordPress theme, originally built with the [Zurb Foundation](https://foundation.zurb.com/sites/docs/v/5.5.3/) front-end Framework, version 5. It is currently in process of transition to a leaner, framework-free model based on CSS grid.
+SatDar is an original WordPress theme built on CSS grid with PostCSS.
 
 ## Requirements
 

@@ -9,7 +9,6 @@ get_header();
 get_header('portfolio-hero');
 get_template_part('navigation');
 ?>
-<main>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="portfolio_type">  
         <?php 
@@ -78,9 +77,8 @@ get_template_part('navigation');
             echo '</div></div>'; //Close the column / row
             
         endif;
-        ?>
-    </aside>
-</main>            
+    ?>
+</aside>          
 <?php
 	get_footer('display');
 	get_footer();
