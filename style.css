@@ -7294,6 +7294,72 @@ figcaption {
           position: relative;
           z-index: 10; }
 
+code {
+  margin-bottom: 1rem; }
+
+.floating-button {
+  display: block;
+  position: relative;
+  z-index: 10;
+  top: -6rem;
+  margin-top: -3rem; }
+
+.case-study {
+  padding: 1rem 1rem .25rem;
+  border-radius: 6px;
+  background: #ebebdb;
+  margin-bottom: 1.5rem; }
+
+.case-study h4 {
+  text-transform: uppercase;
+  font-size: .9rem;
+  margin: 0 0 .5rem; }
+
+.case-study .wp-block-column:first-child {
+  margin-top: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.case-study .wp-block-image img {
+  border: none !important;
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+.wp-block-buttons {
+  margin-bottom: 2rem; }
+
+.merch-item {
+  border: 1px solid #ebebdb;
+  padding: 0 1rem .25rem;
+  border-radius: 6px;
+  /* 	background:  #ebebdb; */
+  margin-bottom: 1.5rem; }
+
+.merch-item h3 {
+  margin: 0 -1rem 1rem;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  background: #ebebdb; }
+
+blockquote p {
+  font-size: 1.65rem; }
+
+@media screen and (min-width: 781px) {
+  .case-study .wp-block-column:first-child {
+    border-right: 1px dotted silver; }
+
+  .case-study .wp-block-image img {
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+@media screen and (max-width: 780.05px) {
+  .case-study .wp-block-column:first-child {
+    border-bottom: 1px dotted silver; }
+
+  .case-study .wp-block-image img {
+    margin: .5rem 0 !important; } }
 .floating-button {
   display: block;
   position: relative;
