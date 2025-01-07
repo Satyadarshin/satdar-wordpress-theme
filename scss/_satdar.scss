@@ -693,31 +693,15 @@ figcaption {
             width: 100%;
         }
         span {  
-            width: 200px;
-            height: 200px;
             a { 
-                border-radius: 150px;
-                // background-color: #ede6ce;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 200px;
-                height: 200px;
-                transition: all 250ms;    
-                border: 1px solid #ede6ce;
-                -webkit-box-shadow: none;
-                -moz-box-shadow: none;
-                box-shadow: none;  
+                transition: all 250ms;
                 &:hover {
-                    background-color: transparent;
-                    @include throw-shade; 
                     filter: grayscale(100%);
-                }
-                img {
-                    width: 300px;
-                    display: block;
-                    position: relative;
-                    z-index: 10;
+                    img {
+                        display: block;
+                        position: relative;
+                        z-index: 10;
+                    }
                 }
             }
         }
@@ -749,6 +733,34 @@ figcaption {
         background: 100% 10% no-repeat url('images/drips.png');
         min-height: 32rem;
     }
+    .bish-bash-circles {
+        .button-panel { 
+            span {  
+                width: 200px;
+                height: 200px;
+                a { 
+                    border-radius: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 200px;
+                    height: 200px;   
+                    border: 1px solid #ede6ce;
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none; 
+                    &:hover {
+                        background-color: transparent;
+                        @include throw-shade; 
+                        filter: grayscale(100%);
+                        img {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
 }
 @media screen and ( max-width: 640px ) {
@@ -758,5 +770,10 @@ figcaption {
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: 390px 600px;
+    }
+    .bish-bash-circles {
+        .button-panel { 
+            flex-direction: column;
         }
+    }
 }

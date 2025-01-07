@@ -7285,29 +7285,11 @@ figcaption {
     border-radius: 6px; }
     .bish-bash-circles .button-panel div {
       width: 100%; }
-    .bish-bash-circles .button-panel span {
-      width: 200px;
-      height: 200px; }
-      .bish-bash-circles .button-panel span a {
-        border-radius: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 200px;
-        height: 200px;
-        transition: all 250ms;
-        border: 1px solid #ede6ce;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none; }
-        .bish-bash-circles .button-panel span a:hover {
-          background-color: transparent;
-          -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-          -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-          box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
-          filter: grayscale(100%); }
-        .bish-bash-circles .button-panel span a img {
-          width: 300px;
+    .bish-bash-circles .button-panel span a {
+      transition: all 250ms; }
+      .bish-bash-circles .button-panel span a:hover {
+        filter: grayscale(100%); }
+        .bish-bash-circles .button-panel span a:hover img {
           display: block;
           position: relative;
           z-index: 10; }
@@ -7328,11 +7310,37 @@ figcaption {
 @media screen and (min-width: 640.05px) {
   .bish-bash-buttons {
     background: 100% 10% no-repeat url("images/drips.png");
-    min-height: 32rem; } }
+    min-height: 32rem; }
+
+  .bish-bash-circles .button-panel span {
+    width: 200px;
+    height: 200px; }
+    .bish-bash-circles .button-panel span a {
+      border-radius: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ede6ce;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      .bish-bash-circles .button-panel span a:hover {
+        background-color: transparent;
+        -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
+        filter: grayscale(100%); }
+        .bish-bash-circles .button-panel span a:hover img {
+          width: 300px; } }
 @media screen and (max-width: 640px) {
   .bish-bash-buttons {
     min-height: 600px;
     background-image: url("images/drops.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 390px 600px; } }
+    background-size: 390px 600px; }
+
+  .bish-bash-circles .button-panel {
+    flex-direction: column; } }
