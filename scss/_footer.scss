@@ -20,21 +20,11 @@
         color: $aluminum;
         font-size: .75rem;
     }
-    a {
+    .satdar-credits a {
         color: $iron;
         &:hover {
             color: $aluminum;
         }
-    }
-    .inline-list a {
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 2px;
-        font-size: 1.5rem;
-        text-align: center;
-        line-height: 35px;
-        margin: 0 3px 0 0;
     }
     .copyright {
         font-size: 0.875rem;
@@ -44,7 +34,7 @@
         margin-top: 0;
         max-height: 250px;  
     }
-    .footer-links a {
+    .footer-links .satdar-credits a {
         list-style: none;
         font-weight: normal;
         color: $iron;

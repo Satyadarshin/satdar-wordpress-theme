@@ -764,9 +764,19 @@ code {
 	background:  #ebebdb; 
 }
 
+.welcome-introduction {
+	margin: 2rem 0 3rem;
+}
+blockquote {
+	border-left: none;
+	border-right: 1px dotted;
+	padding-left: 0;
+	padding-top: 0;
+}
 blockquote p {
 	font-size: 1.65rem;
 }
+
 @media screen and (min-width: 781px) {
 	.case-study .wp-block-column:first-child {
 		border-right: 1px dotted silver;

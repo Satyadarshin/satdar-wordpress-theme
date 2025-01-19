@@ -42,32 +42,20 @@
 <footer class="lower_footer" >
 	<div class="row">
 		<div class="small-12 medium-3 large-5 columns" >
-            <img class="rocketship" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rocketship.png" />
+           <a href="/portfolio/case-study-content-design/"><img class="rocketship" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rocketship.png" /></a>
 		</div>
 		<div class="small-12 medium-3 large-3 columns">
-            <?php
-            if (has_nav_menu('secondary')) {          
-                wp_nav_menu(
-                    array(
-                        'menu' => 'Secondary Site Navigation',
-                        'container' => 'false',
-                        'container_class' => '',
-                        'container_id' => '',
-                        'menu_id' => '',
-                        'menu_class' => 'contact',
-                        'echo' => true,
-                        'before' => '<p>',
-                        'after' => '</p>',
-                        'link_before' => '',
-                        'link_after' => '',
-                        'depth' => 0,
-                        'theme_location' => 'secondary'
-                    )
-                );
-            }
-            ?>
+            <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-1 wp-block-buttons-is-layout-flex">
+                <div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="/contact-me/">Contact me</a></div>
+            </div>
+            <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-1 wp-block-buttons-is-layout-flex">
+                <div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="/gallery/">The gallery</a></div>
+            </div>
+                <div class="wp-block-buttons is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-1 wp-block-buttons-is-layout-flex">
+            <div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="/articles/">Articles</a></div>
+            </div>
 		</div>
-		<div class="small-12 medium-6 large-4 columns">
+		<div class="small-12 medium-6 large-4 columns satdar-credits">
 		<?php 
             //TODO pull the URLs dynamically from the author profile.
             //$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
