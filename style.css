@@ -6563,19 +6563,32 @@ services.php / template part
       .gallery_latest_post .the_cards {
         flex-direction: column; } }
   .gallery_latest_post .the_gallery {
+    background: url("images/TheGallery.png") 0 0 no-repeat;
+    filter: grayscale(1);
+    transition: all 1s;
     display: flex;
     align-items: center;
     min-height: 22rem;
-    border: 1px solid silver;
+    border: 1px solid #304588;
     border-radius: 6px; }
     .gallery_latest_post .the_gallery h3 {
       width: 100%;
       padding: 0 2rem;
-      font-size: 4rem;
+      font-size: 8rem;
+      line-height: .8;
+      font-weight: bold;
       text-align: center; }
+      .gallery_latest_post .the_gallery h3 a {
+        transition: all 1s;
+        color: white; }
     @media screen and (min-width: 640.05px) {
       .gallery_latest_post .the_gallery {
         width: 70%; } }
+    .gallery_latest_post .the_gallery:hover {
+      background-color: #fafaf5;
+      filter: grayscale(0); }
+      .gallery_latest_post .the_gallery:hover h3 a {
+        opacity: 0; }
   .gallery_latest_post .the_latest_post {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     background-color: #fafafa;
@@ -6961,9 +6974,14 @@ figcaption {
   -webkit-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5);
   box-shadow: 10px 10px 23px -4px rgba(0, 0, 0, 0.5); }
-  @media screen and (max-width: 1025px) {
+  @media screen and (max-width: 809.5px) {
     .blog_sidebar_thumbnail .panel {
-      grid-template-columns: 250px 1fr 2fr;
+      grid-template-rows: 300px 1fr 2fr;
+      grid-template-areas: "thumbnail" "caption" "meta"; } }
+  @media screen and (min-width: 810px) and (max-width: 1025px) {
+    .blog_sidebar_thumbnail .panel {
+      grid-template-columns: 300px 1fr 2fr;
+      grid-template-rows: 300px 1fr;
       grid-template-areas: "thumbnail caption meta"; } }
   @media screen and (min-width: 1025.5px) {
     .blog_sidebar_thumbnail .panel {
@@ -6981,12 +6999,14 @@ figcaption {
         .blog_sidebar_thumbnail .panel .the-post-thumbnail img {
           border-radius: 5px 5px 0 0; } }
   .blog_sidebar_thumbnail .panel .project_thumb_detail_caption {
+    background-color: #FCF4E0;
     grid-area: caption; }
   .blog_sidebar_thumbnail .panel .tags_and_categories {
     grid-area: meta;
-    padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+    padding-top: 1rem; }
     .blog_sidebar_thumbnail .panel .tags_and_categories p {
-      margin: 1rem; }
+      margin: 0 1rem .25rem; }
       .blog_sidebar_thumbnail .panel .tags_and_categories p span {
         font-weight: bold; }
 
@@ -7410,3 +7430,17 @@ blockquote p {
 
   .bish-bash-circles .button-panel {
     flex-direction: column; } }
+@media screen and (max-width: 640px) {
+  .gravatar {
+    flex-direction: column; } }
+@media screen and (min-width: 640.5px) {
+  .gravatar {
+    flex-direction: row; } }
+.article-content-list {
+  margin-bottom: 1rem; }
+
+.article-content-list h4 {
+  width: 100%;
+  padding-bottom: .5rem;
+  border-bottom: 1px dotted;
+  margin-bottom: .5rem; }

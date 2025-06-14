@@ -50,7 +50,7 @@ get_template_part('navigation');
                 ?>
                 <div class="tags_and_categories">
                     <p><span>Post published:</span> <?php the_date('j F Y'); ?></p>
-                    <p><?php the_author_posts_link(); ?></p>
+                    <p><span>Author:</span> <?php the_author_posts_link(); ?></p>
                     <p><span>This post in categories:</span><br>
                     <?php
                         $categories = get_the_category();
